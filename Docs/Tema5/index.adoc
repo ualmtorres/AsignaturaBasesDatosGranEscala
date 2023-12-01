@@ -1,0 +1,47 @@
+////
+NO CAMBIAR!!
+Codificación, idioma, tabla de contenidos, tipo de documento
+////
+:encoding: utf-8
+:lang: es
+:toc: right
+:toc-title: Tabla de contenidos
+:doctype: book
+:linkattrs:
+
+////
+Nombre y título del trabajo
+////
+# Tema 5. XXX
+Máster en Tecnologías y Aplicaciones en Ingeniería Informática. Manuel Torres <mtorres@ual.es>
+
+
+image::../../images/di.png[]
+
+// NO CAMBIAR!! (Entrar en modo no numerado de apartados)
+:numbered!: 
+
+
+[abstract]
+== Resumen
+////
+COLOCA A CONTINUACION EL RESUMEN
+////
+Ullamco commodo ex minim enim aliqua esse sunt culpa cillum cupidatat elit velit excepteur quis. Qui ex veniam deserunt ut. Non qui magna cupidatat pariatur. Ex anim voluptate dolor veniam adipisicing. Cillum irure non consectetur do occaecat deserunt aliquip consequat. Aliquip laboris sint enim mollit mollit duis occaecat dolore nostrud esse ad ea.
+
+////
+COLOCA A CONTINUACION LOS OBJETIVOS
+////
+.Objetivos
+* Qui veniam ad exercitation consequat deserunt.
+* Adipisicing duis est et sit fugiat dolore nisi.
+
+// Entrar en modo numerado de apartados
+:numbered:
+
+== Introducción
+
+////
+COLOCA A CONTINUACION LA INTRODUCCION
+////
+Ex ea irure adipisicing ullamco adipisicing. Fugiat reprehenderit non tempor officia laboris aliquip pariatur fugiat ipsum id dolor eiusmod. Magna ut eiusmod enim cupidatat dolor exercitation ea ad nostrud qui do occaecat.

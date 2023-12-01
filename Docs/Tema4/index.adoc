@@ -1,0 +1,47 @@
+////
+NO CAMBIAR!!
+Codificación, idioma, tabla de contenidos, tipo de documento
+////
+:encoding: utf-8
+:lang: es
+:toc: right
+:toc-title: Tabla de contenidos
+:doctype: book
+:linkattrs:
+
+////
+Nombre y título del trabajo
+////
+# Tema 4. XXX
+Máster en Tecnologías y Aplicaciones en Ingeniería Informática. Manuel Torres <mtorres@ual.es>
+
+
+image::../../images/di.png[]
+
+// NO CAMBIAR!! (Entrar en modo no numerado de apartados)
+:numbered!: 
+
+
+[abstract]
+== Resumen
+////
+COLOCA A CONTINUACION EL RESUMEN
+////
+Eiusmod ea ex commodo qui elit id do amet ad eiusmod nulla labore. Dolor do irure dolore commodo eiusmod. Quis Lorem commodo ut tempor. Proident adipisicing eiusmod veniam do aliquip esse aliqua. Commodo non deserunt ullamco fugiat non ad commodo proident adipisicing ut eiusmod deserunt elit non. Ad fugiat non proident esse elit est aliquip ad dolore elit nostrud voluptate duis velit.
+
+////
+COLOCA A CONTINUACION LOS OBJETIVOS
+////
+.Objetivos
+* Excepteur sint non mollit ullamco fugiat id nisi
+* Aliquip laboris laboris nisi laboris
+
+// Entrar en modo numerado de apartados
+:numbered:
+
+== Introducción
+
+////
+COLOCA A CONTINUACION LA INTRODUCCION
+////
+Aliquip sint ipsum eu excepteur eu aliquip voluptate nisi est laborum nostrud. Sunt aute reprehenderit laborum culpa esse consequat fugiat enim laborum voluptate aliquip cupidatat tempor. Culpa labore qui aliqua deserunt adipisicing est magna enim laborum. Magna incididunt aute voluptate ipsum ullamco eiusmod. Sit ea ipsum exercitation fugiat voluptate aliqua dolor esse. Aliqua deserunt exercitation aliquip occaecat.

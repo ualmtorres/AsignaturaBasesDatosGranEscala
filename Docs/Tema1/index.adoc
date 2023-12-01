@@ -1,0 +1,54 @@
+////
+NO CAMBIAR!!
+Codificación, idioma, tabla de contenidos, tipo de documento
+////
+:encoding: utf-8
+:lang: es
+:toc: right
+:toc-title: Tabla de contenidos
+:doctype: book
+:linkattrs:
+
+////
+Nombre y título del trabajo
+////
+# Tema 1. Introducción a las Bases de Datos a Gran Escala
+Máster en Tecnologías y Aplicaciones en Ingeniería Informática. Manuel Torres <mtorres@ual.es>
+
+
+image::../../images/di.png[]
+
+// NO CAMBIAR!! (Entrar en modo no numerado de apartados)
+:numbered!: 
+
+
+[abstract]
+== Resumen
+////
+COLOCA A CONTINUACION EL RESUMEN
+////
+Este tema introduce las bases de datos a gran escala, también conocidas como bases de datos NoSQL. Se estudiará por qué las bases de datos a gran escalana son necesarias en el contexto actual de grandes volúmenes de datos y como demanda de las aplicaciones altamente escalables. Se introducirán los principales modos de almacenamiento más populares en bases de datos NoSQL, como son los de las bases de datos clave-valor, las de documentos, las basadas en columnas y las bases de datos de grafos. Asimismo, se introducirán conceptos clave en este contexto, como escalabilidad, distribución, consistencia, particionamiento (sharding) y replicación. Finalmente, se introducirán las bases de datos NewSQL, que son bases de datos relacionales que intentan combinar las ventajas de las bases de datos relacionales con las de las bases de datos NoSQL.
+
+////
+COLOCA A CONTINUACION LOS OBJETIVOS
+////
+.Objetivos
+* Conocer las bases de datos a gran escala, también conocidas como bases de datos NoSQL.
+* Conocer los principales modos de almacenamiento de las bases de datos NoSQL.
+* Conocer los principales conceptos de las bases de datos NoSQL.
+* Conocer las bases de datos NewSQL.
+
+// Entrar en modo numerado de apartados
+:numbered:
+
+[part]
+= Parte I. Introducción a las bases de datos a gran escala
+
+[partintro]
+== Introducción
+
+////
+COLOCA A CONTINUACION LA INTRODUCCION
+////
+Las bases de datos a gran escala, también conocidas como bases de datos NoSQL, son un tipo de bases de datos que se han desarrollado en los últimos años para dar respuesta a las necesidades de las aplicaciones actuales, que manejan grandes volúmenes de datos y que necesitan ser altamente escalables. Las bases de datos a gran escala se caracterizan por ser bases de datos no relacionales, es decir, que no utilizan el modelo relacional para almacenar los datos. En su lugar, utilizan otros modelos de datos, como el modelo clave-valor, el modelo de documentos, el modelo de columnas o el modelo de grafos. En este tema se introducirán los principales modos de almacenamiento de las bases de datos a gran escala, así como los principales conceptos que se utilizan en este contexto, como escalabilidad, distribución, consistencia, particionamiento (sharding) y replicación. Finalmente, se introducirán las bases de datos NewSQL, que son bases de datos relacionales que intentan combinar las ventajas de las bases de datos relacionales con las de las bases de datos NoSQL.
+

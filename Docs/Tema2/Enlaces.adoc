@@ -1,0 +1,23 @@
+////
+NO CAMBIAR!!
+Codificación, idioma, tabla de contenidos, tipo de documento
+////
+:encoding: utf-8
+:lang: es
+:doctype: book
+:linkattrs:
+
+////
+Nombre y título del trabajo
+////
+# Enlaces de interés sobre XXX
+Bases de datos a gran escala - Máster en Tecnologías y Aplicaciones en Ingeniería Informática
+Manuel Torres <mtorres@ual.es>
+
+
+image::../../images/di.png[]
+
+## Enlaces de interés
+
+* https://www.mongodb.com/nosql-explained[Ea amet irure anim occaecat deserunt excepteur aute]
+

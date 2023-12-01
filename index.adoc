@@ -1,0 +1,189 @@
+////
+NO CAMBIAR!!
+Codificación, idioma, tabla de contenidos, tipo de documento
+////
+:encoding: utf-8
+:lang: es
+:toc: right
+:toc-title: Tabla de contenidos
+:doctype: book
+:linkattrs:
+
+////
+Nombre y título del trabajo
+////
+# Bases de datos a gran escala
+Máster en Tecnologías y Aplicaciones en Ingeniería Informática. Manuel Torres <mtorres@ual.es>
+
+
+image::images/di.png[]
+
+// NO CAMBIAR!! (Entrar en modo no numerado de apartados)
+:numbered!: 
+
+
+[abstract]
+== Resumen
+////
+COLOCA A CONTINUACION EL RESUMEN
+////
+La asignatura Bases de datos a gran escala es una asignatura optativa del módulo de Especialidad en Big Data del https://www.ual.es/estudios/masteres/presentacion/7114[Máster oficial en Tecnologías y Aplicaciones en Ingeniería Informática] de la UAL. En la asignatura se hace una introducción a las bases de datos no relacionales (NoSQL) y a su uso en aplicaciones escalables.
+
+////
+COLOCA A CONTINUACION LOS OBJETIVOS
+////
+.Objetivos
+* Conocer los principales modos de almacenamiento NoSQL 
+* Realizar consultas basicas y de agregacion de datos 
+* Conocer modos de indexacion para mejorar el rendimiento de la base de datos 
+* Conocer las tecnicas de replicacion y sharding 
+* Desarrollar aplicaciones sobre bases de datos NoSQL 
+* Aplicar los conocimientos adquiridos y resolver problemas en entornos nuevos o poco conocidos dentro de contextos más amplios (o multidisciplinares) relacionados con su área de estudio 
+* Aplicar los conocimientos adquiridos y resolver problemas en entornos nuevos o poco conocidos dentro de contextos más amplios y multidisciplinares, siendo capaces de integrar estos conocimientos 
+* Modelar, diseñar, definir la arquitectura, implantar, gestionar, operar, administrar y mantener aplicaciones, redes, sistemas, servicios y contenidos informáticos 
+* Analizar las necesidades de información que se plantean en un entorno y llevar a cabo en todas sus etapas el proceso de construcción de un sistema de información
+
+// Entrar en modo numerado de apartados
+:numbered:
+
+## Introducción
+
+El crecimiento en la produccion de los datos de usuario, sensores, sistemas GPS, y demas, han disparado el tamaño y el tipo de los datos generados, los cuales ademas pueden ser de naturaleza no estructurada. Estos grandes volumenes de datos suponen nuevos desafios en terminos de almacenamiento y procesamiento, por los que las tecnicas tradicionales de gestion de datos no son aplicables directamente en este contexto. Bajo el termino de NoSQL se encuentran los pricipales productos de bases de datos para tratar con este problema, como son las bases de datos orientadas a columnas, bases de datos clave-valor y bases de datos de documentos. En esta asignatura se estudian los conceptos fundamentales relacionados con NoSQL en el contexto de diferentes productos comerciales. 
+
+
+## Sobre la Guía docente
+
+### Materia con la que se relaciona en el Plan de estudios:
+
+La asignatura Bases de datos a gran escala está directamente relacionada con las asignaturas siguientes:
+
+* Cloud computing 
+* Infraestructura Big Data 
+* Análisis de grandes volúmenes de datos 
+* Computación sobre datos masivos 
+* Visualización de datos 
+* Aplicaciones de Big data
+
+### Conocimientos recomendables
+
+* Bases de datos
+* Linux
+* Git
+* Desarrollo web
+
+## Contenidos
+
+* Modelos de almacenamiento no relacionales (4 horas) 
+** El fenomeno NoSQL 
+** Modelos de almacenamiento 
+* Bases de datos no relacionales (14 horas)
+** Bases de datos clave-valor 
+** Bases de datos orientadas a documentos 
+** Bases de datos orientadas a grafos
+** Bases de datos orientadas a columnas 
+* Escalabilidad de bases de datos
+** Replicación
+** Sharding 
+* Desarrollo de aplicaciones para bases de datos a gran escala 
+
+link:Docs/PlanificacionBDGE.html[Planificación de la asignatura]
+
+## Horario de clase y de tutorías
+
+* Clases: Aula 14 - Aulario V (Aulas de Informática)
+* Sesiones presenciales (link:Docs/PlanificacionBDGE.html[Planificación de la asignatura])
+** Horario: 16h a 18h
+** 8 sesiones presenciales = 16 horas.
+** 7 sesiones no presenciales = 14 horas
+* Profesores 
+** Manuel Torres Gil
+*** Tutorías: Jueves y Viernes de 11h a 13h. Cita previa y a través de Google Meet
+*** Despacho: 2.19.5 CITE III (2a planta)
+*** email: mailto:mtorres@ual.es[mtorres@ual.es]
+*** Twitter: https://twitter.com/ualmtorres[@ualmtorres]
+
+	
+## Cómo seguir la asignatura
+
+* Material disponible en
+** Aula Virtual UAL
+** https://ualmtorres.github.io/AsignaturaBasesDatosGranEscala/[Repositorio GitHub]
+
+* Metodología docente
+** Clases participativas
+** Contenido práctico
+** Elaboración de trabajos prácticos
+** Actividades no presenciales: $$$
+** Tutorías
+
+## Cómo superar la asignatura
+
+* Cada tema tiene una o varias actividades teórico/prácticas, que se entregarán de forma individual sobre:
+** Consultas sobre bases de datos NoSQL
+** Desarrollo de aplicaciones sobre bases de datos NoSQL
+** Despliegue de aplicaciones
+
+.Criterios e Instrumentos de evaluación
+****
+* Los ejercicios y proyectos prácticos deberán ser presentados en la fecha indicada utilizando el Aula Virtual y/o las herramientas y servicios cloud, como repositorios de código, proveedores cloud, servicios en la nube, etc., donde quedan registradas la acciones realizadas.
+* En las actividades en equipo, se tendrá en cuenta tanto el trabajo del equipo en su conjunto, como la aportación individual realizada por cada miembro del equipo.
+
+****
+
+## Encuesta inicial
+
+Si eres alumno de la asignatura en la UAL completa esta https://forms.gle/tx5Usu7U4t5n6wE1A[pequeña encuesta] que permita valorar tus conocimientos iniciales y adaptar el desarrollo de la asignatura.
+
+## Antes de comenzar
+
+* OpenStack-DI
+** https://ualmtorres.github.io/AsignaturaCloudComputing/Docs/Tema0/ActivacionCuentaOpenStackDI.html[Activación de cuenta OpenStack-DI]
+
+## Recursos
+
+### Tema 1. Introducción a las bases de datos a gran escala
+
+* https://docs.google.com/presentation/d/1jFvI2dYeVBPPnwzm8q4CmO2ABXXxSfThHPg33eHEHck/edit?usp=sharing[Presentación]
+* link:Docs/Tema1/Enlaces.html[Enlaces de interés]
+
+### Tema 2. 
+
+* https://docs.google.com/presentation/d/1zzATSnpLQf2-7dmB-yRJkogC9e-HRd5YT5brjLgGiig/edit?usp=sharing[Presentación]
+* link:Docs/Tema2/Enlaces.html[Enlaces de interés]
+
+### Tema 3. 
+
+* https://docs.google.com/presentation/d/1V4eY5CV23bNb1PBBmzR3We5LsQht496WcymFM-EKRbM/edit?usp=sharing[Presentación]
+* link:Docs/Tema3/Enlaces.html[Enlaces de interés]
+
+### Tema 4.
+
+* https://docs.google.com/presentation/d/1Fgi6YYBOGAYAQWEyzLL8yGep22sMo0DR2RreYIZRyj4/edit?usp=sharing[Presentación]
+* link:Docs/Tema4/Enlaces.html[Enlaces de interés]
+
+### Tema 5. 
+
+* https://docs.google.com/presentation/d/1II-av-qegkEj9JqR95iABLFf8Exrjn0y1xBHBtvQgmM/edit?usp=sharing[Presentación]
+* link:Docs/Tema5/Enlaces.html[Enlaces de interés]
+
+### Tema 6. 
+
+* https://docs.google.com/presentation/d/1M6Qd_B9DB6nvNHNd4VBPYweMdfs6lHKESIf-yJHsATQ/edit?usp=sharing[Presentación]
+* link:Docs/Tema6/Enlaces.html[Enlaces de interés]
+
+## Trabajo autónomo
+
+* link:Labs/Lab01/index.html[Lab 01. XXX] 
+
+
+.Actividades complementarias
+****
+Puedes profundizar en XXX a través de estos recursos:
+
+* XXX
+****
+
+## Actividades no presenciales
+
+https://www.cloudskillsboost.google/journeys/11[Programa _Cloud Engineer Learning Path]
+

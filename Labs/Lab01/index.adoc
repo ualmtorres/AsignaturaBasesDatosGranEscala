@@ -1,0 +1,66 @@
+////
+NO CAMBIAR!!
+Codificación, idioma, tabla de contenidos, tipo de documento
+////
+:encoding: utf-8
+:lang: es
+:toc: right
+:toc-title: Tabla de contenidos
+:doctype: book
+:linkattrs:
+
+////
+Nombre y título del trabajo
+////
+# Lab 01 Bases de datos a gran escala. XXX
+Máster en Tecnologías y Aplicaciones en Ingeniería Informática
+Manuel Torres <mtorres@ual.es>
+
+
+image::../../images/di.png[]
+
+// NO CAMBIAR!! (Entrar en modo no numerado de apartados)
+:numbered!: 
+
+
+[abstract]
+== Resumen
+////
+COLOCA A CONTINUACION EL RESUMEN
+////
+Ad ea sunt nulla proident aliquip esse exercitation est laborum voluptate in eu enim. Ipsum ut consequat aliqua aliqua nostrud et laborum in cillum officia ea labore. Do ad proident aliqua ut minim magna mollit cupidatat nisi laborum eu anim eiusmod. Est fugiat id Lorem cillum. In nulla excepteur cillum anim laborum. Ad duis voluptate dolor fugiat. Aute eiusmod nisi nulla cillum in non nulla aliquip pariatur cillum sint officia.
+
+////
+COLOCA A CONTINUACION LOS OBJETIVOS
+////
+.Objetivos
+* Quis est proident ex et eiusmod ex culpa duis sint culpa voluptate enim aliquip.
+* Aliquip laborum laboris laboris laboris.
+
+.Prerrequisitos
+****
+* Consequat est in magna minim esse ea ad sunt.
+* Aliqua laboris laboris laboris laboris.
+****
+
+// Entrar en modo numerado de apartados
+:numbered:
+
+## Recursos
+
+Nisi minim dolor anim quis sit sint duis cupidatat veniam ipsum laboris sint veniam. Laborum ad exercitation laborum reprehenderit in. Non quis labore incididunt Lorem esse ut velit. Id ullamco ex mollit sint id exercitation. Dolor ea sint mollit ipsum eu aliqua nulla consectetur ea.
+
+* Proident dolore quis eiusmod voluptate ullamco aliqua et.
+* Aliqua laboris laboris laboris laboris.
+
+## Actividades
+
+### Anim quis duis culpa cillum fugiat
+
+. Ad veniam eu exercitation veniam fugiat consequat.
+. Aliqua laboris laboris laboris laboris.
+
+### Enim non officia laboris ea velit nostrud dolor
+
+. Laboris exercitation sint et ex aute sit ipsum elit cillum anim sint velit.
+. Aliqua laboris laboris laboris laboris.

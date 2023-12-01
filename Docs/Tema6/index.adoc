@@ -1,0 +1,44 @@
+////
+NO CAMBIAR!!
+Codificación, idioma, tabla de contenidos, tipo de documento
+////
+:encoding: utf-8
+:lang: es
+:toc: right
+:toc-title: Tabla de contenidos
+:doctype: book
+:linkattrs:
+
+////
+Nombre y título del trabajo
+////
+# Tema 6. XXX
+Máster en Tecnologías y Aplicaciones en Ingeniería Informática. Manuel Torres <mtorres@ual.es>
+
+
+image::../../images/di.png[]
+
+// NO CAMBIAR!! (Entrar en modo no numerado de apartados)
+:numbered!: 
+
+
+[abstract]
+== Resumen
+////
+COLOCA A CONTINUACION EL RESUMEN
+////
+Excepteur in non nulla dolore do non ut anim dolore cupidatat. Laborum nisi deserunt quis aute deserunt. Est enim est cupidatat nulla ullamco quis qui reprehenderit sint sunt nulla culpa cupidatat cillum. Laborum magna voluptate adipisicing ut eu occaecat aute ut aliquip. Tempor deserunt ullamco consequat ex ut. Nisi cillum id excepteur in ea amet dolor incididunt. Labore nulla ipsum aute consectetur ad voluptate Lorem deserunt id ipsum ullamco minim.
+
+////
+COLOCA A CONTINUACION LOS OBJETIVOS
+////
+.Objetivos
+* Officia excepteur ut excepteur proident aliqua eiusmod incididunt consectetur tempor laboris est velit.
+* Labore elit pariatur ad culpa officia.
+
+// Entrar en modo numerado de apartados
+:numbered:
+
+== Introducción
+
+Elit Lorem adipisicing amet fugiat consectetur in ullamco deserunt proident dolore. Esse ipsum amet do reprehenderit pariatur eu reprehenderit irure. Culpa et deserunt reprehenderit excepteur Lorem nisi est ea laborum sint officia esse. Quis anim aliqua quis commodo velit veniam officia magna cupidatat sint anim. Pariatur consequat culpa sint ut mollit magna enim amet amet. Culpa aute veniam ut irure.
