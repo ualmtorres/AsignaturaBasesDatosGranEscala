@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.18">
 <meta name="author" content="Máster en Tecnologías y Aplicaciones en Ingeniería Informática">
-<title>Lab 01 Bases de datos a gran escala. XXX</title>
+<title>Lab 01 Bases de datos a gran escala. Consultas en MongoDB</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /*! Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
@@ -440,7 +440,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </head>
 <body class="book toc2 toc-right">
 <div id="header">
-<h1>Lab 01 Bases de datos a gran escala. XXX</h1>
+<h1>Lab 01 Bases de datos a gran escala. Consultas en MongoDB</h1>
 <div class="details">
 <span id="author" class="author">Máster en Tecnologías y Aplicaciones en Ingeniería Informática</span><br>
 <span id="revdate">Manuel Torres &lt;mtorres@ual.es&gt;</span>
@@ -450,12 +450,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel1">
 <li><a href="#resumen">Resumen</a></li>
 <li><a href="#recursos">1. Recursos</a></li>
-<li><a href="#actividades">2. Actividades</a>
-<ul class="sectlevel2">
-<li><a href="#anim-quis-duis-culpa-cillum-fugiat">2.1. Anim quis duis culpa cillum fugiat</a></li>
-<li><a href="#enim-non-officia-laboris-ea-velit-nostrud-dolor">2.2. Enim non officia laboris ea velit nostrud dolor</a></li>
-</ul>
-</li>
+<li><a href="#actividades">2. Actividades</a></li>
 </ul>
 </div>
 </div>
@@ -473,16 +468,19 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h2 id="resumen"><a class="anchor" href="#resumen"></a>Resumen</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Ad ea sunt nulla proident aliquip esse exercitation est laborum voluptate in eu enim. Ipsum ut consequat aliqua aliqua nostrud et laborum in cillum officia ea labore. Do ad proident aliqua ut minim magna mollit cupidatat nisi laborum eu anim eiusmod. Est fugiat id Lorem cillum. In nulla excepteur cillum anim laborum. Ad duis voluptate dolor fugiat. Aute eiusmod nisi nulla cillum in non nulla aliquip pariatur cillum sint officia.</p>
+<p>En este laboratorio se practica con consultas básicas en MongoDB y con la importación de datos. Se practicará con los operadores básicos de comparación, conteo de resultados, manejo de arrays y ordenación de resultados.</p>
 </div>
 <div class="ulist">
 <div class="title">Objetivos</div>
 <ul>
 <li>
-<p>Quis est proident ex et eiusmod ex culpa duis sint culpa voluptate enim aliquip.</p>
+<p>Importar datos en una base de datos.</p>
 </li>
 <li>
-<p>Aliquip laborum laboris laboris laboris.</p>
+<p>Realizar operaciones básicas de consulta.</p>
+</li>
+<li>
+<p>Realizar consultas con manejo de arrays.</p>
 </li>
 </ul>
 </div>
@@ -492,10 +490,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="ulist">
 <ul>
 <li>
-<p>Consequat est in magna minim esse ea ad sunt.</p>
-</li>
-<li>
-<p>Aliqua laboris laboris laboris laboris.</p>
+<p>Tener configurado el entorno de desarrollo de la asignatura.</p>
 </li>
 </ul>
 </div>
@@ -507,15 +502,15 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h2 id="recursos"><a class="anchor" href="#recursos"></a>1. Recursos</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Nisi minim dolor anim quis sit sint duis cupidatat veniam ipsum laboris sint veniam. Laborum ad exercitation laborum reprehenderit in. Non quis labore incididunt Lorem esse ut velit. Id ullamco ex mollit sint id exercitation. Dolor ea sint mollit ipsum eu aliqua nulla consectetur ea.</p>
+<p>Puedes obtener más información sobre cómo trabajar con MongoDB siguiendo estos tutoriales:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Proident dolore quis eiusmod voluptate ullamco aliqua et.</p>
+<p><a href="https://www.geeksforgeeks.org/mongodb-tutorial/?ref=lbp">MongoDB Tutorial de Geeks for Geeks</a></p>
 </li>
 <li>
-<p>Aliqua laboris laboris laboris laboris.</p>
+<p><a href="https://www.javatpoint.com/mongodb-tutorial">MongoDB Tutorial de Java T Point</a></p>
 </li>
 </ul>
 </div>
@@ -524,38 +519,114 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect1">
 <h2 id="actividades"><a class="anchor" href="#actividades"></a>2. Actividades</h2>
 <div class="sectionbody">
-<div class="sect2">
-<h3 id="anim-quis-duis-culpa-cillum-fugiat"><a class="anchor" href="#anim-quis-duis-culpa-cillum-fugiat"></a>2.1. Anim quis duis culpa cillum fugiat</h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Ad veniam eu exercitation veniam fugiat consequat.</p>
+<p>Importar el archivo JSON <code>zips.json</code> disponible en la carpeta <a href="../../SampleDatabases/">SampleDatabases</a> en una colección <code>zips</code> dentro de una base de datos denominada <code>zips</code>.</p>
 </li>
 <li>
-<p>Aliqua laboris laboris laboris laboris.</p>
+<p>Crear una consulta que recupere los documentos de ciudades del estado <code>AL</code> con población superior a 40000 habitantes</p>
+<div class="paragraph">
+<p>Resultado:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{ "city" : "BESSEMER", "loc" : [  -86.947547,  33.409002 ], "pop" : 40549, "state" : "AL", "_id" : "35020" }
+{ "city" : "CENTER POINT", "loc" : [  -86.693197,  33.635447 ], "pop" : 43862, "state" : "AL", "_id" : "35215" }
+{ "city" : "TUSCALOOSA", "loc" : [  -87.562666,  33.196891 ], "pop" : 42124, "state" : "AL", "_id" : "35401" }
+{ "city" : "SOUTHSIDE", "loc" : [  -86.010279,  33.997248 ], "pop" : 44165, "state" : "AL", "_id" : "35901" }</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Crear una consulta que recupere los documentos de ciudades del estado <code>AL</code> con población superior a 35000 e inferior a 37000 habitantes</p>
+<div class="paragraph">
+<p>Resultado:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{ "city" : "BIRMINGHAM", "loc" : [  -86.85904,  33.481565 ], "pop" : 35836, "state" : "AL", "_id" : "35211" }
+{ "city" : "DECATUR", "loc" : [  -86.98868,  34.589599 ], "pop" : 36696, "state" : "AL", "_id" : "35601" }
+{ "city" : "ATHENS", "loc" : [  -86.970733,  34.803604 ], "pop" : 35441, "state" : "AL", "_id" : "35611" }</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Escribir una consulta que recupere los documentos de ciudades del estado <code>AL</code> o <code>WA</code> con población superior a 35000 e inferior a 37000 habitantes. Consejo: Se puede resolver con <code>$or</code> o con <code>$in</code></p>
+<div class="paragraph">
+<p>Resultado:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{ "city" : "BIRMINGHAM", "loc" : [  -86.85904,  33.481565 ], "pop" : 35836, "state" : "AL", "_id" : "35211" }
+{ "city" : "DECATUR", "loc" : [  -86.98868,  34.589599 ], "pop" : 36696, "state" : "AL", "_id" : "35601" }
+{ "city" : "ATHENS", "loc" : [  -86.970733,  34.803604 ], "pop" : 35441, "state" : "AL", "_id" : "35611" }
+{ "city" : "LYNNWOOD", "loc" : [  -122.282139,  47.850532 ], "pop" : 36995, "state" : "WA", "_id" : "98037" }
+{ "city" : "SEATTLE", "loc" : [  -122.275021,  47.541234 ], "pop" : 36684, "state" : "WA", "_id" : "98118" }
+{ "city" : "BONNEY LAKE", "loc" : [  -122.180275,  47.188801 ], "pop" : 35436, "state" : "WA", "_id" : "98390" }</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Escribir una consulta que devuelva cuántas ciudades tiene el estado <code>AL</code> con poblaciones comprendidas entre 10.000 y 20.000 habitantes?</p>
+<div class="paragraph">
+<p>Resultado: 89</p>
+</div>
+</li>
+<li>
+<p>Importar el archivo JSON <code>bios.json</code> disponible en <a href="../../SampleDatabases">SampleDatabases</a> en una colección <code>bios</code> dentro de la base de datos denominada <code>test</code>.</p>
+</li>
+<li>
+<p>Escribir una consulta que recupere el nombre y apellidos de celebridades que hayan obtenido un premio después del año 2000.</p>
+<div class="paragraph">
+<p>Resultado:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{ "name" : { "first" : "Kristen", "last" : "Nygaard" } }
+{ "name" : { "first" : "Ole-Johan", "last" : "Dahl" } }
+{ "name" : { "first" : "Guido", "last" : "van Rossum" } }
+{ "name" : { "first" : "Dennis", "last" : "Ritchie" } }
+{ "name" : { "first" : "Yukihiro", "last" : "Matsumoto" } }
+{ "name" : { "first" : "James", "last" : "Gosling" } }</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Escribir una consukta que recupere nombre y apellidos de celebridades a los que se les atribuye la creación de <code>Lisp</code> y <code>ALGOL</code></p>
+<div class="paragraph">
+<p>Resultado:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{ "name" : { "first" : "John", "last" : "McCarthy" } }</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Escribir una consulta que añada en una sola operación las contribuciones <code>Gosling Emacs</code> y <code>(p-code) virtual machine</code> a <code>James Gosling</code></p>
+</li>
+<li>
+<p>Escribir una consulta que devuelva un listado alfabético de tres celebridades que hayan obtenido algún galardón por alguna organización de IEEE.</p>
+<div class="paragraph">
+<p>Resultado:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{ "name" : { "first" : "John", "last" : "Backus" } }
+{ "name" : { "first" : "Ole-Johan", "last" : "Dahl" } }
+{ "name" : { "first" : "Grace", "last" : "Hopper" } }</code></pre>
+</div>
+</div>
 </li>
 </ol>
-</div>
-</div>
-<div class="sect2">
-<h3 id="enim-non-officia-laboris-ea-velit-nostrud-dolor"><a class="anchor" href="#enim-non-officia-laboris-ea-velit-nostrud-dolor"></a>2.2. Enim non officia laboris ea velit nostrud dolor</h3>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Laboris exercitation sint et ex aute sit ipsum elit cillum anim sint velit.</p>
-</li>
-<li>
-<p>Aliqua laboris laboris laboris laboris.</p>
-</li>
-</ol>
-</div>
 </div>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2023-12-01 10:57:58 +0100
+Last updated 2024-02-19 19:21:13 +0100
 </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>

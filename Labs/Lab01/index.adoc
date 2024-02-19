@@ -12,7 +12,7 @@ Codificación, idioma, tabla de contenidos, tipo de documento
 ////
 Nombre y título del trabajo
 ////
-# Lab 01 Bases de datos a gran escala. XXX
+# Lab 01 Bases de datos a gran escala. Consultas en MongoDB
 Máster en Tecnologías y Aplicaciones en Ingeniería Informática
 Manuel Torres <mtorres@ual.es>
 
@@ -28,19 +28,19 @@ image::../../images/di.png[]
 ////
 COLOCA A CONTINUACION EL RESUMEN
 ////
-Ad ea sunt nulla proident aliquip esse exercitation est laborum voluptate in eu enim. Ipsum ut consequat aliqua aliqua nostrud et laborum in cillum officia ea labore. Do ad proident aliqua ut minim magna mollit cupidatat nisi laborum eu anim eiusmod. Est fugiat id Lorem cillum. In nulla excepteur cillum anim laborum. Ad duis voluptate dolor fugiat. Aute eiusmod nisi nulla cillum in non nulla aliquip pariatur cillum sint officia.
+En este laboratorio se practica con consultas básicas en MongoDB y con la importación de datos. Se practicará con los operadores básicos de comparación, conteo de resultados, manejo de arrays y ordenación de resultados.
 
 ////
 COLOCA A CONTINUACION LOS OBJETIVOS
 ////
 .Objetivos
-* Quis est proident ex et eiusmod ex culpa duis sint culpa voluptate enim aliquip.
-* Aliquip laborum laboris laboris laboris.
+* Importar datos en una base de datos.
+* Realizar operaciones básicas de consulta.
+* Realizar consultas con manejo de arrays.
 
 .Prerrequisitos
 ****
-* Consequat est in magna minim esse ea ad sunt.
-* Aliqua laboris laboris laboris laboris.
+* Tener configurado el entorno de desarrollo de la asignatura.
 ****
 
 // Entrar en modo numerado de apartados
@@ -48,19 +48,90 @@ COLOCA A CONTINUACION LOS OBJETIVOS
 
 ## Recursos
 
-Nisi minim dolor anim quis sit sint duis cupidatat veniam ipsum laboris sint veniam. Laborum ad exercitation laborum reprehenderit in. Non quis labore incididunt Lorem esse ut velit. Id ullamco ex mollit sint id exercitation. Dolor ea sint mollit ipsum eu aliqua nulla consectetur ea.
+Puedes obtener más información sobre cómo trabajar con MongoDB siguiendo estos tutoriales:
 
-* Proident dolore quis eiusmod voluptate ullamco aliqua et.
-* Aliqua laboris laboris laboris laboris.
+* https://www.geeksforgeeks.org/mongodb-tutorial/?ref=lbp[MongoDB Tutorial de Geeks for Geeks]
+* https://www.javatpoint.com/mongodb-tutorial[MongoDB Tutorial de Java T Point]
 
 ## Actividades
 
-### Anim quis duis culpa cillum fugiat
+. Importar el archivo JSON `zips.json` disponible en la carpeta link:../../SampleDatabases/[SampleDatabases] en una colección `zips` dentro de una base de datos denominada `zips`.
+. Crear una consulta que recupere los documentos de ciudades del estado `AL` con población superior a 40000 habitantes
++
+Resultado:
++
+[source, json]
+----
+{ "city" : "BESSEMER", "loc" : [  -86.947547,  33.409002 ], "pop" : 40549, "state" : "AL", "_id" : "35020" }
+{ "city" : "CENTER POINT", "loc" : [  -86.693197,  33.635447 ], "pop" : 43862, "state" : "AL", "_id" : "35215" }
+{ "city" : "TUSCALOOSA", "loc" : [  -87.562666,  33.196891 ], "pop" : 42124, "state" : "AL", "_id" : "35401" }
+{ "city" : "SOUTHSIDE", "loc" : [  -86.010279,  33.997248 ], "pop" : 44165, "state" : "AL", "_id" : "35901" }
+----
 
-. Ad veniam eu exercitation veniam fugiat consequat.
-. Aliqua laboris laboris laboris laboris.
+. Crear una consulta que recupere los documentos de ciudades del estado `AL` con población superior a 35000 e inferior a 37000 habitantes
++
+Resultado:
++
+[source, json]
+----
+{ "city" : "BIRMINGHAM", "loc" : [  -86.85904,  33.481565 ], "pop" : 35836, "state" : "AL", "_id" : "35211" }
+{ "city" : "DECATUR", "loc" : [  -86.98868,  34.589599 ], "pop" : 36696, "state" : "AL", "_id" : "35601" }
+{ "city" : "ATHENS", "loc" : [  -86.970733,  34.803604 ], "pop" : 35441, "state" : "AL", "_id" : "35611" }
+----
 
-### Enim non officia laboris ea velit nostrud dolor
+. Escribir una consulta que recupere los documentos de ciudades del estado `AL` o `WA` con población superior a 35000 e inferior a 37000 habitantes. Consejo: Se puede resolver con `$or` o con `$in`
++
+Resultado:
++
+[source, json]
+----
+{ "city" : "BIRMINGHAM", "loc" : [  -86.85904,  33.481565 ], "pop" : 35836, "state" : "AL", "_id" : "35211" }
+{ "city" : "DECATUR", "loc" : [  -86.98868,  34.589599 ], "pop" : 36696, "state" : "AL", "_id" : "35601" }
+{ "city" : "ATHENS", "loc" : [  -86.970733,  34.803604 ], "pop" : 35441, "state" : "AL", "_id" : "35611" }
+{ "city" : "LYNNWOOD", "loc" : [  -122.282139,  47.850532 ], "pop" : 36995, "state" : "WA", "_id" : "98037" }
+{ "city" : "SEATTLE", "loc" : [  -122.275021,  47.541234 ], "pop" : 36684, "state" : "WA", "_id" : "98118" }
+{ "city" : "BONNEY LAKE", "loc" : [  -122.180275,  47.188801 ], "pop" : 35436, "state" : "WA", "_id" : "98390" }
+----
 
-. Laboris exercitation sint et ex aute sit ipsum elit cillum anim sint velit.
-. Aliqua laboris laboris laboris laboris.
+. Escribir una consulta que devuelva cuántas ciudades tiene el estado `AL` con poblaciones comprendidas entre 10.000 y 20.000 habitantes?
++
+Resultado: 89
+
+. Importar el archivo JSON `bios.json` disponible en link:../../SampleDatabases[SampleDatabases] en una colección `bios` dentro de la base de datos denominada `test`.
+
+. Escribir una consulta que recupere el nombre y apellidos de celebridades que hayan obtenido un premio después del año 2000.
++
+Resultado:
++
+[source, json]
+----
+{ "name" : { "first" : "Kristen", "last" : "Nygaard" } }
+{ "name" : { "first" : "Ole-Johan", "last" : "Dahl" } }
+{ "name" : { "first" : "Guido", "last" : "van Rossum" } }
+{ "name" : { "first" : "Dennis", "last" : "Ritchie" } }
+{ "name" : { "first" : "Yukihiro", "last" : "Matsumoto" } }
+{ "name" : { "first" : "James", "last" : "Gosling" } }
+----
+
+. Escribir una consukta que recupere nombre y apellidos de celebridades a los que se les atribuye la creación de `Lisp` y `ALGOL`
++
+Resultado:
++
+[source, json]
+----
+{ "name" : { "first" : "John", "last" : "McCarthy" } }
+----
+
+. Escribir una consulta que añada en una sola operación las contribuciones `Gosling Emacs` y `(p-code) virtual machine` a `James Gosling`
+
+. Escribir una consulta que devuelva un listado alfabético de tres celebridades que hayan obtenido algún galardón por alguna organización de IEEE.
++
+Resultado:
++
+[source, json]
+----
+{ "name" : { "first" : "John", "last" : "Backus" } }
+{ "name" : { "first" : "Ole-Johan", "last" : "Dahl" } }
+{ "name" : { "first" : "Grace", "last" : "Hopper" } }
+----
+

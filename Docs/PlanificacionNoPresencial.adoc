@@ -1,0 +1,81 @@
+////
+NO CAMBIAR!!
+Codificación, idioma, tabla de contenidos, tipo de documento
+////
+:encoding: utf-8
+:lang: es
+:toc: right
+:toc-title: Tabla de contenidos
+:doctype: book
+:linkattrs:
+
+////
+Nombre y título del trabajo
+////
+# Planificación recomendada para seguir la parte no presencial de BDGE
+Manuel Torres <mtorres@ual.es> 
+
+image::images/di.png[]
+
+// NO CAMBIAR!! (Entrar en modo no numerado de apartados)
+:numbered!: 
+
+
+[abstract]
+== Resumen
+////
+COLOCA A CONTINUACION EL RESUMEN
+////
+
+Planificación recomendada para seguir la parte no presencial durante el desarrollo de la asignatura de Bases de datos a gran escala.
+
+////
+COLOCA A CONTINUACION LOS OBJETIVOS
+////
+.Objetivos
+* Ofrecer una planificación ordenada para poder desarrollar de forma equilibrada las actividades de la asignatura Bases de datos a gran escala.
+
+// Entrar en modo numerado de apartados
+:numbered:
+
+## Planificación recomendada
+
+[NOTE]
+====
+Para evitar acumulación de trabajo en la fecha de vencimiento se recomienda ir entregando cada actividad en su semana y así resolver las dudas planteadas en las clases presenciales.
+====
+
+:numbered!: 
+
+### Semana 1
+
+* http://ualmtorres.github.io/howtos/ConfiguracionEntornoGGVD/[Configuración del entorno de la asignatura - Máquina virtual]
+* https://github.com/ualmtorres/bdge-entorno-desarrollo-docker[Configuración del entorno de la asignatura - Docker]
+
+### Semana 2
+
+* https://ualmtorres.github.io/howtos/RedisJava/[Interacción con Redis desde Java]
+* http://ualmtorres.github.io/howtos/RedisPHP/[Interacción con Redis desde PHP]
+
+### Semana 3
+
+* http://ualmtorres.github.io/howtos/RedisPHP/PhalconRedisAPIREST/[Desarrollo de una API REST para Redis en PHP usando Phalcon]
+
+### Semana 4
+
+* http://ualmtorres.github.io/howtos/MongoDBPHP/[Interacción con MongoDB usando PHP]
+* http://ualmtorres.github.io/howtos/MongoDBJava/[Interacción con MongoDB usando Java]
+* http://api.mongodb.org/java[MongoDB Java Drivers]
+
+### Semana 5
+
+* http://ualmtorres.github.io/howtos/Neo4jPHP[Neo4j desde aplicaciones PHP]
+
+### Semana 6
+
+* To Do
+
+### Semana 7
+
+* To Do
+

@@ -1,0 +1,42 @@
+////
+NO CAMBIAR!!
+Codificación, idioma, tabla de contenidos, tipo de documento
+////
+:encoding: utf-8
+:lang: es
+:toc: right
+:toc-title: Tabla de contenidos
+:doctype: book
+:linkattrs:
+
+////
+Nombre y título del trabajo
+////
+# Planificación recomendada
+Bases de datos a gran escala - Máster en Tecnologías y Aplicaciones en Ingeniería Informática
+Manuel Torres <mtorres@ual.es>
+
+image::../images/di.png[]
+
+## Planificación
+
+.Planificación de las sesiones
+[width="100%",options="header"]
+|====================
+| Sesión | Fecha | Presencial | Enlace 
+| 01 | Semana 1 | Sí |  
+| 02| - | No | link:PlanificacionNoPresencial.html#truesemana-1[BDGE No presencial Semana 1]
+| 03| Semana 2 | Sí |  
+| 04 | - | No | link:PlanificacionNoPresencial.html#truesemana-2[BDGE No presencial Semana 2]
+| 05 | Semana 3 | Sí |  
+| 06 | - | No | link:PlanificacionNoPresencial.html#truesemana-3[BDGE No presencial Semana 3]
+| 07 | Semana 4 | Sí |  
+| 08 | - | No | link:PlanificacionNoPresencial.html#truesemana-4[BDGE No presencial Semana 4]
+| 09 | Semana 5 | Sí |  
+| 10 | - | No | link:PlanificacionNoPresencial.html#truesemana-5[BDGE No presencial Semana 5]
+| 11 | Semana 6 | Sí |  
+| 12 | - | No | link:PlanificacionNoPresencial.html#truesemana-6[BDGE No presencial Semana 6]
+| 13 | Semana 7 | Sí |  
+| 14 | - | No | link:PlanificacionNoPresencial.html#truesemana-7[BDGE No presencial Semana 7]
+| 15 | Semana 8 | Sí |  
+|====================

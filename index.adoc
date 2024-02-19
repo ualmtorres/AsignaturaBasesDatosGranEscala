@@ -48,7 +48,7 @@ COLOCA A CONTINUACION LOS OBJETIVOS
 
 ## Introducción
 
-El crecimiento en la produccion de los datos de usuario, sensores, sistemas GPS, y demas, han disparado el tamaño y el tipo de los datos generados, los cuales ademas pueden ser de naturaleza no estructurada. Estos grandes volumenes de datos suponen nuevos desafios en terminos de almacenamiento y procesamiento, por los que las tecnicas tradicionales de gestion de datos no son aplicables directamente en este contexto. Bajo el termino de NoSQL se encuentran los pricipales productos de bases de datos para tratar con este problema, como son las bases de datos orientadas a columnas, bases de datos clave-valor y bases de datos de documentos. En esta asignatura se estudian los conceptos fundamentales relacionados con NoSQL en el contexto de diferentes productos comerciales. 
+El crecimiento en la produccion de los datos de usuario, sensores, sistemas GPS, y demas, han disparado el tamaño y el tipo de los datos generados, los cuales ademas pueden ser de naturaleza no estructurada. Estos grandes volumenes de datos suponen nuevos desafios en terminos de almacenamiento y procesamiento, por los que las tecnicas tradicionales de gestion de datos no son aplicables directamente en este contexto. Bajo el termino de NoSQL se encuentran los principales productos de bases de datos para tratar con este problema, como son las bases de datos orientadas a columnas, bases de datos clave-valor y bases de datos de documentos. En esta asignatura se estudian los conceptos fundamentales relacionados con NoSQL en el contexto de diferentes productos comerciales. 
 
 
 ## Sobre la Guía docente
@@ -90,14 +90,14 @@ link:Docs/PlanificacionBDGE.html[Planificación de la asignatura]
 
 ## Horario de clase y de tutorías
 
-* Clases: Aula 14 - Aulario V (Aulas de Informática)
+* Clases: Aula 22 - Aulario V (Aulas de Informática)
 * Sesiones presenciales (link:Docs/PlanificacionBDGE.html[Planificación de la asignatura])
 ** Horario: 16h a 18h
 ** 8 sesiones presenciales = 16 horas.
 ** 7 sesiones no presenciales = 14 horas
 * Profesores 
 ** Manuel Torres Gil
-*** Tutorías: Jueves y Viernes de 11h a 13h. Cita previa y a través de Google Meet
+*** Tutorías: Lunes y Viernes de 11h a 13:30h. Martes de 12:30h a 13:30h. Cita previa y a través de Google Meet
 *** Despacho: 2.19.5 CITE III (2a planta)
 *** email: mailto:mtorres@ual.es[mtorres@ual.es]
 *** Twitter: https://twitter.com/ualmtorres[@ualmtorres]
@@ -113,7 +113,7 @@ link:Docs/PlanificacionBDGE.html[Planificación de la asignatura]
 ** Clases participativas
 ** Contenido práctico
 ** Elaboración de trabajos prácticos
-** Actividades no presenciales: $$$
+** Actividades no presenciales
 ** Tutorías
 
 ## Cómo superar la asignatura
@@ -132,7 +132,7 @@ link:Docs/PlanificacionBDGE.html[Planificación de la asignatura]
 
 ## Encuesta inicial
 
-Si eres alumno de la asignatura en la UAL completa esta https://forms.gle/tx5Usu7U4t5n6wE1A[pequeña encuesta] que permita valorar tus conocimientos iniciales y adaptar el desarrollo de la asignatura.
+Si eres alumno de la asignatura en la UAL completa esta https://forms.gle/V43eetd5r7D4KYuU9[pequeña encuesta] que permita valorar tus conocimientos iniciales y adaptar el desarrollo de la asignatura.
 
 ## Antes de comenzar
 
@@ -141,19 +141,34 @@ Si eres alumno de la asignatura en la UAL completa esta https://forms.gle/tx5Usu
 
 ## Recursos
 
-### Tema 1. Introducción a las bases de datos a gran escala
+.Entorno básico de pruebas
+****
+Archivo https://gist.github.com/ualmtorres/c85c3caf61eb9db953ebd5bd9d77ab53[docker-compose.yml] para pruebas con las principales bases de datos NoSQL usadas.
+****
+
+
+### Tema 1. Modelos de almacenamiento no relacionales. El fenómeno NoSQL
 
 * https://docs.google.com/presentation/d/1jFvI2dYeVBPPnwzm8q4CmO2ABXXxSfThHPg33eHEHck/edit?usp=sharing[Presentación]
 * link:Docs/Tema1/Enlaces.html[Enlaces de interés]
 
-### Tema 2. 
+### Tema 2. Bases de datos clave-valor
 
 * https://docs.google.com/presentation/d/1zzATSnpLQf2-7dmB-yRJkogC9e-HRd5YT5brjLgGiig/edit?usp=sharing[Presentación]
+* https://ualmtorres.github.io/SeminarioRedis[Código de ejemplos de la presentación]
+* Archivo https://gist.github.com/ualmtorres/102a65abc4fea2f3929b48d6803a6b87[docker-compose.yml] con Redis y Redis Commander
+* http://ualmtorres.github.io/howtos/RedisPHP/[Tutorial: Interacción con Redis desde PHP]
+* http://ualmtorres.github.io/howtos/RedisJava/[Tutorial: Interacción con Redis desde Java]
+* http://ualmtorres.github.io/howtos/RedisPHP/PhalconRedisAPIREST/[Tutorial: Desarrollo de una API REST en PHP para Redis usando Phalcon]
 * link:Docs/Tema2/Enlaces.html[Enlaces de interés]
 
-### Tema 3. 
+### Tema 3. Bases de datos orientadas a documentos
 
 * https://docs.google.com/presentation/d/1V4eY5CV23bNb1PBBmzR3We5LsQht496WcymFM-EKRbM/edit?usp=sharing[Presentación]
+* Código de ejemplos de la presentación https://gist.github.com/ualmtorres/c04eaaa15789bfef2ebec3f9bcf820a6[[Introducción]] https://gist.github.com/ualmtorres/7fc041515f8a74e5c6fdb289ed241e4f[[Agregación]] https://gist.github.com/ualmtorres/2f99fff89517687bcd87aaf8523fd112[[Indexación]] 
+* Archivo https://gist.github.com/ualmtorres/48fd676d2e07cd9c905caf7fed3f5bbf[docker-compose.yml] con MongoDB y Mongo-express
+* http://ualmtorres.github.io/howtos/MongoDBPHP/[Tutorial: Interacción con MongoDB desde PHP]
+* http://ualmtorres.github.io/howtos/MongoDBJava/[Tutorial: Interacción con MongoDB desde Java]
 * link:Docs/Tema3/Enlaces.html[Enlaces de interés]
 
 ### Tema 4.
@@ -161,29 +176,22 @@ Si eres alumno de la asignatura en la UAL completa esta https://forms.gle/tx5Usu
 * https://docs.google.com/presentation/d/1Fgi6YYBOGAYAQWEyzLL8yGep22sMo0DR2RreYIZRyj4/edit?usp=sharing[Presentación]
 * link:Docs/Tema4/Enlaces.html[Enlaces de interés]
 
-### Tema 5. 
-
-* https://docs.google.com/presentation/d/1II-av-qegkEj9JqR95iABLFf8Exrjn0y1xBHBtvQgmM/edit?usp=sharing[Presentación]
-* link:Docs/Tema5/Enlaces.html[Enlaces de interés]
-
-### Tema 6. 
-
-* https://docs.google.com/presentation/d/1M6Qd_B9DB6nvNHNd4VBPYweMdfs6lHKESIf-yJHsATQ/edit?usp=sharing[Presentación]
-* link:Docs/Tema6/Enlaces.html[Enlaces de interés]
-
 ## Trabajo autónomo
 
-* link:Labs/Lab01/index.html[Lab 01. XXX] 
-
+* link:Labs/Lab01/index.html[Lab 01. Consultas básicas en MongoDB]
+* link:Labs/Lab02/index.html[Lab 02. Manejo de índices en MongoDB]
+* link:Labs/Lab03/index.html[Lab 03. Desarrollo de un Blog con PHP y MongoDB]
+* link:Labs/Lab04/index.html[Lab 04. Framework de Agregación de MongoDB]
+* link:Labs/Lab05/index.html[Lab 05. Consultas en Neo4j]
+* link:Labs/Lab06/index.html[Lab 06. Desarrollo de un aplicación PHP para la consulta de información cinematográfica almacenada en Neo4j]
 
 .Actividades complementarias
 ****
-Puedes profundizar en XXX a través de estos recursos:
+Puedes profundizar en contenidos de la asignatura a través de estos recursos:
 
-* XXX
+* No disponible aún.
 ****
 
 ## Actividades no presenciales
 
-https://www.cloudskillsboost.google/journeys/11[Programa _Cloud Engineer Learning Path]
-
+* No disponible aún.

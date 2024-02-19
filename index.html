@@ -463,12 +463,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#antes-de-comenzar">8. Antes de comenzar</a></li>
 <li><a href="#recursos">9. Recursos</a>
 <ul class="sectlevel2">
-<li><a href="#tema-1-introducción-a-las-bases-de-datos-a-gran-escala">9.1. Tema 1. Introducción a las bases de datos a gran escala</a></li>
-<li><a href="#tema-2">9.2. Tema 2.</a></li>
-<li><a href="#tema-3">9.3. Tema 3.</a></li>
+<li><a href="#tema-1-modelos-de-almacenamiento-no-relacionales-el-fenómeno-nosql">9.1. Tema 1. Modelos de almacenamiento no relacionales. El fenómeno NoSQL</a></li>
+<li><a href="#tema-2-bases-de-datos-clave-valor">9.2. Tema 2. Bases de datos clave-valor</a></li>
+<li><a href="#tema-3-bases-de-datos-orientadas-a-documentos">9.3. Tema 3. Bases de datos orientadas a documentos</a></li>
 <li><a href="#tema-4">9.4. Tema 4.</a></li>
-<li><a href="#tema-5">9.5. Tema 5.</a></li>
-<li><a href="#tema-6">9.6. Tema 6.</a></li>
 </ul>
 </li>
 <li><a href="#trabajo-autónomo">10. Trabajo autónomo</a></li>
@@ -530,7 +528,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h2 id="introducción"><a class="anchor" href="#introducción"></a>1. Introducción</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>El crecimiento en la produccion de los datos de usuario, sensores, sistemas GPS, y demas, han disparado el tamaño y el tipo de los datos generados, los cuales ademas pueden ser de naturaleza no estructurada. Estos grandes volumenes de datos suponen nuevos desafios en terminos de almacenamiento y procesamiento, por los que las tecnicas tradicionales de gestion de datos no son aplicables directamente en este contexto. Bajo el termino de NoSQL se encuentran los pricipales productos de bases de datos para tratar con este problema, como son las bases de datos orientadas a columnas, bases de datos clave-valor y bases de datos de documentos. En esta asignatura se estudian los conceptos fundamentales relacionados con NoSQL en el contexto de diferentes productos comerciales.</p>
+<p>El crecimiento en la produccion de los datos de usuario, sensores, sistemas GPS, y demas, han disparado el tamaño y el tipo de los datos generados, los cuales ademas pueden ser de naturaleza no estructurada. Estos grandes volumenes de datos suponen nuevos desafios en terminos de almacenamiento y procesamiento, por los que las tecnicas tradicionales de gestion de datos no son aplicables directamente en este contexto. Bajo el termino de NoSQL se encuentran los principales productos de bases de datos para tratar con este problema, como son las bases de datos orientadas a columnas, bases de datos clave-valor y bases de datos de documentos. En esta asignatura se estudian los conceptos fundamentales relacionados con NoSQL en el contexto de diferentes productos comerciales.</p>
 </div>
 </div>
 </div>
@@ -652,7 +650,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="ulist">
 <ul>
 <li>
-<p>Clases: Aula 14 - Aulario V (Aulas de Informática)</p>
+<p>Clases: Aula 22 - Aulario V (Aulas de Informática)</p>
 </li>
 <li>
 <p>Sesiones presenciales (<a href="Docs/PlanificacionBDGE.html">Planificación de la asignatura</a>)</p>
@@ -679,7 +677,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="ulist">
 <ul>
 <li>
-<p>Tutorías: Jueves y Viernes de 11h a 13h. Cita previa y a través de Google Meet</p>
+<p>Tutorías: Lunes y Viernes de 11h a 13:30h. Martes de 12:30h a 13:30h. Cita previa y a través de Google Meet</p>
 </li>
 <li>
 <p>Despacho: 2.19.5 CITE III (2a planta)</p>
@@ -732,7 +730,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>Elaboración de trabajos prácticos</p>
 </li>
 <li>
-<p>Actividades no presenciales: $$$</p>
+<p>Actividades no presenciales</p>
 </li>
 <li>
 <p>Tutorías</p>
@@ -788,7 +786,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h2 id="encuesta-inicial"><a class="anchor" href="#encuesta-inicial"></a>7. Encuesta inicial</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Si eres alumno de la asignatura en la UAL completa esta <a href="https://forms.gle/tx5Usu7U4t5n6wE1A">pequeña encuesta</a> que permita valorar tus conocimientos iniciales y adaptar el desarrollo de la asignatura.</p>
+<p>Si eres alumno de la asignatura en la UAL completa esta <a href="https://forms.gle/V43eetd5r7D4KYuU9">pequeña encuesta</a> que permita valorar tus conocimientos iniciales y adaptar el desarrollo de la asignatura.</p>
 </div>
 </div>
 </div>
@@ -814,8 +812,16 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect1">
 <h2 id="recursos"><a class="anchor" href="#recursos"></a>9. Recursos</h2>
 <div class="sectionbody">
+<div class="sidebarblock">
+<div class="content">
+<div class="title">Entorno básico de pruebas</div>
+<div class="paragraph">
+<p>Archivo <a href="https://gist.github.com/ualmtorres/c85c3caf61eb9db953ebd5bd9d77ab53">docker-compose.yml</a> para pruebas con las principales bases de datos NoSQL usadas.</p>
+</div>
+</div>
+</div>
 <div class="sect2">
-<h3 id="tema-1-introducción-a-las-bases-de-datos-a-gran-escala"><a class="anchor" href="#tema-1-introducción-a-las-bases-de-datos-a-gran-escala"></a>9.1. Tema 1. Introducción a las bases de datos a gran escala</h3>
+<h3 id="tema-1-modelos-de-almacenamiento-no-relacionales-el-fenómeno-nosql"><a class="anchor" href="#tema-1-modelos-de-almacenamiento-no-relacionales-el-fenómeno-nosql"></a>9.1. Tema 1. Modelos de almacenamiento no relacionales. El fenómeno NoSQL</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -828,11 +834,26 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect2">
-<h3 id="tema-2"><a class="anchor" href="#tema-2"></a>9.2. Tema 2.</h3>
+<h3 id="tema-2-bases-de-datos-clave-valor"><a class="anchor" href="#tema-2-bases-de-datos-clave-valor"></a>9.2. Tema 2. Bases de datos clave-valor</h3>
 <div class="ulist">
 <ul>
 <li>
 <p><a href="https://docs.google.com/presentation/d/1zzATSnpLQf2-7dmB-yRJkogC9e-HRd5YT5brjLgGiig/edit?usp=sharing">Presentación</a></p>
+</li>
+<li>
+<p><a href="https://ualmtorres.github.io/SeminarioRedis">Código de ejemplos de la presentación</a></p>
+</li>
+<li>
+<p>Archivo <a href="https://gist.github.com/ualmtorres/102a65abc4fea2f3929b48d6803a6b87">docker-compose.yml</a> con Redis y Redis Commander</p>
+</li>
+<li>
+<p><a href="http://ualmtorres.github.io/howtos/RedisPHP/">Tutorial: Interacción con Redis desde PHP</a></p>
+</li>
+<li>
+<p><a href="http://ualmtorres.github.io/howtos/RedisJava/">Tutorial: Interacción con Redis desde Java</a></p>
+</li>
+<li>
+<p><a href="http://ualmtorres.github.io/howtos/RedisPHP/PhalconRedisAPIREST/">Tutorial: Desarrollo de una API REST en PHP para Redis usando Phalcon</a></p>
 </li>
 <li>
 <p><a href="Docs/Tema2/Enlaces.html">Enlaces de interés</a></p>
@@ -841,11 +862,23 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect2">
-<h3 id="tema-3"><a class="anchor" href="#tema-3"></a>9.3. Tema 3.</h3>
+<h3 id="tema-3-bases-de-datos-orientadas-a-documentos"><a class="anchor" href="#tema-3-bases-de-datos-orientadas-a-documentos"></a>9.3. Tema 3. Bases de datos orientadas a documentos</h3>
 <div class="ulist">
 <ul>
 <li>
 <p><a href="https://docs.google.com/presentation/d/1V4eY5CV23bNb1PBBmzR3We5LsQht496WcymFM-EKRbM/edit?usp=sharing">Presentación</a></p>
+</li>
+<li>
+<p>Código de ejemplos de la presentación <a href="https://gist.github.com/ualmtorres/c04eaaa15789bfef2ebec3f9bcf820a6">[Introducción</a>] <a href="https://gist.github.com/ualmtorres/7fc041515f8a74e5c6fdb289ed241e4f">[Agregación</a>] <a href="https://gist.github.com/ualmtorres/2f99fff89517687bcd87aaf8523fd112">[Indexación</a>]</p>
+</li>
+<li>
+<p>Archivo <a href="https://gist.github.com/ualmtorres/48fd676d2e07cd9c905caf7fed3f5bbf">docker-compose.yml</a> con MongoDB y Mongo-express</p>
+</li>
+<li>
+<p><a href="http://ualmtorres.github.io/howtos/MongoDBPHP/">Tutorial: Interacción con MongoDB desde PHP</a></p>
+</li>
+<li>
+<p><a href="http://ualmtorres.github.io/howtos/MongoDBJava/">Tutorial: Interacción con MongoDB desde Java</a></p>
 </li>
 <li>
 <p><a href="Docs/Tema3/Enlaces.html">Enlaces de interés</a></p>
@@ -866,32 +899,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
-<div class="sect2">
-<h3 id="tema-5"><a class="anchor" href="#tema-5"></a>9.5. Tema 5.</h3>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="https://docs.google.com/presentation/d/1II-av-qegkEj9JqR95iABLFf8Exrjn0y1xBHBtvQgmM/edit?usp=sharing">Presentación</a></p>
-</li>
-<li>
-<p><a href="Docs/Tema5/Enlaces.html">Enlaces de interés</a></p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="tema-6"><a class="anchor" href="#tema-6"></a>9.6. Tema 6.</h3>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="https://docs.google.com/presentation/d/1M6Qd_B9DB6nvNHNd4VBPYweMdfs6lHKESIf-yJHsATQ/edit?usp=sharing">Presentación</a></p>
-</li>
-<li>
-<p><a href="Docs/Tema6/Enlaces.html">Enlaces de interés</a></p>
-</li>
-</ul>
-</div>
-</div>
 </div>
 </div>
 <div class="sect1">
@@ -900,7 +907,22 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="ulist">
 <ul>
 <li>
-<p><a href="Labs/Lab01/index.html">Lab 01. XXX</a></p>
+<p><a href="Labs/Lab01/index.html">Lab 01. Consultas básicas en MongoDB</a></p>
+</li>
+<li>
+<p><a href="Labs/Lab02/index.html">Lab 02. Manejo de índices en MongoDB</a></p>
+</li>
+<li>
+<p><a href="Labs/Lab03/index.html">Lab 03. Desarrollo de un Blog con PHP y MongoDB</a></p>
+</li>
+<li>
+<p><a href="Labs/Lab04/index.html">Lab 04. Framework de Agregación de MongoDB</a></p>
+</li>
+<li>
+<p><a href="Labs/Lab05/index.html">Lab 05. Consultas en Neo4j</a></p>
+</li>
+<li>
+<p><a href="Labs/Lab06/index.html">Lab 06. Desarrollo de un aplicación PHP para la consulta de información cinematográfica almacenada en Neo4j</a></p>
 </li>
 </ul>
 </div>
@@ -908,12 +930,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="content">
 <div class="title">Actividades complementarias</div>
 <div class="paragraph">
-<p>Puedes profundizar en XXX a través de estos recursos:</p>
+<p>Puedes profundizar en contenidos de la asignatura a través de estos recursos:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>XXX</p>
+<p>No disponible aún.</p>
 </li>
 </ul>
 </div>
@@ -924,15 +946,19 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect1">
 <h2 id="actividades-no-presenciales"><a class="anchor" href="#actividades-no-presenciales"></a>11. Actividades no presenciales</h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p><a href="https://www.cloudskillsboost.google/journeys/11">Programa _Cloud Engineer Learning Path</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p>No disponible aún.</p>
+</li>
+</ul>
 </div>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2023-12-01 10:52:41 +0100
+Last updated 2024-02-19 23:10:26 +0100
 </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>

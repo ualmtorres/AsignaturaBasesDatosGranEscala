@@ -10,7 +10,7 @@ Codificación, idioma, tabla de contenidos, tipo de documento
 ////
 Nombre y título del trabajo
 ////
-# Enlaces de interés sobre XXX
+# Enlaces de interés sobre Bases de datos clave-valor
 Bases de datos a gran escala - Máster en Tecnologías y Aplicaciones en Ingeniería Informática
 Manuel Torres <mtorres@ual.es>
 
@@ -19,5 +19,9 @@ image::../../images/di.png[]
 
 ## Enlaces de interés
 
-* https://www.mongodb.com/nosql-explained[Ea amet irure anim occaecat deserunt excepteur aute]
-
+* https://redis.io/docs/about/users/[Sitios populares que usan Redis]
+* https://redis.io/docs/install/install-redis/[Instalación de Redis[
+* https://redis.io/docs/install/install-stack/[Instalación de Redis Stack (Redis Server + RedisInsight, GUI para Redis)]
+* https://redis.io/resources/clients/[Drivers para Redis]
+* https://www.tutorialspoint.com/redis/index.htm[Tutorial de Redis en TutorialsPoint]
+* https://medium.com/@diego.coder/implementando-cach%C3%A9-con-node-js-y-redis-b5a331c41405[Implementando caché con Node.js y Redis]

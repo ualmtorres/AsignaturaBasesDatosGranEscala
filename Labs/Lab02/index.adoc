@@ -1,0 +1,130 @@
+////
+NO CAMBIAR!!
+Codificación, idioma, tabla de contenidos, tipo de documento
+////
+:encoding: utf-8
+:lang: es
+:toc: right
+:toc-title: Tabla de contenidos
+:doctype: book
+:linkattrs:
+
+////
+Nombre y título del trabajo
+////
+# Lab 02 Bases de datos a gran escala. Indexación en MongoDB
+Máster en Tecnologías y Aplicaciones en Ingeniería Informática
+Manuel Torres <mtorres@ual.es>
+
+
+image::../../images/di.png[]
+
+// NO CAMBIAR!! (Entrar en modo no numerado de apartados)
+:numbered!: 
+
+
+[abstract]
+== Resumen
+////
+COLOCA A CONTINUACION EL RESUMEN
+////
+En este laboratorio se practica con el manejo de índices en MongoDB y con la importación de datos. Se practicará con los creación de índices para la mejora del rendimiento, el uso de la explicación de resultados y el uso de índices espaciales.
+
+////
+COLOCA A CONTINUACION LOS OBJETIVOS
+////
+.Objetivos
+* Importar datos en una base de datos.
+* Realizar operaciones de manejo de índices.
+* Utilizar y comprender la información devuelta por la explicación de resultados.
+* Realizar operaciones de manejo de índices espaciales.
+
+.Prerrequisitos
+****
+* Tener configurado el entorno de desarrollo de la asignatura.
+****
+
+// Entrar en modo numerado de apartados
+:numbered:
+
+## Recursos
+
+Puedes obtener más información sobre cómo trabajar con MongoDB siguiendo estos tutoriales:
+
+* https://www.geeksforgeeks.org/mongodb-tutorial/?ref=lbp[MongoDB Tutorial de Geeks for Geeks]
+* https://www.javatpoint.com/mongodb-tutorial[MongoDB Tutorial de Java T Point]
+
+## Actividades
+
+. Importar el archivo JSON `zips.json` disponible en la carpeta link:../../SampleDatabases/[SampleDatabases] en una colección `zips` dentro de una base de datos denominada `zips`.
+
+. Obtener cuántos índices hay definidos y cuáles son los nombres de los índices 
+
+. Crear una consulta que recupere los documentos del estado `AL`
+    .. ¿Cuántos documentos devuelve la consulta? 
+    .. ¿Cuántos elementos del índice son leídos para ejecutar la consulta? 
+    .. ¿Cuántos documentos son leídos de la base de datos? 
+
+. Definir un índice ascendente sobre el campo `state`. Volver a recuperar los documentos del estado `AL`.
+    .. ¿Cuántos documentos devuelve la consulta? 
+    .. ¿Cuántos elementos del índice son leídos para ejecutar la consulta? 
+    .. ¿Cuántos documentos son leídos de la base de datos? 
+
+. Definir dos índices: uno para `city` y otro para `pop`. ¿Cuántos índices hay definidos? 
+
+. Crear una consulta para obtener todos los documentos de códigos postales con una población superior a 100.000 habitantes.
+    .. ¿Cuántos documentos devuelve la consulta? 
+    .. ¿Cuántos elementos del índice son leídos para ejecutar la consulta? 
+    .. ¿Cuántos documentos son leídos de la base de datos? 
+
+. Definir un índice espacial 2d para el campo `loc`. Escribir una consulta que recupere los tres documentos de códigos postales más cercanos a las coordenadas `[-86.51, 33.58]`.
++
+Resultado:
++
+[source, json]
+----
+{ "city" : "ACMAR", "loc" : [  -86.51557,  33.584132 ], "pop" : 6055, "state" : "AL", "_id" : "35004" }
+{ "city" : "LEEDS", "loc" : [  -86.574824,  33.528333 ], "pop" : 10421, "state" : "AL", "_id" : "35094" }
+{ "city" : "VANDIVER", "loc" : [  -86.501278,  33.480704 ], "pop" : 1066, "state" : "AL", "_id" : "35176" }
+----
+
+. Crear un índice compuesto para `city` y `pop`. Crear una consulta que recupere sólo la población de documentos del estado `NY` y con una población superior a 80.000 habitantes.
+    .. ¿Cuántos documentos devuelve la consulta? 
+    .. ¿Cuántas entradas del índice analiza la consulta? 
+    .. ¿Es posible resolver la consulta usando sólo el índice? 
+
+. En la colección `bios` de la base de datos `test`, definir un índice disperso sobre el campo `aka` del campo `name`. 
+    .. Crear una consulta que devuelva los documentos de galardonados con premios que hayan sido otorgados por organizaciones que contengan la palabra `Free`. 
++
+Resultado:
++
+[source, json]
+----
+{ "_id" : 6, "name" : { "first" : "Guido", "last" : "van Rossum" }, … }
+{ "_id" : 8, "name" : { "first" : "Yukihiro", "aka" : "Matz", "last" : "Matsumoto" }, … }
+----
+    .. Modificar la consulta anterior para que muestre los resultados ordenados por el campo `aka` de `name`
++
+Resultado:
++
+[source, json]
+----
+{ "_id" : 8, "name" : { "first" : "Yukihiro", "aka" : "Matz", "last" : "Matsumoto" }, … }
+----
+    .. ¿Por qué la consulta del apartado _b_ devuelve menos documentos que la del apartado _a_? 
+    
+. Crear un índice en la colección `bios` de la base de datos `test` sobre el campo `award` del campo `awards`. Crear una consulta que devuelva los documentos de celebridades que hayan obtenido el premio _(award)_ `Turing Award`.
++
+Resultado:
++
+[source, json]
+----
+{ "_id" : 1, "name" : { "first" : "John", "last" : "Backus" }, … }
+{ "_id" : 2, "name" : { "first" : "John", "last" : "McCarthy" }, … }
+{ "_id" : 7, "name" : { "first" : "Dennis", "last" : "Ritchie" }, … }
+{ "_id" : 5, "name" : { "first" : "Ole-Johan", "last" : "Dahl" }, … }
+{ "_id" : 4, "name" : { "first" : "Kristen", "last" : "Nygaard" }, … }
+----
+    .. ¿Se usa el índice definido para resolver la consulta? 
+    .. ¿Cuántas entradas del índice analiza la consulta? 
+    .. ¿Es posible resolver la consulta usando sólo el índice? 
