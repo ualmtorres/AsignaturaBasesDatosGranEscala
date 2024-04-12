@@ -171,10 +171,16 @@ Archivo https://gist.github.com/ualmtorres/c85c3caf61eb9db953ebd5bd9d77ab53[dock
 * http://ualmtorres.github.io/howtos/MongoDBJava/[Tutorial: Interacción con MongoDB desde Java]
 * link:Docs/Tema3/Enlaces.html[Enlaces de interés]
 
-### Tema 4.
+### Tema 4. Bases de datos orientadas a grafos
 
 * https://docs.google.com/presentation/d/1Fgi6YYBOGAYAQWEyzLL8yGep22sMo0DR2RreYIZRyj4/edit?usp=sharing[Presentación]
 * link:Docs/Tema4/Enlaces.html[Enlaces de interés]
+
+### Tema 5. Bases de datos orientadas a columnas
+
+* https://docs.google.com/presentation/d/1pHhOeKbeO4k2nzbZLoFeTx72kzUyDvhzGRCGfajk4no/edit?usp=sharing[Presentación]
+* https://ualmtorres.github.io/SeminarioCassandra[Tutorial de Cassandra]
+* link:Docs/Tema5/Enlaces.html[Enlaces de interés]
 
 ## Trabajo autónomo
 
