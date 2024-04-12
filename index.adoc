@@ -179,7 +179,10 @@ Archivo https://gist.github.com/ualmtorres/c85c3caf61eb9db953ebd5bd9d77ab53[dock
 ### Tema 5. Bases de datos orientadas a columnas
 
 * https://docs.google.com/presentation/d/1pHhOeKbeO4k2nzbZLoFeTx72kzUyDvhzGRCGfajk4no/edit?usp=sharing[Presentación]
-* https://ualmtorres.github.io/SeminarioCassandra[Tutorial de Cassandra]
+* https://gist.github.com/ualmtorres/ca414f89b11765a651e32f9f48b08d42[Cassandra con Docker]
+* https://github.com/ualmtorres/CassandraDocker[Cassandra con Docker Compose]
+* https://ualmtorres.github.io/SeminarioCassandra[Tutorial: Cassandra]
+* https://gist.github.com/ualmtorres/0c3cb28cf35401d9ac984f2f02895dd4[Scripts Tutorial Cassandra]
 * link:Docs/Tema5/Enlaces.html[Enlaces de interés]
 
 ## Trabajo autónomo
