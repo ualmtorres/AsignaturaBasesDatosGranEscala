@@ -54,7 +54,7 @@ image::../images/di.png[]
 
 ** Contenidos
 *** https://docs.google.com/presentation/d/1jFvI2dYeVBPPnwzm8q4CmO2ABXXxSfThHPg33eHEHck/edit?usp=sharing[Presentación: El fenómeno NoSQL, windows=blank]
-*** link:Docs/Tema1/Enlaces.html[Enlaces de interés, windows=blank]
+*** link:Tema1/Enlaces.html[Enlaces de interés, windows=blank]
 
 ** Actividades
 *** Sin actividades
@@ -77,7 +77,7 @@ image::../images/di.png[]
 *** http://ualmtorres.github.io/howtos/RedisPHP/[Tutorial: Interacción con Redis desde PHP]
 *** http://ualmtorres.github.io/howtos/RedisJava/[Tutorial: Interacción con Redis desde Java]
 *** http://ualmtorres.github.io/howtos/RedisPHP/PhalconRedisAPIREST/[Tutorial: Desarrollo de una API REST en PHP para Redis usando Phalcon]
-*** link:Docs/Tema2/Enlaces.html[Enlaces de interés]
+*** link:Tema2/Enlaces.html[Enlaces de interés]
 
 ** Actividades
 *** Sin actividades
@@ -103,10 +103,10 @@ image::../images/di.png[]
 *** link:Docs/Tema3/Enlaces.html[Enlaces de interés]
 
 ** Actividades
-*** link:Labs/Lab01/index.html[Lab 01. Consultas básicas en MongoDB]
-*** link:Labs/Lab02/index.html[Lab 02. Manejo de índices en MongoDB]
-*** link:Labs/Lab03/index.html[Lab 03. Desarrollo de un Blog con PHP y MongoDB]
-*** link:Labs/Lab04/index.html[Lab 04. Framework de Agregación de MongoDB]
+*** link:../Labs/Lab01/index.html[Lab 01. Consultas básicas en MongoDB]
+*** link:../Labs/Lab02/index.html[Lab 02. Manejo de índices en MongoDB]
+*** link:../Labs/Lab03/index.html[Lab 03. Desarrollo de un Blog con PHP y MongoDB]
+*** link:../Labs/Lab04/index.html[Lab 04. Framework de Agregación de MongoDB]
 
 ** Metodología
 *** Clases teórico-prácticas con presentaciones y tutoriales de casos prácticos. 
@@ -123,11 +123,11 @@ image::../images/di.png[]
 
 ** Contenidos
 *** https://docs.google.com/presentation/d/1Fgi6YYBOGAYAQWEyzLL8yGep22sMo0DR2RreYIZRyj4/edit?usp=sharing[Presentación]
-*** link:Docs/Tema4/Enlaces.html[Enlaces de interés]
+*** link:Tema4/Enlaces.html[Enlaces de interés]
 
 ** Actividades
-*** link:Labs/Lab05/index.html[Lab 05. Consultas en Neo4j]
-*** link:Labs/Lab06/index.html[Lab 06. Desarrollo de un aplicación PHP para la consulta de información cinematográfica almacenada en Neo4j]
+*** link:../Labs/Lab05/index.html[Lab 05. Consultas en Neo4j]
+*** link:../Labs/Lab06/index.html[Lab 06. Desarrollo de un aplicación PHP para la consulta de información cinematográfica almacenada en Neo4j]
 
 ** Metodología
 *** Clases teórico-prácticas con presentaciones y tutoriales de casos prácticos. 
@@ -148,7 +148,7 @@ image::../images/di.png[]
 *** https://github.com/ualmtorres/CassandraDocker[Cassandra con Docker Compose]
 *** https://ualmtorres.github.io/SeminarioCassandra[Tutorial: Cassandra]
 *** https://gist.github.com/ualmtorres/0c3cb28cf35401d9ac984f2f02895dd4[Scripts Tutorial Cassandra]
-*** link:Docs/Tema5/Enlaces.html[Enlaces de interés]
+*** link:Tema5/Enlaces.html[Enlaces de interés]
 
 ** Actividades
 *** Sin actividades
