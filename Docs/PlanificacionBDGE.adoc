@@ -100,7 +100,7 @@ image::../images/di.png[]
 *** Archivo https://gist.github.com/ualmtorres/48fd676d2e07cd9c905caf7fed3f5bbf[docker-compose.yml] con MongoDB y Mongo-express
 *** http://ualmtorres.github.io/howtos/MongoDBPHP/[Tutorial: Interacción con MongoDB desde PHP]
 *** http://ualmtorres.github.io/howtos/MongoDBJava/[Tutorial: Interacción con MongoDB desde Java]
-*** link:Docs/Tema3/Enlaces.html[Enlaces de interés]
+*** link:Tema3/Enlaces.html[Enlaces de interés]
 
 ** Actividades
 *** link:../Labs/Lab01/index.html[Lab 01. Consultas básicas en MongoDB]
