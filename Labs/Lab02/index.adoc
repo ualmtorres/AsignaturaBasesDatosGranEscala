@@ -56,7 +56,7 @@ Puedes obtener más información sobre cómo trabajar con MongoDB siguiendo esto
 
 ## Actividades
 
-. Importar el archivo JSON `zips.json` disponible en la carpeta link:../../SampleDatabases/[SampleDatabases] en una colección `zips` dentro de una base de datos denominada `zips`.
+. Importar el archivo JSON `zips.json` disponible en la carpeta link:https://github.com/ualmtorres/SampleDatabases[SampleDatabases] en una colección `zips` dentro de una base de datos denominada `zips`.
 
 . Obtener cuántos índices hay definidos y cuáles son los nombres de los índices 
 

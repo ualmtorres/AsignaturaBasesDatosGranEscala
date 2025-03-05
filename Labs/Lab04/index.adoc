@@ -39,7 +39,7 @@ COLOCA A CONTINUACION LOS OBJETIVOS
 .Prerrequisitos
 ****
 * Tener configurado el entorno de desarrollo de la asignatura.
-* Importar el archivo JSON `zips.json` disponible en link:../../SampleDatabases[SampleDatabases] en una colección `zips` dentro de una base de datos denominada `zips`.
+* Importar el archivo JSON `zips.json` disponible en link:https://github.com/ualmtorres/SampleDatabases[SampleDatabases] en una colección `zips` dentro de una base de datos denominada `zips`.
 ****
 
 // Entrar en modo numerado de apartados
@@ -245,7 +245,7 @@ Resultado:
 +
 [NOTE]
 ====
-Puedes importar el archivo JSON `bios.json` disponible en link:../../SampleDatabases[SampleDatabases] en una colección `bios`.
+Puedes importar el archivo JSON `bios.json` disponible en link:https://github.com/ualmtorres/SampleDatabases[SampleDatabases] en una colección `bios`.
 ====
 +
 Resultado:

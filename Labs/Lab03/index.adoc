@@ -68,7 +68,7 @@ Desarrollar una aplicación web en PHP sobre una base de datos MongoDB como la q
 
 ### Ejercicios propuestos
 
-. Importar el archivo JSON `posts.json` disponible en link:../../SampleDatabases[SampleDatabases] en una colección `posts` dentro de una base de datos denominada `blog`.
+. Importar el archivo JSON `posts.json` disponible en link:https://github.com/ualmtorres/SampleDatabases[SampleDatabases] en una colección `posts` dentro de una base de datos denominada `blog`.
 
 . Hacer un fork de https://gitlab.com/ualmtorres/MongoDBIncompleto.git[https://gitlab.com/ualmtorres/MongoDBIncompleto.git]
 

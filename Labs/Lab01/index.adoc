@@ -55,7 +55,7 @@ Puedes obtener más información sobre cómo trabajar con MongoDB siguiendo esto
 
 ## Actividades
 
-. Importar el archivo JSON `zips.json` disponible en la carpeta link:../../SampleDatabases/[SampleDatabases] en una colección `zips` dentro de una base de datos denominada `zips`.
+. Importar el archivo JSON `zips.json` disponible en la carpeta link:https://github.com/ualmtorres/SampleDatabases[SampleDatabases] en una colección `zips` dentro de una base de datos denominada `zips`.
 . Crear una consulta que recupere los documentos de ciudades del estado `AL` con población superior a 40000 habitantes
 +
 Resultado:
@@ -97,7 +97,7 @@ Resultado:
 +
 Resultado: 89
 
-. Importar el archivo JSON `bios.json` disponible en link:../../SampleDatabases[SampleDatabases] en una colección `bios` dentro de la base de datos denominada `test`.
+. Importar el archivo JSON `bios.json` disponible en link:../../../SampleDatabases[SampleDatabases] en una colección `bios` dentro de la base de datos denominada `test`.
 
 . Escribir una consulta que recupere el nombre y apellidos de celebridades que hayan obtenido un premio después del año 2000.
 +
