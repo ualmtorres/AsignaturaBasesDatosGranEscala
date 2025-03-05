@@ -13,7 +13,7 @@ Codificación, idioma, tabla de contenidos, tipo de documento
 Nombre y título del trabajo
 ////
 # Bases de datos a gran escala
-Máster en Tecnologías y Aplicaciones en Ingeniería Informática. Manuel Torres <mtorres@ual.es>
+Máster en Ingeniería Informática. Manuel Torres <mtorres@ual.es>
 
 
 image::images/di.png[]
@@ -27,7 +27,7 @@ image::images/di.png[]
 ////
 COLOCA A CONTINUACION EL RESUMEN
 ////
-La asignatura Bases de datos a gran escala es una asignatura optativa del módulo de Especialidad en Big Data del https://www.ual.es/estudios/masteres/presentacion/7114[Máster oficial en Tecnologías y Aplicaciones en Ingeniería Informática] de la UAL. En la asignatura se hace una introducción a las bases de datos no relacionales (NoSQL) y a su uso en aplicaciones escalables.
+La asignatura Bases de datos a gran escala es una asignatura optativa del módulo de Especialidad en Big Data del https://www.ual.es/estudios/masteres/presentacion/7114[Máster oficial en Ingeniería Informática] de la UAL. En la asignatura se hace una introducción a las bases de datos no relacionales (NoSQL) y a su uso en aplicaciones escalables.
 
 ////
 COLOCA A CONTINUACION LOS OBJETIVOS
@@ -155,11 +155,12 @@ Archivo https://gist.github.com/ualmtorres/c85c3caf61eb9db953ebd5bd9d77ab53[dock
 ### Tema 2. Bases de datos clave-valor
 
 * https://docs.google.com/presentation/d/1zzATSnpLQf2-7dmB-yRJkogC9e-HRd5YT5brjLgGiig/edit?usp=sharing[Presentación]
+* https://ualmtorres.github.io/posts/bases-de-datos-clave-valor[Bases de datos clave-valor]
 * https://ualmtorres.github.io/SeminarioRedis[Código de ejemplos de la presentación]
 * Archivo https://gist.github.com/ualmtorres/102a65abc4fea2f3929b48d6803a6b87[docker-compose.yml] con Redis y Redis Commander
 * http://ualmtorres.github.io/howtos/RedisPHP/[Tutorial: Interacción con Redis desde PHP]
 * http://ualmtorres.github.io/howtos/RedisJava/[Tutorial: Interacción con Redis desde Java]
-* http://ualmtorres.github.io/howtos/RedisPHP/PhalconRedisAPIREST/[Tutorial: Desarrollo de una API REST en PHP para Redis usando Phalcon]
+* https://ualmtorres.github.io/posts/tutorial-api-rest-slim-redis-ofertas-flash[Desarrollo de una API REST para gestión de ofertas flash con Slim Framework y Redis]
 * link:Docs/Tema2/Enlaces.html[Enlaces de interés]
 
 ### Tema 3. Bases de datos orientadas a documentos
@@ -169,11 +170,13 @@ Archivo https://gist.github.com/ualmtorres/c85c3caf61eb9db953ebd5bd9d77ab53[dock
 * Archivo https://gist.github.com/ualmtorres/48fd676d2e07cd9c905caf7fed3f5bbf[docker-compose.yml] con MongoDB y Mongo-express
 * http://ualmtorres.github.io/howtos/MongoDBPHP/[Tutorial: Interacción con MongoDB desde PHP]
 * http://ualmtorres.github.io/howtos/MongoDBJava/[Tutorial: Interacción con MongoDB desde Java]
+* https://ualmtorres.github.io/posts/tutorial-api-rest-slim-mongodb-productos-valoraciones[Desarrollo de una API REST para gestión de productos y valoraciones con Slim Framework y MongoDB]
 * link:Docs/Tema3/Enlaces.html[Enlaces de interés]
 
 ### Tema 4. Bases de datos orientadas a grafos
 
 * https://docs.google.com/presentation/d/1Fgi6YYBOGAYAQWEyzLL8yGep22sMo0DR2RreYIZRyj4/edit?usp=sharing[Presentación]
+* https://ualmtorres.github.io/posts/tutorial-api-rest-slim-neo4j-recomendaciones[Desarrollo de una API REST para gestión de recomendaciones con Slim Framework y Neo4j]
 * link:Docs/Tema4/Enlaces.html[Enlaces de interés]
 
 ### Tema 5. Bases de datos orientadas a columnas
@@ -183,6 +186,7 @@ Archivo https://gist.github.com/ualmtorres/c85c3caf61eb9db953ebd5bd9d77ab53[dock
 * https://github.com/ualmtorres/CassandraDocker[Cassandra con Docker Compose]
 * https://ualmtorres.github.io/SeminarioCassandra[Tutorial: Cassandra]
 * https://gist.github.com/ualmtorres/0c3cb28cf35401d9ac984f2f02895dd4[Scripts Tutorial Cassandra]
+* https://ualmtorres.github.io/posts/tutorial-api-rest-express-cassandra-pedidos[Desarrollo de una API REST para gestión historial de pedidos y seguimiento en tiempo real con Express y Cassandra]
 * link:Docs/Tema5/Enlaces.html[Enlaces de interés]
 
 ## Trabajo autónomo
@@ -198,7 +202,11 @@ Archivo https://gist.github.com/ualmtorres/c85c3caf61eb9db953ebd5bd9d77ab53[dock
 ****
 Puedes profundizar en contenidos de la asignatura a través de estos recursos:
 
-* No disponible aún.
+* https://ualmtorres.github.io/posts/tutorial-api-rest-slim-redis-ofertas-flash[Desarrollo de una API REST para gestión de ofertas flash con Slim Framework y Redis]
+* https://ualmtorres.github.io/posts/tutorial-api-rest-slim-mongodb-productos-valoraciones[Desarrollo de una API REST para gestión de productos y valoraciones con Slim Framework y MongoDB]
+* https://ualmtorres.github.io/posts/tutorial-api-rest-slim-neo4j-recomendaciones[Desarrollo de una API REST para gestión de recomendaciones con Slim Framework y Neo4j]
+* https://ualmtorres.github.io/posts/tutorial-api-rest-express-cassandra-pedidos[Desarrollo de una API REST para gestión historial de pedidos y seguimiento en tiempo real con Express y Cassandra]
+
 ****
 
 ## Actividades no presenciales

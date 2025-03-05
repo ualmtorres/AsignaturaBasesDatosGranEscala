@@ -13,7 +13,7 @@ Codificación, idioma, tabla de contenidos, tipo de documento
 Nombre y título del trabajo
 ////
 # Lab 02 Bases de datos a gran escala. Indexación en MongoDB
-Máster en Tecnologías y Aplicaciones en Ingeniería Informática
+Máster en Ingeniería Informática
 Manuel Torres <mtorres@ual.es>
 
 

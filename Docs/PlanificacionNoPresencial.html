@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Asciidoctor 2.0.18">
+<meta name="generator" content="Asciidoctor 2.0.22">
 <meta name="author" content="Manuel Torres">
 <title>Planificación recomendada para seguir la parte no presencial de BDGE</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
@@ -141,7 +141,7 @@ p a>code:hover{color:rgba(0,0,0,.9)}
 #content::before{content:none}
 #header>h1:first-child{color:rgba(0,0,0,.85);margin-top:2.25rem;margin-bottom:0}
 #header>h1:first-child+#toc{margin-top:8px;border-top:1px solid #dddddf}
-#header>h1:only-child,body.toc2 #header>h1:nth-last-child(2){border-bottom:1px solid #dddddf;padding-bottom:8px}
+#header>h1:only-child{border-bottom:1px solid #dddddf;padding-bottom:8px}
 #header .details{border-bottom:1px solid #dddddf;line-height:1.45;padding-top:.25em;padding-bottom:.25em;padding-left:.25em;color:rgba(0,0,0,.6);display:flex;flex-flow:row wrap}
 #header .details span:first-child{margin-left:-.125em}
 #header .details span.email a{color:rgba(0,0,0,.85)}
@@ -163,6 +163,7 @@ p a>code:hover{color:rgba(0,0,0,.9)}
 #toctitle{color:#7a2518;font-size:1.2em}
 @media screen and (min-width:768px){#toctitle{font-size:1.375em}
 body.toc2{padding-left:15em;padding-right:0}
+body.toc2 #header>h1:nth-last-child(2){border-bottom:1px solid #dddddf;padding-bottom:8px}
 #toc.toc2{margin-top:0!important;background:#f8f8f7;position:fixed;width:15em;left:0;top:0;border-right:1px solid #e7e7e9;border-top-width:0!important;border-bottom-width:0!important;z-index:1000;padding:1.25em 1em;height:100%;overflow:auto}
 #toc.toc2 #toctitle{margin-top:0;margin-bottom:.8rem;font-size:1.2em}
 #toc.toc2>ul{font-size:.9em;margin-bottom:0}
@@ -209,13 +210,10 @@ table.tableblock.fit-content>caption.title{white-space:nowrap;width:0}
 .admonitionblock>table td.content{padding-left:1.125em;padding-right:1.25em;border-left:1px solid #dddddf;color:rgba(0,0,0,.6);word-wrap:anywhere}
 .admonitionblock>table td.content>:last-child>:last-child{margin-bottom:0}
 .exampleblock>.content{border:1px solid #e6e6e6;margin-bottom:1.25em;padding:1.25em;background:#fff;border-radius:4px}
-.exampleblock>.content>:first-child{margin-top:0}
-.exampleblock>.content>:last-child{margin-bottom:0}
 .sidebarblock{border:1px solid #dbdbd6;margin-bottom:1.25em;padding:1.25em;background:#f3f3f2;border-radius:4px}
-.sidebarblock>:first-child{margin-top:0}
-.sidebarblock>:last-child{margin-bottom:0}
 .sidebarblock>.content>.title{color:#7a2518;margin-top:0;text-align:center}
-.exampleblock>.content>:last-child>:last-child,.exampleblock>.content .olist>ol>li:last-child>:last-child,.exampleblock>.content .ulist>ul>li:last-child>:last-child,.exampleblock>.content .qlist>ol>li:last-child>:last-child,.sidebarblock>.content>:last-child>:last-child,.sidebarblock>.content .olist>ol>li:last-child>:last-child,.sidebarblock>.content .ulist>ul>li:last-child>:last-child,.sidebarblock>.content .qlist>ol>li:last-child>:last-child{margin-bottom:0}
+.exampleblock>.content>:first-child,.sidebarblock>.content>:first-child{margin-top:0}
+.exampleblock>.content>:last-child,.exampleblock>.content>:last-child>:last-child,.exampleblock>.content .olist>ol>li:last-child>:last-child,.exampleblock>.content .ulist>ul>li:last-child>:last-child,.exampleblock>.content .qlist>ol>li:last-child>:last-child,.sidebarblock>.content>:last-child,.sidebarblock>.content>:last-child>:last-child,.sidebarblock>.content .olist>ol>li:last-child>:last-child,.sidebarblock>.content .ulist>ul>li:last-child>:last-child,.sidebarblock>.content .qlist>ol>li:last-child>:last-child{margin-bottom:0}
 .literalblock pre,.listingblock>.content>pre{border-radius:4px;overflow-x:auto;padding:1em;font-size:.8125em}
 @media screen and (min-width:768px){.literalblock pre,.listingblock>.content>pre{font-size:.90625em}}
 @media screen and (min-width:1280px){.literalblock pre,.listingblock>.content>pre{font-size:1em}}
@@ -331,7 +329,7 @@ a.image{text-decoration:none;display:inline-block}
 a.image object{pointer-events:none}
 sup.footnote,sup.footnoteref{font-size:.875em;position:static;vertical-align:super}
 sup.footnote a,sup.footnoteref a{text-decoration:none}
-sup.footnote a:active,sup.footnoteref a:active{text-decoration:underline}
+sup.footnote a:active,sup.footnoteref a:active,#footnotes .footnote a:first-of-type:active{text-decoration:underline}
 #footnotes{padding-top:.75em;padding-bottom:.75em;margin-bottom:.625em}
 #footnotes hr{width:20%;min-width:6.25em;margin:-.25em 0 .75em;border-width:1px 0 0}
 #footnotes .footnote{padding:0 .375em 0 .225em;line-height:1.3334;font-size:.875em;margin-left:1.2em;margin-bottom:.2em}
@@ -394,7 +392,7 @@ b.conum *{color:inherit!important}
 dt,th.tableblock,td.content,div.footnote{text-rendering:optimizeLegibility}
 h1,h2,p,td.content,span.alt,summary{letter-spacing:-.01em}
 p strong,td.content strong,div.footnote strong{letter-spacing:-.005em}
-p,blockquote,dt,td.content,span.alt,summary{font-size:1.0625rem}
+p,blockquote,dt,td.content,td.hdlist1,span.alt,summary{font-size:1.0625rem}
 p{margin-bottom:1.25rem}
 .sidebarblock p,.sidebarblock dt,.sidebarblock td.content,p.tableblock{font-size:1em}
 .exampleblock>.content{background:#fffef7;border-color:#e0e0dc;box-shadow:0 1px 4px #e0e0dc}
@@ -436,7 +434,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 #footer-text{color:rgba(0,0,0,.6);font-size:.9em}}
 @media amzn-kf8{#header,#content,#footnotes,#footer{padding:0}}
 </style>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/styles/github.min.css">
 </head>
 <body class="book toc2 toc-right">
 <div id="header">
@@ -448,16 +445,15 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="toc" class="toc2">
 <div id="toctitle">Tabla de contenidos</div>
 <ul class="sectlevel1">
-<li><a href="#resumen">Resumen</a></li>
-<li><a href="#planificación-recomendada">1. Planificación recomendada</a>
+<li><a href="#_resumen">Resumen</a></li>
+<li><a href="#_planificación_recomendada">1. Planificación recomendada</a>
 <ul class="sectlevel2">
-<li><a href="#semana-1">Semana 1</a></li>
-<li><a href="#semana-2">Semana 2</a></li>
-<li><a href="#semana-3">Semana 3</a></li>
-<li><a href="#semana-4">Semana 4</a></li>
-<li><a href="#semana-5">Semana 5</a></li>
-<li><a href="#semana-6">Semana 6</a></li>
-<li><a href="#semana-7">Semana 7</a></li>
+<li><a href="#_semana_1">Semana 1</a></li>
+<li><a href="#_semana_2">Semana 2</a></li>
+<li><a href="#_semana_3">Semana 3</a></li>
+<li><a href="#_semana_4">Semana 4</a></li>
+<li><a href="#_semana_6">Semana 6</a></li>
+<li><a href="#_semana_8">Semana 8</a></li>
 </ul>
 </li>
 </ul>
@@ -468,13 +464,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sectionbody">
 <div class="imageblock">
 <div class="content">
-<img src="data:image/png;base64," alt="di">
+<img src="images/di.png" alt="di">
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="resumen"><a class="anchor" href="#resumen"></a>Resumen</h2>
+<h2 id="_resumen">Resumen</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Planificación recomendada para seguir la parte no presencial durante el desarrollo de la asignatura de Bases de datos a gran escala.</p>
@@ -490,7 +486,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect1">
-<h2 id="planificación-recomendada"><a class="anchor" href="#planificación-recomendada"></a>1. Planificación recomendada</h2>
+<h2 id="_planificación_recomendada">1. Planificación recomendada</h2>
 <div class="sectionbody">
 <div class="admonitionblock note">
 <table>
@@ -507,7 +503,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </table>
 </div>
 <div class="sect2">
-<h3 id="semana-1"><a class="anchor" href="#semana-1"></a>Semana 1</h3>
+<h3 id="_semana_1">Semana 1</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -520,7 +516,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect2">
-<h3 id="semana-2"><a class="anchor" href="#semana-2"></a>Semana 2</h3>
+<h3 id="_semana_2">Semana 2</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -533,17 +529,17 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect2">
-<h3 id="semana-3"><a class="anchor" href="#semana-3"></a>Semana 3</h3>
+<h3 id="_semana_3">Semana 3</h3>
 <div class="ulist">
 <ul>
 <li>
-<p><a href="http://ualmtorres.github.io/howtos/RedisPHP/PhalconRedisAPIREST/">Desarrollo de una API REST para Redis en PHP usando Phalcon</a></p>
+<p><a href="https://ualmtorres.github.io/posts/tutorial-api-rest-slim-redis-ofertas-flash">Desarrollo de una API REST para gestión de ofertas flash con Slim Framework y Redis</a></p>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect2">
-<h3 id="semana-4"><a class="anchor" href="#semana-4"></a>Semana 4</h3>
+<h3 id="_semana_4">Semana 4</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -555,35 +551,28 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li>
 <p><a href="http://api.mongodb.org/java">MongoDB Java Drivers</a></p>
 </li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="semana-5"><a class="anchor" href="#semana-5"></a>Semana 5</h3>
-<div class="ulist">
-<ul>
 <li>
-<p><a href="http://ualmtorres.github.io/howtos/Neo4jPHP">Neo4j desde aplicaciones PHP</a></p>
+<p><a href="https://ualmtorres.github.io/posts/tutorial-api-rest-slim-mongodb-productos-valoraciones" class="bare">https://ualmtorres.github.io/posts/tutorial-api-rest-slim-mongodb-productos-valoraciones</a>[Desarrollo de una API REST para</p>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect2">
-<h3 id="semana-6"><a class="anchor" href="#semana-6"></a>Semana 6</h3>
+<h3 id="_semana_6">Semana 6</h3>
 <div class="ulist">
 <ul>
 <li>
-<p>To Do</p>
+<p><a href="https://ualmtorres.github.io/posts/tutorial-api-rest-slim-neo4j-recomendaciones">Desarrollo de una API REST para gestión de recomendaciones con Slim Framework y Neo4j</a></p>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect2">
-<h3 id="semana-7"><a class="anchor" href="#semana-7"></a>Semana 7</h3>
+<h3 id="_semana_8">Semana 8</h3>
 <div class="ulist">
 <ul>
 <li>
-<p>To Do</p>
+<p><a href="https://ualmtorres.github.io/posts/tutorial-api-rest-express-cassandra-pedidos">Desarrollo de una API REST para gestión historial de pedidos y seguimiento en tiempo real con Express y Cassandra</a></p>
 </li>
 </ul>
 </div>
@@ -593,15 +582,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2024-02-19 17:47:36 +0100
+Last updated 2025-03-05 14:06:44 +0100
 </div>
 </div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>
-<script>
-if (!hljs.initHighlighting.called) {
-  hljs.initHighlighting.called = true
-  ;[].slice.call(document.querySelectorAll('pre.highlight > code[data-lang]')).forEach(function (el) { hljs.highlightBlock(el) })
-}
-</script>
 </body>
 </html>

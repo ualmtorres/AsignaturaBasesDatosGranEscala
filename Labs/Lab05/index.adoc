@@ -12,7 +12,7 @@ Codificación, idioma, tabla de contenidos, tipo de documento
 ////
 Nombre y título del trabajo
 ////
-# Lab 05 Bases de datos a gran escala. Consultas en Neo4j. Máster en Tecnologías y Aplicaciones en Ingeniería Informática
+# Lab 05 Bases de datos a gran escala. Consultas en Neo4j. Máster en Ingeniería Informática
 Manuel Torres <mtorres@ual.es>
 
 

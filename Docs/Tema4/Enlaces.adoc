@@ -11,7 +11,7 @@ Codificación, idioma, tabla de contenidos, tipo de documento
 Nombre y título del trabajo
 ////
 # Enlaces de interés sobre XXX
-Bases de datos a gran escala - Máster en Tecnologías y Aplicaciones en Ingeniería Informática
+Bases de datos a gran escala - Máster en Ingeniería Informática
 Manuel Torres <mtorres@ual.es>
 
 

@@ -12,7 +12,7 @@ Codificación, idioma, tabla de contenidos, tipo de documento
 ////
 Nombre y título del trabajo
 ////
-# Lab 03 Bases de datos a gran escala. Desarrollo de un Blog con PHP y MongoDB. Máster en Tecnologías y Aplicaciones en Ingeniería Informática
+# Lab 03 Bases de datos a gran escala. Desarrollo de un Blog con PHP y MongoDB. Máster en Ingeniería Informática
 Manuel Torres <mtorres@ual.es>
 
 

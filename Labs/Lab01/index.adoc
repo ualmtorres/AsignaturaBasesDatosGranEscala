@@ -13,7 +13,7 @@ Codificación, idioma, tabla de contenidos, tipo de documento
 Nombre y título del trabajo
 ////
 # Lab 01 Bases de datos a gran escala. Consultas en MongoDB
-Máster en Tecnologías y Aplicaciones en Ingeniería Informática
+Máster en Ingeniería Informática
 Manuel Torres <mtorres@ual.es>
 
 

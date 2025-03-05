@@ -13,7 +13,7 @@ Codificación, idioma, tabla de contenidos, tipo de documento
 Nombre y título del trabajo
 ////
 # Tema 5. XXX
-Máster en Tecnologías y Aplicaciones en Ingeniería Informática. Manuel Torres <mtorres@ual.es>
+Máster en Ingeniería Informática. Manuel Torres <mtorres@ual.es>
 
 
 image::../../images/di.png[]
