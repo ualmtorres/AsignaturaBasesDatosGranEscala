@@ -134,11 +134,6 @@ link:Docs/PlanificacionBDGE.html[Planificación de la asignatura]
 
 Si eres alumno de la asignatura en la UAL completa esta https://forms.gle/V43eetd5r7D4KYuU9[pequeña encuesta] que permita valorar tus conocimientos iniciales y adaptar el desarrollo de la asignatura.
 
-## Antes de comenzar
-
-* OpenStack-DI
-** https://ualmtorres.github.io/AsignaturaCloudComputing/Docs/Tema0/ActivacionCuentaOpenStackDI.html[Activación de cuenta OpenStack-DI]
-
 ## Recursos
 
 .Entorno básico de pruebas
