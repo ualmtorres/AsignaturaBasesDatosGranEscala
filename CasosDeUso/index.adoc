@@ -18,7 +18,7 @@ Nombre y título del trabajo
 Máster en Ingeniería Informática. Manuel Torres <mtorres@ual.es>
 
 
-image::images/di.png[]
+image::../images/di.png[]
 
 // NO CAMBIAR!! (Entrar en modo no numerado de apartados)
 :numbered!: 
@@ -68,3 +68,5 @@ En esta actividad se plantea desarrollar una plataforma que gestione informació
 * Coordinación de unidades de emergencia y rutas óptimas. El objetivo es coordinar la actuación de las unidades de emergencia y optimizar las rutas de desplazamiento, teniendo en cuenta la localización de los incidentes y la disponibilidad de recursos. Este componente se desarrollará con Neo4j, se modelará la red de emergencias como un grafo y se utilizarán algoritmos de búsqueda de caminos más cortos para coordinar las unidades de emergencia y mejorar la eficiencia en la asignación de recursos.
 
 * Registro histórico de intervenciones. El objetivo es almacenar datos históricos sobre intervenciones realizadas, tiempos de respuesta y recursos utilizados. Este componente se desarrollará con Cassandra y se utilizará un esquema diseñado para consultas rápidas sobre datos históricos, como obtener el historial de intervenciones en un incidente o analizar la eficiencia en la asignación de recursos en distintos tipos de incidentes.
+
+:link:gestionEmergenciasDesastresNaturales.html[Descripción detallada de la actividad]

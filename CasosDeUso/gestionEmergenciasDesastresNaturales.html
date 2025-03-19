@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.22">
 <meta name="author" content="Máster en Ingeniería Informática. Manuel Torres &lt;mtorres@ual.es&gt;">
-<title>Caso de uso. Gestión de una red de transporte y movilidad urbana</title>
+<title>Caso de uso. Gestión de emergencias y desastres naturales</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /*! Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
@@ -439,7 +439,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </head>
 <body class="book toc2 toc-right">
 <div id="header">
-<h1>Caso de uso. Gestión de una red de transporte y movilidad urbana</h1>
+<h1>Caso de uso. Gestión de emergencias y desastres naturales</h1>
 <div class="details">
 <span id="author" class="author">Máster en Ingeniería Informática. Manuel Torres &lt;mtorres@ual.es&gt;</span><br>
 </div>
@@ -447,25 +447,25 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="toctitle">Tabla de contenidos</div>
 <ul class="sectlevel1">
 <li><a href="#_resumen">Resumen</a></li>
-<li><a href="#_gestión_de_estaciones_y_ubicaciones_manejando_información_espacial_con_mongodb">1. Gestión de estaciones y ubicaciones manejando información espacial con MongoDB</a>
+<li><a href="#_gestión_de_incidentes_y_recursos_con_mongodb">1. Gestión de incidentes y recursos con MongoDB</a>
 <ul class="sectlevel2">
 <li><a href="#_diseño_de_la_base_de_datos">1.1. Diseño de la base de datos</a></li>
 <li><a href="#_desarrollo_de_la_api_rest">1.2. Desarrollo de la API REST</a></li>
 </ul>
 </li>
-<li><a href="#_gestión_de_disponibilidad_en_tiempo_real_con_redis">2. Gestión de disponibilidad en tiempo real con Redis</a>
+<li><a href="#_disponibilidad_de_recursos_y_alertas_en_tiempo_real_con_redis">2. Disponibilidad de recursos y alertas en tiempo real con Redis</a>
 <ul class="sectlevel2">
 <li><a href="#_diseño_de_la_base_de_datos_2">2.1. Diseño de la base de datos</a></li>
 <li><a href="#_desarrollo_de_la_api_rest_2">2.2. Desarrollo de la API REST</a></li>
 </ul>
 </li>
-<li><a href="#_recomendación_de_rutas_óptimas_y_conexiones_en_una_red_de_bicicletas_compartidas_con_neo4j">3. Recomendación de rutas óptimas y conexiones en una red de bicicletas compartidas con Neo4j</a>
+<li><a href="#_coordinación_de_unidades_de_emergencia_y_rutas_óptimas_con_neo4j">3. Coordinación de unidades de emergencia y rutas óptimas con Neo4j</a>
 <ul class="sectlevel2">
 <li><a href="#_diseño_de_la_base_de_datos_3">3.1. Diseño de la base de datos</a></li>
-<li><a href="#_desarrollo_de_la_api_rest_3">3.2. Desarrollo de la API REST</a></li>
+<li><a href="#_desarrollo_de_la_api_rest_3">3.2. 🔗 Desarrollo de la API REST</a></li>
 </ul>
 </li>
-<li><a href="#_registro_y_análisis_de_transacciones_en_un_sistema_de_pagos_electrónicos_con_cassandra">4. Registro y análisis de transacciones en un sistema de pagos electrónicos con Cassandra</a>
+<li><a href="#_registro_y_seguimiento_de_incidentes_con_cassandra">4. Registro y seguimiento de incidentes con Cassandra</a>
 <ul class="sectlevel2">
 <li><a href="#_diseño_de_la_base_de_datos_4">4.1. Diseño de la base de datos</a></li>
 <li><a href="#_desarrollo_de_la_api_rest_4">4.2. Desarrollo de la API REST</a></li>
@@ -489,109 +489,118 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h2 id="_resumen">Resumen</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Esta actividad se centra en el desarrollo de un sistema integral para gestionar una red de transporte y movilidad urbana, con un enfoque en la movilidad sostenible y la eficiencia en el transporte público. El sistema abarca diferentes aspectos de la movilidad urbana, incluyendo estaciones de bicicletas compartidas, rutas de autobuses, tráfico en tiempo real y pagos electrónicos. Los usuarios pueden consultar información sobre estaciones cercanas, optimizar rutas, recibir notificaciones sobre eventos de tráfico y realizar pagos de manera segura y eficiente. El sistema utiliza diferentes bases de datos NoSQL para manejar distintos aspectos:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>MongoDB para gestionar estaciones y ubicaciones, aprovechando sus capacidades de indexación espacial</p>
-</li>
-<li>
-<p>Redis para manejar la disponibilidad en tiempo real de las bicicletas</p>
-</li>
-<li>
-<p>Neo4j para recomendar rutas óptimas y conexiones entre usuarios</p>
-</li>
-<li>
-<p>Cassandra para registrar y analizar las transacciones de pago</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>El sistema proporciona APIs REST para cada componente, permitiendo registrar estaciones, consultar disponibilidad, recomendar rutas y gestionar pagos de manera eficiente y escalable.</p>
+<p>La gestión de emergencias y desastres naturales requiere soluciones tecnológicas avanzadas que permitan una respuesta rápida y eficiente. Este caso de uso explora cómo aprovechar bases de datos modernas como MongoDB, Redis, Neo4j y Cassandra para registrar, consultar y coordinar incidentes y recursos en tiempo real. A través del diseño de APIs REST y la implementación de funcionalidades clave como indexación espacial, publicación-suscripción y cálculo de rutas óptimas, se busca optimizar la toma de decisiones en situaciones críticas.</p>
 </div>
 <div class="ulist">
 <div class="title">Objetivos</div>
 <ul>
 <li>
-<p>Desarrollar un sistema de gestión integral para una red de transporte y movilidad urbana utilizando bases de datos NoSQL</p>
+<p>Diseñar una base de datos en MongoDB para registrar y consultar incidentes y recursos en tiempo real.</p>
 </li>
 <li>
-<p>Implementar la gestión de estaciones y ubicaciones con MongoDB, aprovechando sus capacidades de indexación espacial</p>
+<p>Implementar una API REST para gestionar incidentes y recursos utilizando MongoDB.</p>
 </li>
 <li>
-<p>Desarrollar un sistema de disponibilidad en tiempo real usando Redis y sus funcionalidades de caché y pub/sub</p>
+<p>Utilizar Redis para gestionar la disponibilidad de recursos y enviar alertas en tiempo real mediante publicación-suscripción.</p>
 </li>
 <li>
-<p>Crear un sistema de recomendación de rutas y conexiones sociales utilizando el modelo de grafos de Neo4j</p>
+<p>Desarrollar una API REST para interactuar con Redis y gestionar datos de disponibilidad y alertas.</p>
 </li>
 <li>
-<p>Implementar un sistema de registro y análisis de transacciones de pago con Cassandra</p>
+<p>Modelar la infraestructura vial en Neo4j para calcular rutas óptimas y coordinar unidades de emergencia.</p>
 </li>
 <li>
-<p>Diseñar e implementar APIs REST para cada componente del sistema</p>
+<p>Crear una API REST para asignar unidades de emergencia y calcular rutas óptimas con Neo4j.</p>
 </li>
 <li>
-<p>Integrar diferentes tecnologías NoSQL para crear una solución completa de movilidad urbana</p>
+<p>Utilizar Cassandra para registrar incidentes y su historial de actualizaciones.</p>
+</li>
+<li>
+<p>Implementar una API REST para consultar y actualizar incidentes en Cassandra.</p>
 </li>
 </ul>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_gestión_de_estaciones_y_ubicaciones_manejando_información_espacial_con_mongodb">1. Gestión de estaciones y ubicaciones manejando información espacial con MongoDB</h2>
+<h2 id="_gestión_de_incidentes_y_recursos_con_mongodb">1. Gestión de incidentes y recursos con MongoDB</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Una ciudad ha implementado un sistema de bicicletas compartidas con estaciones distribuidas en distintos puntos. Cada estación tiene un número de bicicletas disponibles y permite a los usuarios desbloquear una bicicleta y devolverla en cualquier estación de la red.</p>
-</div>
-<div class="paragraph">
-<p>Hay que desarrollar una API REST que permita:</p>
+<p>En una situación de emergencia, es fundamental poder registrar y localizar rápidamente incidentes como terremotos, incendios o inundaciones. Asimismo, es crucial identificar los recursos de respuesta cercanos, como hospitales, estaciones de bomberos y refugios. Esta práctica se enfoca en diseñar una base de datos en MongoDB que permita almacenar y consultar incidentes en tiempo real utilizando indexación espacial. Además, se desarrollará una API REST para gestionar estos datos de manera eficiente. Como casos de uso clave, se tendrían:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Registrar nuevas estaciones con información relevante.</p>
+<p>Registrar una nueva ruta de senderismo.</p>
 </li>
 <li>
-<p>Consultar estaciones cercanas a una ubicación dada.</p>
+<p>Obtener rutas cercanas a una ubicación.</p>
 </li>
 <li>
-<p>Obtener detalles de una estación específica.</p>
+<p>Consultar los detalles de una ruta específica.</p>
 </li>
 <li>
-<p>Actualizar el número de bicicletas disponibles en una estación.</p>
+<p>Registrar una valoración para una ruta.</p>
+</li>
+<li>
+<p>Obtener valoraciones de una ruta específica.</p>
 </li>
 </ul>
-</div>
-<div class="paragraph">
-<p>Para ello, se utilizará MongoDB y su funcionalidad de indexación espacial para almacenar y consultar información espacial.</p>
 </div>
 <div class="sect2">
 <h3 id="_diseño_de_la_base_de_datos">1.1. Diseño de la base de datos</h3>
 <div class="paragraph">
-<p>Hay que crear una colección <code>stations</code> que almacene la información de las estaciones. Cada documento de la colección tendrá la siguiente estructura:</p>
+<p>Para este escenario, se crearán dos colecciones principales:</p>
 </div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>incidents</strong>: Almacena las incidencias creadas, su ubicación y estado.</p>
+</li>
+<li>
+<p><strong>resources</strong>: Registra los recursos de respuesta disponibles, como hospitales y estaciones de bomberos.</p>
+</li>
+</ul>
+</div>
+<div class="sect3">
+<h4 id="_estructura_de_la_colección_incidents">1.1.1. Estructura de la colección <code>incidents</code></h4>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
-  "_id": ObjectId("..."),
-  "name": "Estación Central",
-  "location": {
-    "type": "Point",
-    "coordinates": [-3.7038, 40.4168]  # [longitud, latitud]
-  },
-  "total_slots": 20,
-  "available_bikes": 5,
-  "last_updated": ISODate("2025-03-19T10:00:00Z")
+  "incident_id": "inc123",
+  "type": "earthquake",
+  "severity": "high",
+  "location": { "type": "Point", "coordinates": [-118.2437, 34.0522] },
+  "reported_at": "2025-03-20T14:30:00Z",
+  "status": "active"
 }</code></pre>
 </div>
 </div>
+</div>
+<div class="sect3">
+<h4 id="_estructura_de_la_colección_resources">1.1.2. Estructura de la colección <code>resources</code></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "resource_id": "res456",
+  "type": "hospital",
+  "name": "General Hospital",
+  "capacity": 200,
+  "location": { "type": "Point", "coordinates": [-118.2500, 34.0500] }
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_creación_de_índices_espaciales">1.1.3. Creación de índices espaciales</h4>
 <div class="paragraph">
-<p>Para almacenar y consultar información espacial, se utilizará el índice geoespacial de MongoDB. El índice se creará sobre el campo <code>location</code> de la colección <code>stations</code>.</p>
+<p>Para almacenar y consultar información espacial, se utilizará el índice geoespacial de MongoDB. El índice se creará en el campo <code>location</code> de ambas colecciones.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">db.stations.createIndex({ location: "2dsphere" })</code></pre>
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">db.incidents.createIndex({ location: "2dsphere" });
+db.resources.createIndex({ location: "2dsphere" });</code></pre>
+</div>
 </div>
 </div>
 </div>
@@ -603,220 +612,261 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="ulist">
 <ul>
 <li>
-<p><code>POST /stations</code>: registra una nueva estación.</p>
+<p><code>POST /incidents</code>: registra una nueva incidencia.</p>
 </li>
 <li>
-<p><code>GET /stations/near</code>: consulta las estaciones cercanas a una ubicación dada.</p>
+<p><code>GET /incidents</code>: obtiene las incidencias cercanas a una ubicación.</p>
 </li>
 <li>
-<p><code>GET /stations/:id</code>: obtiene los detalles de una estación específica.</p>
+<p><code>POST /resources</code>: registra un nuevo recurso de respuesta.</p>
 </li>
 <li>
-<p><code>PUT /stations/:id</code>: actualiza el número de bicicletas disponibles en una estación.</p>
+<p><code>GET /resources</code>: obtiene los recursos cercanos a una ubicación.</p>
+</li>
+<li>
+<p><code>PUT /incidents/{incident_id}</code>: actualiza el estado de una incidencia.</p>
 </li>
 </ul>
 </div>
-<div class="paragraph">
-<p>Para registrar una nueva estación, se usará este cuerpo de ejemplo:</p>
-</div>
+<div class="sect3">
+<h4 id="_registrar_una_nueva_incidencia">1.2.1. Registrar una nueva incidencia</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Endpoint:</strong> <code>POST /incidents</code></p>
+</li>
+<li>
+<p><strong>Cuerpo de la petición:</strong></p>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
-  "name": "Estación Norte",
-  "location": {
-    "coordinates": [-3.701, 40.420]
-  },
-  "total_slots": 15,
-  "available_bikes": 10
+  "type": "fire",
+  "severity": "medium",
+  "location": { "type": "Point", "coordinates": [-118.255, 34.045] },
+  "reported_at": "2025-03-20T15:00:00Z",
+  "status": "active"
 }</code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>La respuesta será el documento de la estación registrado, incluyendo su identificador:</p>
-</div>
+</li>
+<li>
+<p><strong>Consulta MongoDB:</strong></p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
-  "message": "Estación creada correctamente",
-  "station_id": "605c72eaf1a2c9b44c8b4567"
-}</code></pre>
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">db.incidents.insertOne({
+  type: "fire",
+  severity: "medium",
+  location: { type: "Point", coordinates: [-118.255, 34.045] },
+  reported_at: ISODate("2025-03-20T15:00:00Z"),
+  status: "active"
+});</code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>La consulta asociada en MongoDB sería:</p>
+</li>
+</ul>
 </div>
+</div>
+<div class="sect3">
+<h4 id="_consultar_incidentes_cercanos">1.2.2. Consultar incidentes cercanos</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Endpoint:</strong> <code>GET /incidents?lat=34.0500&amp;lon=-118.2500&amp;radius=5000</code></p>
+</li>
+<li>
+<p><strong>Consulta MongoDB:</strong></p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">db.stations.insertOne(
-    {
-        name: "Estación Norte",
-        location: {
-            type: "Point",
-            coordinates: [-3.701, 40.420]
-        },
-        total_slots: 15,
-        available_bikes: 10,
-        last_updated: new Date()
-    }
-)</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Para consultar las estaciones cercanas a una ubicación, las coordenadas de la ubicación se pasarán como parámetros de consulta: <code>GET /stations/near?lat=40.4168&amp;long=-3.7038</code>. La respuesta será un array con las estaciones cercanas.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">[
-  {
-    "name": "Estación Central",
-    "distance": 500,
-    "available_bikes": 5,
-    "total_slots": 20
-  },
-  {
-    "name": "Estación Norte",
-    "distance": 1200,
-    "available_bikes": 10,
-    "total_slots": 15
-  }
-]</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>La consulta asociada en MongoDB sería:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">db.stations.find({
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">db.incidents.find({
   location: {
     $near: {
-      $geometry: {
-        type: "Point",
-        coordinates: [-3.7038, 40.4168]
-      },
-      $maxDistance: 2000  # Distancia máxima en metros
+      $geometry: { type: "Point", coordinates: [-118.2500, 34.0500] },
+      $maxDistance: 5000
     }
   }
-})</code></pre>
+});</code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>Para obtener los detalles de una estación específica, se usará la ruta <code>GET /stations/:id</code>, donde <code>:id</code> es el identificador de la estación. La respuesta será el documento de la estación.</p>
+</li>
+</ul>
 </div>
+</div>
+<div class="sect3">
+<h4 id="_registrar_un_recurso_de_emergencia">1.2.3. Registrar un recurso de emergencia</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Endpoint:</strong> <code>POST /resources</code></p>
+</li>
+<li>
+<p><strong>Cuerpo de la petición:</strong></p>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
-  "name": "Estación Central",
-  "location": {
-    "coordinates": [-3.7038, 40.4168]
-  },
-  "total_slots": 20,
-  "available_bikes": 5
+  "type": "fire_station",
+  "name": "Fire Station #1",
+  "capacity": 5,
+  "location": { "type": "Point", "coordinates": [-118.2600, 34.0480] }
 }</code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>La consulta asociada en MongoDB sería:</p>
-</div>
+</li>
+<li>
+<p><strong>Consulta MongoDB:</strong></p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">db.stations.findOne({ _id: ObjectId("605c72eaf1a2c9b44c8b4567") })</code></pre>
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">db.resources.insertOne({
+  type: "fire_station",
+  name: "Fire Station #1",
+  capacity: 5,
+  location: { type: "Point", coordinates: [-118.2600, 34.0480] }
+});</code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>Para actualizar el número de bicicletas disponibles en una estación, se usará la ruta <code>PUT /stations/:id</code>, donde <code>:id</code> es el identificador de la estación. Se enviará el número de bicicletas disponibles en el cuerpo de la petición.</p>
+</li>
+</ul>
 </div>
+</div>
+<div class="sect3">
+<h4 id="_buscar_recursos_cercanos">1.2.4. Buscar recursos cercanos</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Endpoint:</strong> <code>GET /resources?lat=34.0500&amp;lon=-118.2500&amp;radius=5000</code></p>
+</li>
+<li>
+<p><strong>Consulta MongoDB:</strong></p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">db.resources.find({
+  location: {
+    $near: {
+      $geometry: { type: "Point", coordinates: [-118.2500, 34.0500] },
+      $maxDistance: 5000
+    }
+  }
+});</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_actualizar_el_estado_de_un_incidente">1.2.5. Actualizar el estado de un incidente</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Endpoint:</strong> <code>PUT /incidents/{incident_id}</code></p>
+</li>
+<li>
+<p><strong>Cuerpo de la petición:</strong></p>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
-  "available_bikes": 7
+  "status": "resolved"
 }</code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>La respuesta será el documento de la estación actualizado.</p>
-</div>
+</li>
+<li>
+<p><strong>Consulta MongoDB:</strong></p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
-  "message": "Estación actualizada correctamente",
-}</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>La consulta asociada en MongoDB sería:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">db.stations.updateOne(
-  { _id: ObjectId("605c72eaf1a2c9b44c8b4567") },
-  { $set: { available_bikes: 3, last_updated: new Date() } }
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">db.incidents.updateOne(
+  { _id: ObjectId("inc123") },
+  { $set: { status: "resolved" } }
 );</code></pre>
+</div>
+</div>
+</li>
+</ul>
 </div>
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_gestión_de_disponibilidad_en_tiempo_real_con_redis">2. Gestión de disponibilidad en tiempo real con Redis</h2>
+<h2 id="_disponibilidad_de_recursos_y_alertas_en_tiempo_real_con_redis">2. Disponibilidad de recursos y alertas en tiempo real con Redis</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>En un sistema de bicicletas compartidas, es crucial conocer en tiempo real la disponibilidad de bicicletas en cada estación. Dado que la información de disponibilidad cambia constantemente y se necesita una respuesta inmediata a las consultas, se utilizará Redis para:</p>
+<p>La rapidez y eficiencia en la gestión de emergencias pueden marcar la diferencia entre salvar o perder vidas. Los sistemas tradicionales de gestión de emergencias a menudo se ven limitados por su capacidad de respuesta en tiempo real y su escalabilidad. Redis, con su arquitectura en memoria y sus capacidades de publicación-suscripción, ofrece una solución ideal para manejar la coordinación de recursos de emergencia y la distribución de alertas en tiempo real. En esta práctica utilizaremos Redis para gestionar la disponibilidad de unidades de emergencia (ambulancias, bomberos y refugios) y enviar notificaciones en tiempo real ante situaciones de crisis. Se trata de usar Redis como caché para gestionar la disponibilidad de unidades de emergencia en tiempo real, implementar un sistema de publicación-suscripción (pub/sub) para alertar a las unidades y otros sistemas de emergencias sobre incidentes detectados, y desarrollar una API REST para interactuar con Redis y gestionar los datos de disponibilidad y alertas.</p>
+</div>
+<div class="paragraph">
+<p>Hay que desarrollar una API REST que permita:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Almacenar en caché la disponibilidad de bicicletas en cada estación.</p>
+<p>Registrar la disponibilidad de una unidad de emergencia.</p>
 </li>
 <li>
-<p>Permitir consultas rápidas sobre la disponibilidad.</p>
+<p>Consultar la disponibilidad de una unidad específica.</p>
 </li>
 <li>
-<p>Usar publicación-suscripción para notificar cambios en la disponibilidad a los clientes interesados.</p>
+<p>Obtener la lista de todas las unidades disponibles.</p>
+</li>
+<li>
+<p>Marcar una unidad como ocupada.</p>
+</li>
+<li>
+<p>Enviar alertas en tiempo real a través del sistema de publicación-suscripción de Redis.</p>
+</li>
+<li>
+<p>Suscribirse a alertas para recibir notificaciones en tiempo real.</p>
 </li>
 </ul>
+</div>
+<div class="paragraph">
+<p>Para ello, se utilizará Redis y su funcionalidad de listas y colas para almacenar y consultar información en tiempo real, así como su mecanismo de publicación/suscripción para notificar a los usuarios sobre alertas y evacuaciones.</p>
 </div>
 <div class="sect2">
 <h3 id="_diseño_de_la_base_de_datos_2">2.1. Diseño de la base de datos</h3>
 <div class="paragraph">
-<p>Se utilizarán diferentes estructuras de Redis para modelar los datos:</p>
+<p>Se utilizarán las siguientes estructuras de Redis:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Hash (<code>HSET</code>) para almacenar la disponibilidad de cada estación.</p>
+<p><strong>Claves-valor</strong> para almacenar la disponibilidad de cada unidad.</p>
 </li>
-</ul>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">HSET stations:123 available_bikes 5 total_slots 20</code></pre>
-</div>
-</div>
-<div class="ulist">
-<ul>
 <li>
-<p>List (<code>LPUSH</code> y <code>LTRIM</code>) para almacenar un historial de cambios recientes en cada estación.</p>
+<p>Formato clave: <code>unit:&lt;id&gt;</code></p>
 </li>
-</ul>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">LPUSH history:stations:123 "2025-03-19T10:00:00Z: 5 bicicletas"
-LTRIM history:stations:123 0 9  # Mantener solo los últimos 10 cambios</code></pre>
-</div>
-</div>
-<div class="ulist">
-<ul>
 <li>
-<p>Pub/Sub (<code>PUBLISH</code>) para notificar cambios en la disponibilidad.</p>
-</li>
-</ul>
-</div>
+<p>Valor: JSON con estado y ubicación.</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">PUBLISH station_updates "Estación 123: 4 bicicletas disponibles"</code></pre>
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">SET unit:ambulance123 '{"status": "available", "location": [-118.25, 34.05]}'</code></pre>
 </div>
+</div>
+</li>
+<li>
+<p><strong>Conjuntos ordenados (Sorted Sets)</strong> para indexar unidades disponibles según su ubicación.</p>
+</li>
+<li>
+<p>Clave: <code>available_units</code></p>
+</li>
+<li>
+<p>Miembros: IDs de unidades con coordenadas como score.</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">ZADD available_units 34.05 ambulance123</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p><strong>Canales de publicación-suscripción</strong> para gestionar alertas en tiempo real.</p>
+</li>
+<li>
+<p>Canal: <code>alerts</code></p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">PUBLISH alerts "Incendio detectado en el distrito norte. Equipos de respuesta activados."</code></pre>
+</div>
+</div>
+</li>
+</ul>
 </div>
 </div>
 <div class="sect2">
@@ -827,147 +877,209 @@ LTRIM history:stations:123 0 9  # Mantener solo los últimos 10 cambios</code></
 <div class="ulist">
 <ul>
 <li>
-<p><code>GET /stations/{station_id}/availability</code>: consulta la disponibilidad de bicicletas en una estación.</p>
+<p><code>POST /units</code>: registrar una nueva unidad de emergencia.</p>
 </li>
 <li>
-<p><code>PUT /stations/{station_id}/availability</code>: actualiza la disponibilidad de bicicletas en una estación y notifica a los clientes interesados.</p>
+<p><code>GET /units/{id}</code>: obtener la disponibilidad de una unidad específica.</p>
 </li>
 <li>
-<p><code>WS /stations/{station_id}/updates</code>: establece una conexión WebSocket para recibir notificaciones en tiempo real sobre la disponibilidad de bicicletas.</p>
+<p><code>GET /units/available</code>: obtener la lista de todas las unidades disponibles.</p>
 </li>
 <li>
-<p><code>GET /stations/{station_id}/history</code>: consulta el historial de cambios en la disponibilidad de bicicletas de una estación.</p>
+<p><code>PUT /units/{id}/status</code>: marcar una unidad como ocupada.</p>
+</li>
+<li>
+<p><code>POST /alerts</code>: enviar una alerta en tiempo real.</p>
+</li>
+<li>
+<p>Suscribirse a alertas mediante un cliente de Redis.</p>
 </li>
 </ul>
 </div>
-<div class="paragraph">
-<p>Para consultar la disponibilidad de bicicletas en una estación, se usará la ruta <code>GET /stations/{station_id}/availability</code>, donde <code>{station_id}</code> es el identificador de la estación. La respuesta será la disponibilidad actual.</p>
-</div>
+<div class="sect3">
+<h4 id="_registrar_una_unidad_de_emergencia">2.2.1. Registrar una unidad de emergencia</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Endpoint:</strong> <code>POST /units</code></p>
+</li>
+<li>
+<p><strong>Entrada:</strong></p>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
-  "station_id": "123",
-  "available_bikes": 5,
-  "total_slots": 20
+  "id": "ambulance123",
+  "type": "ambulance",
+  "status": "available",
+  "location": [-118.25, 34.05]
 }</code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>La consulta asociada en Redis sería:</p>
-</div>
+</li>
+<li>
+<p><strong>Operación en Redis:</strong></p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">HGETALL stations:123</code></pre>
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">SET unit:ambulance123 '{"status": "available", "location": [-118.25, 34.05]}'
+ZADD available_units 34.05 ambulance123</code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>Para actualizar la disponibilidad de bicicletas en una estación, se usará la ruta <code>PUT /stations/{station_id}/availability</code>, donde <code>{station_id}</code> es el identificador de la estación. Se enviará el número de bicicletas disponibles en el cuerpo de la petición.</p>
+</li>
+</ul>
 </div>
+</div>
+<div class="sect3">
+<h4 id="_consultar_la_disponibilidad_de_una_unidad">2.2.2. Consultar la disponibilidad de una unidad</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Endpoint:</strong> <code>GET /units/{id}</code></p>
+</li>
+<li>
+<p><strong>Operación en Redis:</strong></p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">GET unit:ambulance123</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p><strong>Salida esperada:</strong></p>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
-  "available_bikes": 7
+  "status": "available",
+  "location": [-118.25, 34.05]
 }</code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>La respuesta será un mensaje de confirmación.</p>
+</li>
+</ul>
 </div>
+</div>
+<div class="sect3">
+<h4 id="_obtener_todas_las_unidades_disponibles">2.2.3. Obtener todas las unidades disponibles</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Endpoint:</strong> <code>GET /units/available</code></p>
+</li>
+<li>
+<p><strong>Operación en Redis:</strong></p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">ZRANGE available_units 0 -1</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p><strong>Salida esperada:</strong></p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">["ambulance123", "firetruck456"]</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_marcar_una_unidad_como_ocupada">2.2.4. Marcar una unidad como ocupada</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Endpoint:</strong> <code>PUT /units/{id}/status</code></p>
+</li>
+<li>
+<p><strong>Entrada:</strong></p>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
-  "message": "Disponibilidad actualizada correctamente",
+  "status": "occupied"
 }</code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>La consulta asociada en Redis sería:</p>
-</div>
+</li>
+<li>
+<p><strong>Operación en Redis:</strong></p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">HSET stations:123 available_bikes 7
-LPUSH history:stations:123 "2025-03-19T10:05:00Z: 7 bicicletas"
-LTRIM history:stations:123 0 9
-PUBLISH station_updates "Estación 123: 7 bicicletas disponibles"</code></pre>
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">SET unit:ambulance123 '{"status": "occupied", "location": [-118.25, 34.05]}'
+ZREM available_units ambulance123</code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>Para establecer una conexión WebSocket y recibir notificaciones en tiempo real sobre la disponibilidad de bicicletas, se usará la ruta <code>WS /stations/{station_id}/updates</code>, donde <code>{station_id}</code> es el identificador de la estación. La conexión WebSocket permitirá recibir mensajes de actualización en tiempo real.</p>
+</li>
+</ul>
 </div>
-<div class="paragraph">
-<p>La respuesta de evento recibido sería:</p>
 </div>
+<div class="sect3">
+<h4 id="_5_enviar_una_alerta_en_tiempo_real">2.2.5. 5. Enviar una alerta en tiempo real</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Endpoint:</strong> <code>POST /alerts</code></p>
+</li>
+<li>
+<p><strong>Entrada:</strong></p>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
-  "event": "availability_update",
-  "data": {
-    "station_id": "123",
-    "available_bikes": 7,
-    "total_slots": 20
-  }
+  "message": "Incendio detectado en el distrito norte. Equipos de respuesta activados."
 }</code></pre>
 </div>
 </div>
+</li>
+<li>
+<p><strong>Operación en Redis:</strong></p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">PUBLISH alerts "Incendio detectado en el distrito norte. Equipos de respuesta activados."</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_suscribirse_a_alertas">2.2.6. Suscribirse a alertas</h4>
 <div class="paragraph">
-<p>La consulta asociada en Redis sería:</p>
+<p>Para suscribirse al canal de alertas en Redis, se utilizará un cliente de Redis con la siguiente operación:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">SUBSCRIBE station_updates</code></pre>
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">SUBSCRIBE alerts</code></pre>
 </div>
-</div>
-<div class="paragraph">
-<p>Para consultar el historial de cambios en la disponibilidad de bicicletas de una estación, se usará la ruta <code>GET /stations/{station_id}/history</code>, donde <code>{station_id}</code> es el identificador de la estación. La respuesta será los últinos 10 cambios en la disponibilidad de la estación.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">[
-  {
-    "timestamp": "2025-03-19T10:00:00Z",
-    "available_bikes": 5
-  },
-  {
-    "timestamp": "2025-03-19T10:05:00Z",
-    "available_bikes": 7
-  }
-]</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>La consulta asociada en Redis sería:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">LRANGE history:stations:123 0 9</code></pre>
 </div>
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_recomendación_de_rutas_óptimas_y_conexiones_en_una_red_de_bicicletas_compartidas_con_neo4j">3. Recomendación de rutas óptimas y conexiones en una red de bicicletas compartidas con Neo4j</h2>
+<h2 id="_coordinación_de_unidades_de_emergencia_y_rutas_óptimas_con_neo4j">3. Coordinación de unidades de emergencia y rutas óptimas con Neo4j</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>El sistema de bicicletas compartidas debe recomendar a los usuarios la mejor ruta entre dos estaciones, considerando la disponibilidad de bicicletas y las distancias entre estaciones. Además, se modelarán relaciones entre usuarios para ofrecer sugerencias de compañeros de viaje basadas en hábitos similares. Como casos de uso clave, se tendrían:</p>
+<p>En situaciones de emergencia, la rapidez de respuesta es clave. Un sistema eficiente debe permitir asignar la unidad más cercana y calcular la ruta óptima hasta el lugar del incidente. En esta práctica, se utilizará Neo4j para modelar la infraestructura vial de una ciudad y optimizar el desplazamiento de ambulancias, bomberos y otras unidades de emergencia. Como casos de uso clave, se tendrían:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Recomendar la mejor ruta entre dos estaciones: Basado en la distancia y disponibilidad de bicicletas.</p>
+<p>Registrar una unidad de emergencia y su ubicación actual.</p>
 </li>
 <li>
-<p>Sugerir estaciones cercanas con disponibilidad: Para usuarios que buscan una bicicleta y su estación está llena.</p>
+<p>Informar de un incidente y asignar la unidad más cercana.</p>
 </li>
 <li>
-<p>Sugerir compañeros de viaje: Identificando usuarios con rutas y horarios similares.</p>
+<p>Calcular la ruta óptima desde una unidad hasta un incidente.</p>
+</li>
+<li>
+<p>Marcar un incidente como resuelto y liberar la unidad asignada.</p>
 </li>
 </ul>
 </div>
 <div class="sect2">
 <h3 id="_diseño_de_la_base_de_datos_3">3.1. Diseño de la base de datos</h3>
 <div class="paragraph">
-<p>Se representarán los datos con los siguientes nodos y relaciones:</p>
+<p>La base de datos se estructurará en un <strong>grafo dirigido</strong> con los siguientes nodos y relaciones:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -975,262 +1087,279 @@ PUBLISH station_updates "Estación 123: 7 bicicletas disponibles"</code></pre>
 <p>Nodos</p>
 </li>
 <li>
-<p><strong><code>Station</code></strong>: Representa una estación de bicicletas.</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
-  "station_id": "123",
-  "name": "Estación Central",
-  "latitude": 40.4168,
-  "longitude": -3.7038,
-  "available_bikes": 5,
-  "total_slots": 20
-}</code></pre>
-</div>
-</div>
+<p><strong>Ubicaciones (<code>Location</code>)</strong>: Representan intersecciones, hospitales, estaciones de bomberos, etc. Atributos: <code>id</code>, <code>name</code>, <code>type</code> (hospital, estación de bomberos, intersección), <code>coordinates</code> (latitud y longitud)</p>
 </li>
 <li>
-<p><strong><code>User</code></strong>: Representa un usuario del sistema.</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
-  "user_id": "u456",
-  "name": "Carlos",
-  "home_station": "123"
-}</code></pre>
-</div>
-</div>
+<p><strong>Unidades de emergencia (<code>EmergencyUnit</code>)</strong>: Representan ambulancias, camiones de bomberos, etc. Atributos: <code>id</code>, <code>type</code> (ambulancia, bomberos, policía), <code>status</code> (disponible, en servicio), <code>location_id</code> (ubicación actual)</p>
+</li>
+<li>
+<p><strong>Incidentes (<code>Incident</code>)</strong>: Ubicación donde se necesita asistencia. Atributos: <code>id</code>, <code>type</code> (incendio, accidente, emergencia médica), <code>location_id</code> (ubicación del incidente), <code>priority</code> (alta, media, baja)</p>
 </li>
 <li>
 <p>Relaciones</p>
 </li>
 <li>
-<p><strong><code>CONNECTED_TO`</code></strong>: Conexiones entre estaciones con distancia en km.</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">(:Station)-[:CONNECTED_TO]-&gt;(:Station)</code></pre>
-</div>
-</div>
+<p><code>(:Location)-[:CONNECTED_TO {distance, traffic_level}]&#8594;(:Location)</code>: Define las conexiones entre ubicaciones con información de distancia y tráfico.</p>
 </li>
 <li>
-<p><strong><code>USES`</code></strong>: Relación entre un usuario y su estación más frecuente.</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">(:User)-[:USES]-&gt;(:Station)</code></pre>
-</div>
-</div>
+<p><code>(:EmergencyUnit)-[:STATIONED_AT]&#8594;(:Location)</code>: Relaciona una unidad con su base.</p>
 </li>
 <li>
-<p><strong><code>RIDES_WITH`</code></strong>: Relación entre usuarios que han usado rutas similares en horarios cercanos.</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">(:User)-[:RIDES_WITH]-&gt;(:User)</code></pre>
-</div>
-</div>
+<p><code>(:EmergencyUnit)-[:RESPONDING_TO]&#8594;(:Incident)</code>: Indica que una unidad está en camino a un incidente.</p>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_desarrollo_de_la_api_rest_3">3.2. Desarrollo de la API REST</h3>
+<h3 id="_desarrollo_de_la_api_rest_3">3.2. 🔗 Desarrollo de la API REST</h3>
 <div class="paragraph">
 <p>Se desarrollará una API REST con las siguientes rutas:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><code>GET /routes?from={station_id}&amp;to={station_id}</code>: devuelve la mejor ruta en función de la distancia y disponibilidad de bicicletas.</p>
+<p><code>POST /units</code>: registrar una unidad de emergencia.</p>
 </li>
 <li>
-<p><code>GET /stations/{station_id}/nearby</code>: devuelve las estaciones cercanas con disponibilidad de bicicletas.</p>
+<p><code>POST /incidents</code>: reportar un incidente.</p>
 </li>
 <li>
-<p><code>GET /users/{user_id}/travelmates</code>: devuelve sugerencias de compañeros de viaje basadas en hábitos similares.</p>
+<p><code>GET /units/available</code>: obtener unidades disponibles cerca de un incidente.</p>
+</li>
+<li>
+<p><code>PUT /units/assign</code>: asignar una unidad de emergencia a un incidente.</p>
+</li>
+<li>
+<p><code>GET /routes</code>: calcular la ruta óptima hasta un incidente.</p>
+</li>
+<li>
+<p><code>PUT /incidents/resolve</code>: marcar un incidente como resuelto.</p>
 </li>
 </ul>
 </div>
-<div class="paragraph">
-<p>Para obtener la mejor ruta entre dos estaciones, se usará la ruta <code>GET /routes?from={station_id}&amp;to={station_id}</code>, donde <code>{station_id}</code> es el identificador de la estación de origen y destino. La respuesta será la mejor ruta en función de la distancia y disponibilidad de bicicletas.</p>
-</div>
+<div class="sect3">
+<h4 id="_registrar_una_unidad_de_emergencia_2">3.2.1. Registrar una unidad de emergencia</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>POST /units</strong></p>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
-  "route": [
-    {
-      "station_id": "123",
-      "name": "Estación Central",
-      "distance": 0.0,
-      "available_bikes": 5,
-      "total_slots": 20
-    },
-    {
-      "station_id": "456",
-      "name": "Estación Norte",
-      "distance": 2.5,
-      "available_bikes": 10,
-      "total_slots": 15
-    }
-  ],
-  "total_distance": 2.5
+    "id": "unit123",
+    "type": "ambulance",
+    "status": "available",
+    "location_id": "loc45"
+}</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p><strong>Cypher Query:</strong></p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-cypher hljs" data-lang="cypher">CREATE (u:EmergencyUnit {id: 'unit123', type: 'ambulance', status: 'available'})
+WITH u
+MATCH (l:Location {id: 'loc45'})
+CREATE (u)-[:STATIONED_AT]-&gt;(l);</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_reportar_un_incidente">3.2.2. Reportar un incidente</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>POST /incidents</strong></p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+    "id": "incident789",
+    "type": "accident",
+    "location_id": "loc89",
+    "priority": "high"
+}</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p><strong>Cypher Query:</strong></p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-cypher hljs" data-lang="cypher">MATCH (l:Location {id: 'loc89'})
+CREATE (i:Incident {id: 'incident789', type: 'accident', priority: 'high'})-[:LOCATED_AT]-&gt;(l);</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_obtener_unidades_disponibles_cerca_de_un_incidente">3.2.3. Obtener unidades disponibles cerca de un incidente</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>GET /units/available?incident_id=incident789</strong></p>
+</li>
+<li>
+<p><strong>Cypher Query:</strong></p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-cypher hljs" data-lang="cypher">MATCH (i:Incident {id: 'incident789'})-[:LOCATED_AT]-&gt;(loc:Location)
+MATCH (u:EmergencyUnit {status: 'available'})-[:STATIONED_AT]-&gt;(uLoc:Location)
+WITH u, loc, uLoc, point.distance(point({latitude: loc.coordinates[0], longitude: loc.coordinates[1]}), point({latitude: uLoc.coordinates[0], longitude: uLoc.coordinates[1]})) AS distance
+RETURN u.id, u.type, distance ORDER BY distance ASC LIMIT 3;</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_asignar_unidad_de_emergencia_a_un_incidente">3.2.4. Asignar unidad de emergencia a un incidente</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>PUT /units/assign</strong></p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+    "unit_id": "unit123",
+    "incident_id": "incident789"
 }</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>La consulta asociada en Neo4j sería:</p>
+<p><strong>Cypher Query:</strong></p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-cypher hljs" data-lang="cypher">MATCH p = shortestPath((s1:Station {station_id: "123"})-[:CONNECTED_TO*]-(s2:Station {station_id: "456"}))
-RETURN [n IN nodes(p) | {station_id: n.station_id, name: n.name, distance: n.distance, available_bikes: n.available_bikes, total_slots: n.total_slots}] AS route, reduce(s = 0.0, r IN relationships(p) | s + r.distance) AS total_distance</code></pre>
+<pre class="highlightjs highlight"><code class="language-cypher hljs" data-lang="cypher">MATCH (u:EmergencyUnit {id: 'unit123'}), (i:Incident {id: 'incident789'})
+MERGE (u)-[:RESPONDING_TO]-&gt;(i)
+SET u.status = 'en_route';</code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>Para obtener las estaciones cercanas con disponibilidad de bicicletas, se usará la ruta <code>GET /stations/{station_id}/nearby</code>, donde <code>{station_id}</code> es el identificador de la estación. La respuesta será un array con las estaciones cercanas y su disponibilidad.</p>
+</li>
+</ul>
 </div>
+</div>
+<div class="sect3">
+<h4 id="_calcular_ruta_óptima_hasta_un_incidente">3.2.5. Calcular ruta óptima hasta un incidente</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>GET /routes?unit_id=unit123&amp;incident_id=incident789</strong></p>
+</li>
+<li>
+<p><strong>Cypher Query:</strong></p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">[
-  {
-    "station_id": "456",
-    "name": "Estación Norte",
-    "distance": 2.5,
-    "available_bikes": 10,
-    "total_slots": 15
-  },
-  {
-    "station_id": "789",
-    "name": "Estación Sur",
-    "distance": 3.0,
-    "available_bikes": 8,
-    "total_slots": 12
-  }
-]</code></pre>
+<pre class="highlightjs highlight"><code class="language-cypher hljs" data-lang="cypher">MATCH (u:EmergencyUnit {id: 'unit123'})-[:STATIONED_AT]-&gt;(start:Location),
+      (i:Incident {id: 'incident789'})-[:LOCATED_AT]-&gt;(end:Location)
+CALL algo.shortestPath.stream(start, end, 'distance')
+YIELD nodeId, cost
+RETURN algo.getNodeById(nodeId) AS location, cost;</code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>La consulta asociada en Neo4j sería:</p>
+</li>
+</ul>
 </div>
+</div>
+<div class="sect3">
+<h4 id="_marcar_incidente_como_resuelto">3.2.6. Marcar incidente como resuelto</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>PUT /incidents/resolve</strong></p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-cypher hljs" data-lang="cypher">MATCH (s1:Station {station_id: "123"})-[:CONNECTED_TO]-(s2:Station)
-WHERE s2.available_bikes &gt; 0
-RETURN {station_id: s2.station_id, name: s2.name, distance: s2.distance, available_bikes: s2.available_bikes, total_slots: s2.total_slots} AS nearby_stations</code></pre>
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+    "incident_id": "incident789"
+}</code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>Para obtener sugerencias de compañeros de viaje basadas en hábitos similares, se usará la ruta <code>GET /users/{user_id}/travelmates</code>, donde <code>{user_id}</code> es el identificador del usuario. La respuesta será un array con los usuarios que han usado rutas similares en horarios cercanos.</p>
-</div>
+</li>
+<li>
+<p><strong>Cypher Query:</strong></p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">[
-  {
-    "user_id": "u789",
-    "name": "Laura",
-    "common_routes": 3
-  },
-  {
-    "user_id": "u234",
-    "name": "Pedro",
-    "common_routes": 2
-  }
-]</code></pre>
+<pre class="highlightjs highlight"><code class="language-cypher hljs" data-lang="cypher">MATCH (i:Incident {id: 'incident789'})
+DETACH DELETE i;
+MATCH (u:EmergencyUnit)-[r:RESPONDING_TO]-&gt;(i)
+SET u.status = 'available'
+DELETE r;</code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>La consulta asociada en Neo4j sería:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-cypher hljs" data-lang="cypher">MATCH (u1:User {user_id: "u456"})-[:RIDES_WITH]-(u2:User)
-RETURN {user_id: u2.user_id, name: u2.name, common_routes: count(*)} AS travelmates</code></pre>
+</li>
+</ul>
 </div>
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_registro_y_análisis_de_transacciones_en_un_sistema_de_pagos_electrónicos_con_cassandra">4. Registro y análisis de transacciones en un sistema de pagos electrónicos con Cassandra</h2>
+<h2 id="_registro_y_seguimiento_de_incidentes_con_cassandra">4. Registro y seguimiento de incidentes con Cassandra</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Un sistema de pagos electrónicos registra transacciones de usuarios al realizar pagos en comercios asociados. Cada transacción incluye información sobre el usuario, el comercio, el importe y la fecha. El sistema debe ser capaz de almacenar y analizar grandes volúmenes de transacciones para detectar patrones de uso, fraudes y tendencias de mercado. Como casos de uso clave, se tendrían:</p>
+<p>En esta práctica utilizaremos Cassandra para gestionar el almacenamiento de datos relacionados con incidentes de emergencia. Dado que Cassandra es altamente escalable y optimizado para escrituras rápidas, es ideal para almacenar eventos de incidentes y su historial de actualizaciones. Como casos de uso clave, se tendrían:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Registrar un pago: Almacenar de manera eficiente cada transacción con detalles del emisor, receptor y cantidad.</p>
+<p>Registrar un incidente con detalles como ubicación, tipo de incidente y estado actual.</p>
 </li>
 <li>
-<p>Consultar pagos de un usuario: Recuperar el historial de pagos de un usuario de forma optimizada.</p>
+<p>Obtener los incidentes activos ordenados por fecha de reporte.</p>
 </li>
 <li>
-<p>Consultar pagos en un intervalo de fechas: Obtener pagos en un rango de fechas para facilitar análisis financieros.</p>
+<p>Actualizar el estado de un incidente (ejemplo: "En curso" → "Resuelto").</p>
 </li>
 <li>
-<p>Consultar pagos por estado: Filtrar pagos por estado (pendiente, completado, fallido, etc.).</p>
+<p>Consultar el historial de cambios de un incidente para conocer su evolución.</p>
 </li>
 </ul>
 </div>
 <div class="sect2">
 <h3 id="_diseño_de_la_base_de_datos_4">4.1. Diseño de la base de datos</h3>
 <div class="paragraph">
-<p>Se utilizará Cassandra para almacenar las transacciones con un esquema diseñado para consultas rápidas sobre datos históricos. Se crearán las siguientes tablas:</p>
+<p>Se utilizará Cassandra para almacenar los datos de incidentes y su historial de cambios. Se crearán dos tablas principales:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><code>transactions</code>: Almacena las transacciones de manera eficiente.</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-cql hljs" data-lang="cql">CREATE TABLE transactions (
-  transaction_id UUID,
-  user_id UUID,
-  recipient_id UUID,
-  amount DECIMAL,
-  currency TEXT,
-  status TEXT,
-  date TIMESTAMP,
-  PRIMARY KEY (transaction_id)
-);</code></pre>
-</div>
-</div>
+<p><code>incidents_by_location</code>: Para almacenar incidentes activos indexados por su ubicación y fecha de reporte.</p>
 </li>
 <li>
-<p><code>transactions_by_user</code>: Almacena las transacciones de un usuario.</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-cql hljs" data-lang="cql">CREATE TABLE transactions_by_user (
-  user_id UUID,
-  transaction_id UUID,
-  recipient_id UUID,
-  amount DECIMAL,
-  currency TEXT,
-  status TEXT,
-  date TIMESTAMP,
-  PRIMARY KEY (user_id, date, transaction_id)
-  WITH CLUSTERING ORDER BY (date DESC)
-);</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p><code>transactions_by_status</code>: Almacena las transacciones por estado.</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-cql hljs" data-lang="cql">CREATE TABLE transactions_by_status (
-  status TEXT,
-  transaction_id UUID,
-  user_id UUID,
-  recipient_id UUID,
-  amount DECIMAL,
-  currency TEXT,
-  date TIMESTAMP,
-  PRIMARY KEY (status, date, transaction_id)
-  WITH CLUSTERING ORDER BY (date DESC)
-);</code></pre>
-</div>
-</div>
+<p><code>incident_history</code>: Para registrar el historial de cambios en el estado de cada incidente.</p>
 </li>
 </ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-sql hljs" data-lang="sql">CREATE TABLE incidents_by_location (
+    location TEXT,
+    incident_id UUID,
+    report_time TIMESTAMP,
+    type TEXT,
+    status TEXT,
+    description TEXT,
+    PRIMARY KEY ((location), report_time, incident_id)
+) WITH CLUSTERING ORDER BY (report_time DESC);</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-sql hljs" data-lang="sql">CREATE TABLE incident_history (
+    incident_id UUID,
+    update_time TIMESTAMP,
+    status TEXT,
+    note TEXT,
+    PRIMARY KEY (incident_id, update_time)
+) WITH CLUSTERING ORDER BY (update_time DESC);</code></pre>
+</div>
 </div>
 </div>
 <div class="sect2">
@@ -1241,156 +1370,154 @@ RETURN {user_id: u2.user_id, name: u2.name, common_routes: count(*)} AS travelma
 <div class="ulist">
 <ul>
 <li>
-<p><code>POST /transactions</code>: registra un nuevo pago.</p>
+<p><code>POST /incidents</code>: registrar un nuevo incidente.</p>
 </li>
 <li>
-<p><code>GET /paymentos?user_id={user_id}</code>: consulta los pagos de un usuario.</p>
+<p><code>GET /incidents?location=&lt;location&gt;</code>: obtener los incidentes activos en una ubicación.</p>
 </li>
 <li>
-<p><code>GET /payments?user_id={user_id}&amp;from={start_date}&amp;to={end_date}</code>: consulta los pagos de un usuario en un intervalo de fechas.</p>
+<p><code>PUT /incidents/{incident_id}</code>: actualizar el estado de un incidente.</p>
 </li>
 <li>
-<p><code>GET /payments?status={status}</code>: consulta los pagos por estado.</p>
+<p><code>GET /incidents/{incident_id}/history</code>: consultar el historial de cambios de un incidente.</p>
 </li>
 </ul>
 </div>
-<div class="paragraph">
-<p>Para registrar un nuevo pago, se usará el cuerpo de la petición:</p>
-</div>
+<div class="sect3">
+<h4 id="_registrar_un_incidente">4.2.1. Registrar un incidente</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Endpoint:</strong> <code>POST /incidents</code></p>
+</li>
+<li>
+<p><strong>Cuerpo de la petición:</strong></p>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
-  "user_id": "550e8400-e29b-41d4-a716-446655440000",
-  "recipient_id": "660e8400-e29b-41d4-a716-446655440001",
-  "amount": 100.50,
-  "currency": "EUR",
-  "status": "pending"
+    "location": "Centro",
+    "type": "Incendio",
+    "description": "Fuego en un edificio de oficinas"
 }</code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>La respuesta será el identificador de la transacción registrada.</p>
+</li>
+<li>
+<p><strong>Operaciones en Cassandra:</strong></p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-sql hljs" data-lang="sql">INSERT INTO incidents_by_location (location, incident_id, report_time, type, status, description)
+VALUES ('Centro', uuid(), toTimestamp(now()), 'Incendio', 'Activo', 'Fuego en un edificio de oficinas');</code></pre>
 </div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_obtener_incidentes_activos_en_una_ubicación">4.2.2. Obtener incidentes activos en una ubicación</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Endpoint:</strong> <code>GET /incidents?location=&lt;location&gt;</code></p>
+</li>
+<li>
+<p><strong>Respuesta esperada:</strong></p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">[
+    {
+        "incident_id": "550e8400-e29b-41d4-a716-446655440000",
+        "report_time": "2024-03-19T12:30:00Z",
+        "type": "Incendio",
+        "status": "Activo",
+        "description": "Fuego en un edificio de oficinas"
+    }
+]</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p><strong>Operaciones en Cassandra:</strong></p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-sql hljs" data-lang="sql">SELECT * FROM incidents_by_location WHERE location = 'Centro';</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_actualizar_el_estado_de_un_incidente_2">4.2.3. Actualizar el estado de un incidente</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Endpoint:</strong> <code>PUT /incidents/{incident_id}</code></p>
+</li>
+<li>
+<p><strong>Cuerpo de la petición:</strong></p>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
-  "message": "Pago registrado correctamente",
-  "transaction_id": "550e8400-e29b-41d4-a716-446655440002"
+    "status": "Resuelto",
+    "note": "Bomberos controlaron el fuego."
 }</code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>La consulta asociada en Cassandra sería:</p>
-</div>
+</li>
+<li>
+<p><strong>Operaciones en Cassandra:</strong></p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-cql hljs" data-lang="cql">BEGIN BATCH
-INSERT INTO transactions (transaction_id, user_id, recipient_id, amount, currency, status, date)
-VALUES (uuid(), ?, ?, ?, ?, ?, toTimestamp(now()));
+<pre class="highlightjs highlight"><code class="language-sql hljs" data-lang="sql">UPDATE incidents_by_location
+SET status = 'Resuelto'
+WHERE location = 'Centro' AND report_time = '2024-03-19T12:30:00Z'
+AND incident_id = 550e8400-e29b-41d4-a716-446655440000;
 
-INSERT INTO transactions_by_user (user_id, transaction_id, recipient_id, amount, currency, status, date)
-VALUES (?, ?, ?, ?, ?, ?, toTimestamp(now()));
-
-INSERT INTO transactions_by_status (status, transaction_id, user_id, recipient_id, amount, currency, date)
-VALUES (?, ?, ?, ?, ?, ?, toTimestamp(now()));
-APPLY BATCH;</code></pre>
+INSERT INTO incident_history (incident_id, update_time, status, note)
+VALUES (550e8400-e29b-41d4-a716-446655440000, toTimestamp(now()), 'Resuelto', 'Bomberos controlaron el fuego.');</code></pre>
 </div>
 </div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>Se debe realizar la inserción en las tres tablas para mantener la consistencia de los datos. Cassandra no soporta transacciones ACID, por lo que se utiliza un lote de operaciones para garantizar la atomicidad.</p>
+</li>
+</ul>
 </div>
-</td>
-</tr>
-</table>
 </div>
-<div class="paragraph">
-<p>Para consultar los pagos de un usuario, se usará la ruta <code>GET /payments?user_id={user_id}</code>, donde <code>{user_id}</code> es el identificador del usuario. La respuesta será un array con los pagos del usuario.</p>
-</div>
+<div class="sect3">
+<h4 id="_consultar_el_historial_de_cambios_de_un_incidente">4.2.4. Consultar el historial de cambios de un incidente</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Endpoint:</strong> <code>GET /incidents/{incident_id}/history</code></p>
+</li>
+<li>
+<p><strong>Respuesta esperada:</strong></p>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">[
-  {
-    "transaction_id": "550e8400-e29b-41d4-a716-446655440002",
-    "recipient_id": "660e8400-e29b-41d4-a716-446655440001",
-    "amount": 100.50,
-    "currency": "EUR",
-    "status": "pending",
-    "date": "2025-03-19T10:00:00Z"
-  }
+    {
+        "update_time": "2024-03-19T13:00:00Z",
+        "status": "Resuelto",
+        "note": "Bomberos controlaron el fuego."
+    },
+    {
+        "update_time": "2024-03-19T12:45:00Z",
+        "status": "En curso",
+        "note": "Bomberos en camino."
+    }
 ]</code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>La consulta asociada en Cassandra sería:</p>
-</div>
+</li>
+<li>
+<p><strong>Operaciones en Cassandra:</strong></p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-cql hljs" data-lang="cql">SELECT *
-FROM transactions_by_user
-WHERE user_id = ?;</code></pre>
+<pre class="highlightjs highlight"><code class="language-sql hljs" data-lang="sql">SELECT * FROM incident_history WHERE incident_id = 550e8400-e29b-41d4-a716-446655440000;</code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>Para consultar los pagos de un usuario en un intervalo de fechas, se usará la ruta <code>GET /payments?user_id={user_id}&amp;from={start_date}&amp;to={end_date}</code>, donde <code>{user_id}</code> es el identificador del usuario y <code>{start_date}</code> y <code>{end_date}</code> son las fechas de inicio y fin del intervalo. La respuesta será un array con los pagos del usuario en ese intervalo.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">[
-  {
-    "transaction_id": "550e8400-e29b-41d4-a716-446655440002",
-    "recipient_id": "660e8400-e29b-41d4-a716-446655440001",
-    "amount": 100.50,
-    "currency": "EUR",
-    "status": "pending",
-    "date": "2025-03-19T10:00:00Z"
-  }
-]</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>La consulta asociada en Cassandra sería:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-cql hljs" data-lang="cql">SELECT *
-FROM transactions_by_user
-WHERE user_id = ?
-  AND date &gt;= ?
-  AND date &lt;= ?;</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Para consultar los pagos por estado, se usará la ruta <code>GET /payments?status={status}</code>, donde <code>{status}</code> es el estado de los pagos. La respuesta será un array con los pagos en ese estado.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">[
-  {
-    "transaction_id": "550e8400-e29b-41d4-a716-446655440002",
-    "user_id": "550e8400-e29b-41d4-a716-446655440000",
-    "recipient_id": "660e8400-e29b-41d4-a716-446655440001",
-    "amount": 100.50,
-    "currency": "EUR",
-    "date": "2025-03-19T10:00:00Z"
-  }
-]</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>La consulta asociada en Cassandra sería:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-cql hljs" data-lang="cql">SELECT *
-FROM transactions_by_status
-WHERE status = ?;</code></pre>
+</li>
+</ul>
 </div>
 </div>
 </div>
@@ -1400,14 +1527,14 @@ WHERE status = ?;</code></pre>
 <h2 id="_conclusiones">5. Conclusiones</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Este caso de estudio demuestra la efectividad de utilizar diferentes bases de datos NoSQL para resolver distintos aspectos de un sistema de movilidad urbana. MongoDB resulta ideal para gestionar datos geoespaciales y realizar consultas de proximidad gracias a sus índices 2dsphere. Redis ofrece excelente rendimiento para datos en tiempo real y notificaciones mediante pub/sub. Neo4j facilita el análisis de rutas y relaciones entre usuarios con su modelo basado en grafos. Cassandra permite un registro escalable de transacciones con consultas optimizadas por patrones de acceso. La combinación de estas tecnologías permite construir un sistema robusto y escalable que responde a las necesidades de una ciudad moderna en términos de movilidad y transporte.</p>
+<p>La gestión de emergencias y desastres naturales requiere soluciones tecnológicas avanzadas que permitan una respuesta rápida y eficiente. En este caso de uso, hemos explorado cómo aprovechar bases de datos modernas como MongoDB, Redis, Neo4j y Cassandra para registrar, consultar y coordinar incidentes y recursos en tiempo real. A través del diseño de APIs REST y la implementación de funcionalidades clave como indexación espacial, publicación-suscripción y cálculo de rutas óptimas, hemos optimizado la toma de decisiones en situaciones críticas. La combinación de tecnologías de bases de datos a gran escala nos ha permitido abordar de manera efectiva los desafíos de la gestión de emergencias y desastres naturales, demostrando el potencial de estas herramientas en entornos críticos y dinámicos.</p>
 </div>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2025-03-19 23:34:21 +0100
+Last updated 2025-03-19 23:54:08 +0100
 </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>

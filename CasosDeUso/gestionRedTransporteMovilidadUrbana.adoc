@@ -15,7 +15,7 @@ Codificación, idioma, tabla de contenidos, tipo de documento
 ////
 Nombre y título del trabajo
 ////
-# Gestión de una red de transporte y movilidad urbana
+# Caso de uso. Gestión de una red de transporte y movilidad urbana
 Máster en Ingeniería Informática. Manuel Torres <mtorres@ual.es>
 
 
@@ -378,7 +378,7 @@ El sistema de bicicletas compartidas debe recomendar a los usuarios la mejor rut
 Se representarán los datos con los siguientes nodos y relaciones:
 
 * Nodos
-    * Station: Representa una estación de bicicletas.
+    * **`Station`**: Representa una estación de bicicletas.
 +
 [source, json]
 ----
@@ -392,7 +392,7 @@ Se representarán los datos con los siguientes nodos y relaciones:
 }
 ----
 
-    * User: Representa un usuario del sistema.
+    * **`User`**: Representa un usuario del sistema.
 +
 [source, json]
 ----
@@ -404,21 +404,21 @@ Se representarán los datos con los siguientes nodos y relaciones:
 ----
 
 * Relaciones
-    * `CONNECTED_TO``: Conexiones entre estaciones con distancia en km.
+    * **`CONNECTED_TO``**: Conexiones entre estaciones con distancia en km.
 +
 [source, json]
 ----
 (:Station)-[:CONNECTED_TO]->(:Station)
 ----
 
-    * `USES``: Relación entre un usuario y su estación más frecuente.
+    * **`USES``**: Relación entre un usuario y su estación más frecuente.
 +
 [source, json]
 ----
 (:User)-[:USES]->(:Station)
 ----
 
-    * `RIDES_WITH``: Relación entre usuarios que han usado rutas similares en horarios cercanos.
+    * **`RIDES_WITH``**: Relación entre usuarios que han usado rutas similares en horarios cercanos.
 +
 [source, json]
 ----
@@ -622,9 +622,22 @@ La consulta asociada en Cassandra sería:
 
 [source, cql]
 ----
+BEGIN BATCH
 INSERT INTO transactions (transaction_id, user_id, recipient_id, amount, currency, status, date)
 VALUES (uuid(), ?, ?, ?, ?, ?, toTimestamp(now()));
+
+INSERT INTO transactions_by_user (user_id, transaction_id, recipient_id, amount, currency, status, date)
+VALUES (?, ?, ?, ?, ?, ?, toTimestamp(now()));
+
+INSERT INTO transactions_by_status (status, transaction_id, user_id, recipient_id, amount, currency, date)
+VALUES (?, ?, ?, ?, ?, ?, toTimestamp(now()));
+APPLY BATCH;
 ----
+
+[NOTE]
+====
+Se debe realizar la inserción en las tres tablas para mantener la consistencia de los datos. Cassandra no soporta transacciones ACID, por lo que se utiliza un lote de operaciones para garantizar la atomicidad.
+====
 
 Para consultar los pagos de un usuario, se usará la ruta `GET /payments?user_id={user_id}`, donde `{user_id}` es el identificador del usuario. La respuesta será un array con los pagos del usuario.
 
