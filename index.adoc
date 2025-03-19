@@ -202,6 +202,7 @@ Puedes profundizar en contenidos de la asignatura a través de estos recursos:
 * https://ualmtorres.github.io/posts/tutorial-api-rest-slim-neo4j-recomendaciones[Desarrollo de una API REST para gestión de recomendaciones con Slim Framework y Neo4j]
 * https://ualmtorres.github.io/posts/tutorial-api-rest-express-cassandra-pedidos[Desarrollo de una API REST para gestión historial de pedidos y seguimiento en tiempo real con Express y Cassandra]
 
+* link:CasosDeUso/index.html[Casos de uso]
 ****
 
 ## Actividades no presenciales
