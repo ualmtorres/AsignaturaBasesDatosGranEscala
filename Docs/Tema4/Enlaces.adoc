@@ -10,7 +10,7 @@ Codificación, idioma, tabla de contenidos, tipo de documento
 ////
 Nombre y título del trabajo
 ////
-# Enlaces de interés sobre XXX
+# Enlaces de interés sobre bases de datos Neo4j
 Bases de datos a gran escala - Máster en Ingeniería Informática
 Manuel Torres <mtorres@ual.es>
 
@@ -19,4 +19,4 @@ image::../../images/di.png[]
 
 ## Enlaces de interés
 
-* https://www.mongodb.com/nosql-explained[Eu aliquip dolore duis anim nostrud consequat incididunt]
+* https://github.com/cj2001/bite_sized_data_science[Bite-Sized Neo4j for Data Scientists]

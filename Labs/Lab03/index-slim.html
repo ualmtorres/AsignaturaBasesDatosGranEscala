@@ -5,8 +5,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.22">
-<meta name="author" content="Máster en Ingeniería Informática. Manuel Torres &lt;mtorres@ual.es&gt;">
-<title>Bases de datos a gran escala</title>
+<meta name="author" content="Manuel Torres">
+<title>Lab 03 Bases de datos a gran escala. Desarrollo de un Blog con PHP y MongoDB (Versión Slim Framework). Máster en Ingeniería Informática</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /*! Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
@@ -437,37 +437,22 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </head>
 <body class="book toc2 toc-right">
 <div id="header">
-<h1>Bases de datos a gran escala</h1>
+<h1>Lab 03 Bases de datos a gran escala. Desarrollo de un Blog con PHP y MongoDB (Versión Slim Framework). Máster en Ingeniería Informática</h1>
 <div class="details">
-<span id="author" class="author">Máster en Ingeniería Informática. Manuel Torres &lt;mtorres@ual.es&gt;</span><br>
+<span id="author" class="author">Manuel Torres</span><br>
+<span id="email" class="email"><a href="mailto:mtorres@ual.es">mtorres@ual.es</a></span><br>
 </div>
 <div id="toc" class="toc2">
 <div id="toctitle">Tabla de contenidos</div>
 <ul class="sectlevel1">
 <li><a href="#_resumen">Resumen</a></li>
-<li><a href="#_introducción">1. Introducción</a></li>
-<li><a href="#_sobre_la_guía_docente">2. Sobre la Guía docente</a>
+<li><a href="#_recursos">1. Recursos</a></li>
+<li><a href="#_actividades">2. Actividades</a>
 <ul class="sectlevel2">
-<li><a href="#_materia_con_la_que_se_relaciona_en_el_plan_de_estudios">2.1. Materia con la que se relaciona en el Plan de estudios:</a></li>
-<li><a href="#_conocimientos_recomendables">2.2. Conocimientos recomendables</a></li>
+<li><a href="#_ejercicios_propuestos">2.1. Ejercicios propuestos</a></li>
 </ul>
 </li>
-<li><a href="#_contenidos">3. Contenidos</a></li>
-<li><a href="#_horario_de_clase_y_de_tutorias">4. Horario de clase y de tutorías</a></li>
-<li><a href="#_como_seguir_la_asignatura">5. Cómo seguir la asignatura</a></li>
-<li><a href="#_cómo_superar_la_asignatura">6. Cómo superar la asignatura</a></li>
-<li><a href="#_encuesta_inicial">7. Encuesta inicial</a></li>
-<li><a href="#_recursos">8. Recursos</a>
-<ul class="sectlevel2">
-<li><a href="#_tema_1_modelos_de_almacenamiento_no_relacionales_el_fenómeno_nosql">8.1. Tema 1. Modelos de almacenamiento no relacionales. El fenómeno NoSQL</a></li>
-<li><a href="#_tema_2_bases_de_datos_clave_valor">8.2. Tema 2. Bases de datos clave-valor</a></li>
-<li><a href="#_tema_3_bases_de_datos_orientadas_a_documentos">8.3. Tema 3. Bases de datos orientadas a documentos</a></li>
-<li><a href="#_tema_4_bases_de_datos_orientadas_a_grafos">8.4. Tema 4. Bases de datos orientadas a grafos</a></li>
-<li><a href="#_tema_5_bases_de_datos_orientadas_a_columnas">8.5. Tema 5. Bases de datos orientadas a columnas</a></li>
-</ul>
-</li>
-<li><a href="#_trabajo_autónomo">9. Trabajo autónomo</a></li>
-<li><a href="#_actividades_no_presenciales">10. Actividades no presenciales</a></li>
+<li><a href="#_pantallas_de_la_aplicación">3. Pantallas de la aplicación</a></li>
 </ul>
 </div>
 </div>
@@ -476,7 +461,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sectionbody">
 <div class="imageblock">
 <div class="content">
-<img src="images/di.png" alt="di">
+<img src="../../images/di.png" alt="di">
 </div>
 </div>
 </div>
@@ -485,293 +470,29 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h2 id="_resumen">Resumen</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>La asignatura Bases de datos a gran escala es una asignatura optativa del módulo de Especialidad en Big Data del <a href="https://www.ual.es/estudios/masteres/presentacion/7114">Máster oficial en Ingeniería Informática</a> de la UAL. En la asignatura se hace una introducción a las bases de datos no relacionales (NoSQL) y a su uso en aplicaciones escalables.</p>
+<p>En este laboratorio se desarrolla una aplicación web PHP sobre una base de datos MongoDB. Se creará una API REST para interactuar con la base de datos.</p>
 </div>
 <div class="ulist">
 <div class="title">Objetivos</div>
 <ul>
 <li>
-<p>Conocer los principales modos de almacenamiento NoSQL</p>
+<p>Familiarse con el driver MongoDB para PHP.</p>
 </li>
 <li>
-<p>Realizar consultas basicas y de agregacion de datos</p>
+<p>Desarrollar una API REST en PHP sencilla sobre MongoDB.</p>
 </li>
 <li>
-<p>Conocer modos de indexacion para mejorar el rendimiento de la base de datos</p>
-</li>
-<li>
-<p>Conocer las tecnicas de replicacion y sharding</p>
-</li>
-<li>
-<p>Desarrollar aplicaciones sobre bases de datos NoSQL</p>
-</li>
-<li>
-<p>Aplicar los conocimientos adquiridos y resolver problemas en entornos nuevos o poco conocidos dentro de contextos más amplios (o multidisciplinares) relacionados con su área de estudio</p>
-</li>
-<li>
-<p>Aplicar los conocimientos adquiridos y resolver problemas en entornos nuevos o poco conocidos dentro de contextos más amplios y multidisciplinares, siendo capaces de integrar estos conocimientos</p>
-</li>
-<li>
-<p>Modelar, diseñar, definir la arquitectura, implantar, gestionar, operar, administrar y mantener aplicaciones, redes, sistemas, servicios y contenidos informáticos</p>
-</li>
-<li>
-<p>Analizar las necesidades de información que se plantean en un entorno y llevar a cabo en todas sus etapas el proceso de construcción de un sistema de información</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_introducción">1. Introducción</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>El crecimiento en la produccion de los datos de usuario, sensores, sistemas GPS, y demas, han disparado el tamaño y el tipo de los datos generados, los cuales ademas pueden ser de naturaleza no estructurada. Estos grandes volumenes de datos suponen nuevos desafios en terminos de almacenamiento y procesamiento, por los que las tecnicas tradicionales de gestion de datos no son aplicables directamente en este contexto. Bajo el termino de NoSQL se encuentran los principales productos de bases de datos para tratar con este problema, como son las bases de datos orientadas a columnas, bases de datos clave-valor y bases de datos de documentos. En esta asignatura se estudian los conceptos fundamentales relacionados con NoSQL en el contexto de diferentes productos comerciales.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_sobre_la_guía_docente">2. Sobre la Guía docente</h2>
-<div class="sectionbody">
-<div class="sect2">
-<h3 id="_materia_con_la_que_se_relaciona_en_el_plan_de_estudios">2.1. Materia con la que se relaciona en el Plan de estudios:</h3>
-<div class="paragraph">
-<p>La asignatura Bases de datos a gran escala está directamente relacionada con las asignaturas siguientes:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Cloud computing</p>
-</li>
-<li>
-<p>Infraestructura Big Data</p>
-</li>
-<li>
-<p>Análisis de grandes volúmenes de datos</p>
-</li>
-<li>
-<p>Computación sobre datos masivos</p>
-</li>
-<li>
-<p>Visualización de datos</p>
-</li>
-<li>
-<p>Aplicaciones de Big data</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_conocimientos_recomendables">2.2. Conocimientos recomendables</h3>
-<div class="ulist">
-<ul>
-<li>
-<p>Bases de datos</p>
-</li>
-<li>
-<p>Linux</p>
-</li>
-<li>
-<p>Git</p>
-</li>
-<li>
-<p>Desarrollo web</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_contenidos">3. Contenidos</h2>
-<div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p>Modelos de almacenamiento no relacionales (4 horas)</p>
-<div class="ulist">
-<ul>
-<li>
-<p>El fenomeno NoSQL</p>
-</li>
-<li>
-<p>Modelos de almacenamiento</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Bases de datos no relacionales (14 horas)</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Bases de datos clave-valor</p>
-</li>
-<li>
-<p>Bases de datos orientadas a documentos</p>
-</li>
-<li>
-<p>Bases de datos orientadas a grafos</p>
-</li>
-<li>
-<p>Bases de datos orientadas a columnas</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Escalabilidad de bases de datos</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Replicación</p>
-</li>
-<li>
-<p>Sharding</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Desarrollo de aplicaciones para bases de datos a gran escala</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p><a href="Docs/PlanificacionBDGE.html">Planificación de la asignatura</a></p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_horario_de_clase_y_de_tutorias">4. Horario de clase y de tutorías</h2>
-<div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p>Clases: Aula 22 - Aulario V (Aulas de Informática)</p>
-</li>
-<li>
-<p>Sesiones presenciales (<a href="Docs/PlanificacionBDGE.html">Planificación de la asignatura</a>)</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Horario: 16h a 18h</p>
-</li>
-<li>
-<p>8 sesiones presenciales = 16 horas.</p>
-</li>
-<li>
-<p>7 sesiones no presenciales = 14 horas</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Profesores</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Manuel Torres Gil</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Tutorías: Lunes y Viernes de 11h a 13:30h. Martes de 12:30h a 13:30h. Cita previa y a través de Google Meet</p>
-</li>
-<li>
-<p>Despacho: 2.19.5 CITE III (2a planta)</p>
-</li>
-<li>
-<p>email: <a href="mailto:mtorres@ual.es">mtorres@ual.es</a></p>
-</li>
-<li>
-<p>Twitter: <a href="https://twitter.com/ualmtorres">@ualmtorres</a></p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_como_seguir_la_asignatura">5. Cómo seguir la asignatura</h2>
-<div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p>Material disponible en</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Aula Virtual UAL</p>
-</li>
-<li>
-<p><a href="https://ualmtorres.github.io/AsignaturaBasesDatosGranEscala/">Repositorio GitHub</a></p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Metodología docente</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Clases participativas</p>
-</li>
-<li>
-<p>Contenido práctico</p>
-</li>
-<li>
-<p>Elaboración de trabajos prácticos</p>
-</li>
-<li>
-<p>Actividades no presenciales</p>
-</li>
-<li>
-<p>Tutorías</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_cómo_superar_la_asignatura">6. Cómo superar la asignatura</h2>
-<div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p>Cada tema tiene una o varias actividades teórico/prácticas, que se entregarán de forma individual sobre:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Consultas sobre bases de datos NoSQL</p>
-</li>
-<li>
-<p>Desarrollo de aplicaciones sobre bases de datos NoSQL</p>
-</li>
-<li>
-<p>Despliegue de aplicaciones</p>
-</li>
-</ul>
-</div>
+<p>Crear una aplicación sencilla en PHP sobre MongoDB.</p>
 </li>
 </ul>
 </div>
 <div class="sidebarblock">
 <div class="content">
-<div class="title">Criterios e Instrumentos de evaluación</div>
+<div class="title">Prerrequisitos</div>
 <div class="ulist">
 <ul>
 <li>
-<p>Los ejercicios y proyectos prácticos deberán ser presentados en la fecha indicada utilizando el Aula Virtual y/o las herramientas y servicios cloud, como repositorios de código, proveedores cloud, servicios en la nube, etc., donde quedan registradas la acciones realizadas.</p>
-</li>
-<li>
-<p>En las actividades en equipo, se tendrá en cuenta tanto el trabajo del equipo en su conjunto, como la aportación individual realizada por cada miembro del equipo.</p>
+<p>Tener configurado el entorno de desarrollo de la asignatura.</p>
 </li>
 </ul>
 </div>
@@ -780,195 +501,312 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect1">
-<h2 id="_encuesta_inicial">7. Encuesta inicial</h2>
+<h2 id="_recursos">1. Recursos</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Si eres alumno de la asignatura en la UAL completa esta <a href="https://forms.gle/V43eetd5r7D4KYuU9">pequeña encuesta</a> que permita valorar tus conocimientos iniciales y adaptar el desarrollo de la asignatura.</p>
+<p>Puedes obtener más información sobre cómo trabajar con MongoDB siguiendo estos tutoriales:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://www.geeksforgeeks.org/mongodb-tutorial/?ref=lbp">MongoDB Tutorial de Geeks for Geeks</a></p>
+</li>
+<li>
+<p><a href="https://github.com/ualmtorres/SlimHelloWorld">Creación de una API REST con Slim Framework</a></p>
+</li>
+<li>
+<p><a href="https://ualmtorres.github.io/TutorialSlimMongoDBAPIProductosValoraciones">Desarrollo de una API REST para gestión de productos y valoraciones con Slim Framework y MongoDB</a></p>
+</li>
+</ul>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_recursos">8. Recursos</h2>
+<h2 id="_actividades">2. Actividades</h2>
 <div class="sectionbody">
-<div class="sidebarblock">
+<div class="paragraph">
+<p>Desarrollar una aplicación web en PHP sobre una base de datos MongoDB. Se trata de un ejemplo de un Blog sencillo sobre información legislativa norteamericana. La aplicación ofrece las siguientes funciones básicas:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>La aplicación implementa una API REST que permite lo siguiente:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Obtener toda la información de un post a partir de su <code>ObjectId</code></p>
+</li>
+<li>
+<p>Obtener todos los posts que tengan una etiqueta determinada</p>
+</li>
+<li>
+<p>Crear un post</p>
+</li>
+<li>
+<p>Añadir un comentario a un post</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>En la página de inicio se muestran cinco posts.</p>
+</li>
+<li>
+<p>De forma predeterminada, cada post se presenta de forma parcial, mostrando su título, persona que lo ha escrito, un extracto del cuerpo del post y las etiquetas.</p>
+</li>
+<li>
+<p>Se puede mostrar información completa sobre un post.</p>
+</li>
+<li>
+<p>Se pueden mostrar los posts (máximo 5) asociados a una etiqueta.</p>
+</li>
+<li>
+<p>La aplicación también muestra la lista de todas las personas que hayan realizado algún comentario en algún post. Se pueden mostrar los posts (máximo 5) comentados por una persona.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>La aplicación clonada es totalmente funcional, pero omite toda la lógica de acceso a la base de datos (conexión y endpoints de la API). El objetivo de este laboratorio es completar la lógica de acceso a la base de datos para que la aplicación funcione correctamente.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_ejercicios_propuestos">2.1. Ejercicios propuestos</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Importar el archivo JSON <code>posts.json</code> disponible en <a href="https://github.com/ualmtorres/SampleDatabases">SampleDatabases</a> en una colección <code>posts</code> dentro de una base de datos denominada <code>blog</code>.</p>
+</li>
+<li>
+<p>Hacer un fork del <a href="https://github.com/ualmtorres/MongoDBBlogSlimIncompleto">repositorio de base</a> y completar los scripts PHP para que la aplicación funcione correctamente. Los scripts PHP son los siguientes, modificando los lugares en los que aparece <code>YOUR CODE HERE</code>:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>public/connection.php</code></p>
+</li>
+<li>
+<p><code>public/routes/posts.php</code></p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div class="sect3">
+<h4 id="_descripción_de_los_endpoints_de_la_api_rest">2.1.1. Descripción de los endpoints de la API REST</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Method</th>
+<th class="tableblock halign-left valign-top">URL</th>
+<th class="tableblock halign-left valign-top">Descripción</th>
+<th class="tableblock halign-left valign-top">Uso</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GET</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>/api/posts/{id}</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Obtener un post por ID</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Devuelve los detalles completos de un post específico</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GET</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>/api/posts?tag={tag}</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Obtener posts por etiqueta</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Devuelve todos los posts que contienen la etiqueta proporcionada</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">POST</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>/api/posts</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Crear un nuevo post</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Crea un nuevo post con la información proporcionada en el cuerpo de la petición</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">POST</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>/api/posts/{id}/comments</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Añadir comentario a un post</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Añade un comentario al post especificado con la información proporcionada en el cuerpo</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_ejemplos_de_cuerpo_y_respuesta_de_los_endpoints_de_la_api_rest">2.1.2. Ejemplos de cuerpo y respuesta de los endpoints de la API REST</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Operación: Obtener la lista de posts</p>
+</li>
+<li>
+<p>Endpoint: <code>GET /api/posts</code></p>
+</li>
+<li>
+<p>Respuesta:</p>
+<div class="listingblock">
 <div class="content">
-<div class="title">Entorno básico de pruebas</div>
-<div class="paragraph">
-<p>Archivo <a href="https://gist.github.com/ualmtorres/c85c3caf61eb9db953ebd5bd9d77ab53">docker-compose.yml</a> para pruebas con las principales bases de datos NoSQL usadas.</p>
+<pre class="highlight"><code class="language-json" data-lang="json">{
+    "status": 200,
+    "data": [
+        {
+            "_id": "50ab0f8dbcf1bfe2536dc7df",
+            "body": "Four score and seven years ago our fathers brought forth on this continent a new nation, conceived in liberty, and dedicated to ...",
+            "permalink": "TLxrBfyxTZjqOKqxgnUP",
+            "author": "machine",
+            "title": "Gettysburg Address",
+            "tags": [
+                "wrist",
+                "pasta",
+                "pantyhose",
+                "freon",
+                "tempo",
+                "pail",
+                "atom",
+                "hydrogen",
+                "pilot",
+                "secretary"
+            ],
+            "comments": [
+                {
+                    "body": "Lorem ipsum dolor sit ...",
+                    "email": "WCnznPGN@WrhZKAxu.com",
+                    "author": "Aleida Elsass"
+                },
+                {
+                    "body": "Lorem ipsum dolor sit amet, ...",
+                    "email": "SjcQpnuO@LnriWoky.com",
+                    "author": "Joaquina Arbuckle"
+                },
+                ...
+            ]
+        },
+        {
+            "_id": "50ab0f8dbcf1bfe2536dc7e0",
+            "body": "When in the Course of human events, it becomes necessary for one people to dissolve the political bands which have connected them with another, ...",
+            "permalink": "TLxrBfyxTZjqOKqxgnUQ",
+            "author": "machine",
+            "title": "Declaration of Independence",
+            "tags": [
+                "pantyhose",
+                "freon",
+                "tempo",
+                "pail",
+                "atom",
+                "hydrogen",
+                "pilot",
+                "secretary",
+                "wrist",
+                "pasta"
+            ],
+            "comments": [
+                {
+                    "body": "Lorem ipsum dolor sit ...",
+                    "email": "
+                    "author": "Aleida Elsass"
+                },
+                ...
+            ]
+        },
+        ...
+    ]
+}</code></pre>
 </div>
 </div>
-</div>
-<div class="sect2">
-<h3 id="_tema_1_modelos_de_almacenamiento_no_relacionales_el_fenómeno_nosql">8.1. Tema 1. Modelos de almacenamiento no relacionales. El fenómeno NoSQL</h3>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="https://docs.google.com/presentation/d/1jFvI2dYeVBPPnwzm8q4CmO2ABXXxSfThHPg33eHEHck/edit?usp=sharing">Presentación</a></p>
 </li>
 <li>
-<p><a href="Docs/Tema1/Enlaces.html">Enlaces de interés</a></p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_tema_2_bases_de_datos_clave_valor">8.2. Tema 2. Bases de datos clave-valor</h3>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="https://docs.google.com/presentation/d/1zzATSnpLQf2-7dmB-yRJkogC9e-HRd5YT5brjLgGiig/edit?usp=sharing">Presentación</a></p>
+<p>Operación: Crear un nuevo post</p>
 </li>
 <li>
-<p><a href="https://ualmtorres.github.io/posts/bases-de-datos-clave-valor">Bases de datos clave-valor</a></p>
+<p>Endpoint: <code>POST /api/posts</code></p>
 </li>
 <li>
-<p><a href="https://ualmtorres.github.io/SeminarioRedis">Código de ejemplos de la presentación</a></p>
-</li>
-<li>
-<p>Archivo <a href="https://gist.github.com/ualmtorres/102a65abc4fea2f3929b48d6803a6b87">docker-compose.yml</a> con Redis y Redis Commander</p>
-</li>
-<li>
-<p><a href="http://ualmtorres.github.io/howtos/RedisPHP/">Tutorial: Interacción con Redis desde PHP</a></p>
-</li>
-<li>
-<p><a href="http://ualmtorres.github.io/howtos/RedisJava/">Tutorial: Interacción con Redis desde Java</a></p>
-</li>
-<li>
-<p><a href="https://ualmtorres.github.io/posts/tutorial-api-rest-slim-redis-ofertas-flash">Desarrollo de una API REST para gestión de ofertas flash con Slim Framework y Redis</a></p>
-</li>
-<li>
-<p><a href="Docs/Tema2/Enlaces.html">Enlaces de interés</a></p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_tema_3_bases_de_datos_orientadas_a_documentos">8.3. Tema 3. Bases de datos orientadas a documentos</h3>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="https://docs.google.com/presentation/d/1V4eY5CV23bNb1PBBmzR3We5LsQht496WcymFM-EKRbM/edit?usp=sharing">Presentación</a></p>
-</li>
-<li>
-<p>Código de ejemplos de la presentación <a href="https://gist.github.com/ualmtorres/c04eaaa15789bfef2ebec3f9bcf820a6">[Introducción</a>] <a href="https://gist.github.com/ualmtorres/7fc041515f8a74e5c6fdb289ed241e4f">[Agregación</a>] <a href="https://gist.github.com/ualmtorres/2f99fff89517687bcd87aaf8523fd112">[Indexación</a>]</p>
-</li>
-<li>
-<p>Archivo <a href="https://gist.github.com/ualmtorres/48fd676d2e07cd9c905caf7fed3f5bbf">docker-compose.yml</a> con MongoDB y Mongo-express</p>
-</li>
-<li>
-<p><a href="http://ualmtorres.github.io/howtos/MongoDBPHP/">Tutorial: Interacción con MongoDB desde PHP</a></p>
-</li>
-<li>
-<p><a href="http://ualmtorres.github.io/howtos/MongoDBJava/">Tutorial: Interacción con MongoDB desde Java</a></p>
-</li>
-<li>
-<p><a href="https://ualmtorres.github.io/posts/tutorial-api-rest-slim-mongodb-productos-valoraciones">Desarrollo de una API REST para gestión de productos y valoraciones con Slim Framework y MongoDB</a></p>
-</li>
-<li>
-<p><a href="Docs/Tema3/Enlaces.html">Enlaces de interés</a></p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_tema_4_bases_de_datos_orientadas_a_grafos">8.4. Tema 4. Bases de datos orientadas a grafos</h3>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="https://docs.google.com/presentation/d/1Fgi6YYBOGAYAQWEyzLL8yGep22sMo0DR2RreYIZRyj4/edit?usp=sharing">Presentación</a></p>
-</li>
-<li>
-<p><a href="https://ualmtorres.github.io/posts/tutorial-api-rest-slim-neo4j-recomendaciones">Desarrollo de una API REST para gestión de recomendaciones con Slim Framework y Neo4j</a></p>
-</li>
-<li>
-<p><a href="Docs/Tema4/Enlaces.html">Enlaces de interés</a></p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_tema_5_bases_de_datos_orientadas_a_columnas">8.5. Tema 5. Bases de datos orientadas a columnas</h3>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="https://docs.google.com/presentation/d/1pHhOeKbeO4k2nzbZLoFeTx72kzUyDvhzGRCGfajk4no/edit?usp=sharing">Presentación</a></p>
-</li>
-<li>
-<p><a href="https://gist.github.com/ualmtorres/ca414f89b11765a651e32f9f48b08d42">Cassandra con Docker</a></p>
-</li>
-<li>
-<p><a href="https://github.com/ualmtorres/CassandraDocker">Cassandra con Docker Compose</a></p>
-</li>
-<li>
-<p><a href="https://ualmtorres.github.io/SeminarioCassandra">Tutorial: Cassandra</a></p>
-</li>
-<li>
-<p><a href="https://gist.github.com/ualmtorres/0c3cb28cf35401d9ac984f2f02895dd4">Scripts Tutorial Cassandra</a></p>
-</li>
-<li>
-<p><a href="https://ualmtorres.github.io/posts/tutorial-api-rest-express-cassandra-pedidos">Desarrollo de una API REST para gestión historial de pedidos y seguimiento en tiempo real con Express y Cassandra</a></p>
-</li>
-<li>
-<p><a href="Docs/Tema5/Enlaces.html">Enlaces de interés</a></p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_trabajo_autónomo">9. Trabajo autónomo</h2>
-<div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p><a href="Labs/Lab01/index.html">Lab 01. Consultas básicas en MongoDB</a></p>
-</li>
-<li>
-<p><a href="Labs/Lab02/index.html">Lab 02. Manejo de índices en MongoDB</a></p>
-</li>
-<li>
-<p><a href="Labs/Lab03/index.html">Lab 03. Desarrollo de un Blog con PHP y MongoDB</a></p>
-</li>
-<li>
-<p><a href="Labs/Lab03/index-slim.html">Lab 03. Desarrollo de un Blog con PHP y MongoDB (Versión Slim)</a></p>
-</li>
-<li>
-<p><a href="Labs/Lab04/index.html">Lab 04. Framework de Agregación de MongoDB</a></p>
-</li>
-<li>
-<p><a href="Labs/Lab05/index.html">Lab 05. Consultas en Neo4j</a></p>
-</li>
-<li>
-<p><a href="Labs/Lab06/index.html">Lab 06. Desarrollo de un aplicación PHP para la consulta de información cinematográfica almacenada en Neo4j</a></p>
-</li>
-<li>
-<p><a href="Labs/Lab06/index-slim.html">Lab 06. Desarrollo de un aplicación PHP para la consulta de información cinematográfica almacenada en Neo4j (Versión Slim)</a></p>
-</li>
-</ul>
-</div>
-<div class="sidebarblock">
+<p>Cuerpo:</p>
+<div class="listingblock">
 <div class="content">
-<div class="title">Actividades complementarias</div>
-<div class="paragraph">
-<p>Puedes profundizar en contenidos de la asignatura a través de estos recursos:</p>
+<pre class="highlight"><code class="language-json" data-lang="json">{
+    "body": "En un lugar de La Mancha ...",
+    "permalink": "TLxrBfyxTZjqOKqxgnUQ",
+    "author": "nosqlist",
+    "title": "El Quijote",
+    "tags": [
+        "caballerías",
+        "fantasía",
+        "héroes"
+    ]
+}</code></pre>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="https://ualmtorres.github.io/posts/tutorial-api-rest-slim-redis-ofertas-flash">Desarrollo de una API REST para gestión de ofertas flash con Slim Framework y Redis</a></p>
+</div>
 </li>
 <li>
-<p><a href="https://ualmtorres.github.io/posts/tutorial-api-rest-slim-mongodb-productos-valoraciones">Desarrollo de una API REST para gestión de productos y valoraciones con Slim Framework y MongoDB</a></p>
+<p>Operación: Añadir un comentario a un post</p>
 </li>
 <li>
-<p><a href="https://ualmtorres.github.io/posts/tutorial-api-rest-slim-neo4j-recomendaciones">Desarrollo de una API REST para gestión de recomendaciones con Slim Framework y Neo4j</a></p>
+<p>Endpoint: <code>POST /api/posts/67e339d760c452c6800ff8a2/comments</code></p>
 </li>
 <li>
-<p><a href="https://ualmtorres.github.io/posts/tutorial-api-rest-express-cassandra-pedidos">Desarrollo de una API REST para gestión historial de pedidos y seguimiento en tiempo real con Express y Cassandra</a></p>
+<p>Cuerpo:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-json" data-lang="json">{
+    "body": "Lorem ipsum dolor sit amet, ...",
+    "email": "johndoe@acme.com",
+    "author": "John Doe"
+}</code></pre>
+</div>
+</div>
 </li>
 <li>
-<p><a href="CasosDeUso/index.html">Casos de uso</a></p>
+<p>Operación: Obtener una lista de posts por etiqueta</p>
+</li>
+<li>
+<p>Endpoint: <code>GET /api/posts?tag=caballerías</code></p>
+</li>
+<li>
+<p>Respuesta:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-json" data-lang="json">{
+    "status": 200,
+    "data": [
+        {
+            "_id": "67e339d760c452c6800ff8a2",
+            "body": "En un lugar de La Mancha ...",
+            "permalink": "TLxrBfyxTZjqOKqxgnUQ",
+            "author": "nosqlist",
+            "title": "El Quijote",
+            "tags": [
+                "caballerías",
+                "fantasía",
+                "héroes"
+            ],
+            "comments": [
+                {
+                    "body": "Lorem ipsum dolor sit amet, ...",
+                    "email": "johndoe@acme.com",
+                    "author": "John Doe"
+                }
+            ]
+        }
+    ],
+    "total": 1
+}</code></pre>
+</div>
+</div>
 </li>
 </ul>
 </div>
@@ -977,21 +815,52 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect1">
-<h2 id="_actividades_no_presenciales">10. Actividades no presenciales</h2>
+<h2 id="_pantallas_de_la_aplicación">3. Pantallas de la aplicación</h2>
 <div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p>No disponible aún.</p>
-</li>
-</ul>
+<div class="paragraph">
+<p>A continuación se muestran algunas capturas de pantalla de la aplicación:</p>
+</div>
+<div class="paragraph">
+<p>Esta sería la pantalla de inicio de la aplicación mostrando los cinco primeros posts. A la derecha se muestra la lista de personas que han comentado algún post.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../images/lab03-blog-home.png" alt="Home">
+</div>
+</div>
+<div class="paragraph">
+<p>Al hacer clic en una etiqueta (p.e. <code>watch`</code>) se muestran los posts asociados a esa etiqueta. La figura muestra los posts asociados a la etiqueta <code>watch</code>.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../images/lab03-blog-tag.png" alt="Tag">
+</div>
+</div>
+<div class="paragraph">
+<p>También se pueden mostrar los posts asociados a la persona que ha creado el post y a personas que han realizado comentarios. El resultado sería similar al de las figuras anteriores.</p>
+</div>
+<div class="paragraph">
+<p>La aplicación permite crear nuevos posts pulsando el botón <code>Nuevo Post</code>. La figura muestra el formulario para crear un nuevo post.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../images/lab03-blog-new-post.png" alt="New Post">
+</div>
+</div>
+<div class="paragraph">
+<p>Al hacer clic en un post se muestra la información completa del post. La figura muestra la información completa de un post. Al final se presenta un botón para añadir un comentario, que se muestra en la figura siguiente.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../images/lab03-blog-post-comments.png" alt="Post Comments">
+</div>
 </div>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2025-03-26 00:29:36 +0100
+Last updated 2025-03-26 00:26:55 +0100
 </div>
 </div>
 </body>

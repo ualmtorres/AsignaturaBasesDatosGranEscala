@@ -189,9 +189,11 @@ Archivo https://gist.github.com/ualmtorres/c85c3caf61eb9db953ebd5bd9d77ab53[dock
 * link:Labs/Lab01/index.html[Lab 01. Consultas básicas en MongoDB]
 * link:Labs/Lab02/index.html[Lab 02. Manejo de índices en MongoDB]
 * link:Labs/Lab03/index.html[Lab 03. Desarrollo de un Blog con PHP y MongoDB]
+* link:Labs/Lab03/index-slim.html[Lab 03. Desarrollo de un Blog con PHP y MongoDB (Versión Slim)]
 * link:Labs/Lab04/index.html[Lab 04. Framework de Agregación de MongoDB]
 * link:Labs/Lab05/index.html[Lab 05. Consultas en Neo4j]
 * link:Labs/Lab06/index.html[Lab 06. Desarrollo de un aplicación PHP para la consulta de información cinematográfica almacenada en Neo4j]
+* link:Labs/Lab06/index-slim.html[Lab 06. Desarrollo de un aplicación PHP para la consulta de información cinematográfica almacenada en Neo4j (Versión Slim)]
 
 .Actividades complementarias
 ****
