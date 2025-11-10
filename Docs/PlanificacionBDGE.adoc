@@ -61,6 +61,10 @@ image::../images/di.png[]
 
 ** Metodología
 *** Clases teórico-prácticas con presentaciones y tutoriales de casos prácticos.
+*** Aprendizaje autónomo o autodirigido donde los estudiantes asumen el control de su proceso de aprendizaje y trabajan de forma independiente para adquirir conocimientos y habilidades.
+*** Tutoriales en modalidad de _flipped classroom_, donde los alumnos realizan la actividad de forma autónoma y se resuelven dudas en la clase presencial.
+*** Estudio de casos prácticos de aplicación de bases de datos NoSQL en entornos reales o ficticios para fomentar la toma de decisiones, el debate y la argumentación.
+*** Aprendizaje Basado en Competencias enfocado en el desarrollo de habilidades y destrezas prácticas, más que en la mera adquisición de contenidos teóricos.
 
 * Tema 2. Bases de datos clave-valor
 
@@ -84,7 +88,10 @@ image::../images/di.png[]
 
 ** Metodología
 *** Clases teórico-prácticas con presentaciones y tutoriales de casos prácticos. 
+*** Aprendizaje autónomo o autodirigido donde los estudiantes asumen el control de su proceso de aprendizaje y trabajan de forma independiente para adquirir conocimientos y habilidades.
 *** Tutoriales en modalidad de _flipped classroom_, donde los alumnos realizan la actividad de forma autónoma y se resuelven dudas en la clase presencial.
+*** Estudio de casos prácticos de bases de datos clave-valor en entornos reales o ficticios para fomentar la toma de decisiones, el debate y la argumentación.
+*** Aprendizaje Basado en Competencias enfocado en el desarrollo de habilidades y destrezas prácticas, más que en la mera adquisición de contenidos teóricos.
 
 * Tema 3. Bases de datos orientadas a documentos
 
@@ -110,7 +117,10 @@ image::../images/di.png[]
 
 ** Metodología
 *** Clases teórico-prácticas con presentaciones y tutoriales de casos prácticos. 
-*** Tutoriales en modalidad de _flipped classroom_, donde los alumnos realizan la actividad de forma autónoma y se resuelven dudas en la clase presencial. 
+*** Aprendizaje autónomo o autodirigido donde los estudiantes asumen el control de su proceso de aprendizaje y trabajan de forma independiente para adquirir conocimientos y habilidades.
+*** Tutoriales en modalidad de _flipped classroom_, donde los alumnos realizan la actividad de forma autónoma y se resuelven dudas en la clase presencial.
+*** Estudio de casos prácticos de bases de datos orientadas a documentos en entornos reales o ficticios para fomentar la toma de decisiones, el debate y la argumentación.
+*** Aprendizaje Basado en Competencias enfocado en el desarrollo de habilidades y destrezas prácticas, más que en la mera adquisición de contenidos teóricos. 
 *** Actividades de laboratorio para realizar de forma autónoma en forma de proyecto.
 
 * Tema 4. Bases de datos orientadas a grafos
@@ -131,7 +141,10 @@ image::../images/di.png[]
 
 ** Metodología
 *** Clases teórico-prácticas con presentaciones y tutoriales de casos prácticos. 
-*** Tutoriales en modalidad de _flipped classroom_, donde los alumnos realizan la actividad de forma autónoma y se resuelven dudas en la clase presencial. 
+*** Aprendizaje autónomo o autodirigido donde los estudiantes asumen el control de su proceso de aprendizaje y trabajan de forma independiente para adquirir conocimientos y habilidades.
+*** Tutoriales en modalidad de _flipped classroom_, donde los alumnos realizan la actividad de forma autónoma y se resuelven dudas en la clase presencial.
+*** Estudio de casos prácticos de bases de datos orientadas a grafos en entornos reales o ficticios para fomentar la toma de decisiones, el debate y la argumentación.
+*** Aprendizaje Basado en Competencias enfocado en el desarrollo de habilidades y destrezas prácticas, más que en la mera adquisición de contenidos teóricos. 
 *** Actividades de laboratorio para realizar de forma autónoma en forma de proyecto.
 
 * Tema 5. Bases de datos orientadas a columnas
@@ -155,4 +168,8 @@ image::../images/di.png[]
 
 ** Metodología
 *** Clases teórico-prácticas con presentaciones y tutoriales de casos prácticos. 
+*** Aprendizaje autónomo o autodirigido donde los estudiantes asumen el control de su proceso de aprendizaje y trabajan de forma independiente para adquirir conocimientos y habilidades.
 *** Tutoriales en modalidad de _flipped classroom_, donde los alumnos realizan la actividad de forma autónoma y se resuelven dudas en la clase presencial. 
+*** Estudio de casos prácticos de bases de datos orientadas a columnas en entornos reales o ficticios para fomentar la toma de decisiones, el debate y la argumentación.
+*** Aprendizaje Basado en Competencias enfocado en el desarrollo de habilidades y destrezas prácticas, más que en la mera adquisición de contenidos teóricos. 
+*** Actividades de laboratorio para realizar de forma autónoma en forma de proyecto.
